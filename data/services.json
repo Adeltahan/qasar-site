@@ -1,0 +1,21 @@
+{
+  "whatsapp": "33625433186",
+  "whatsapp_message": "Bonjour, je souhaite faire une demande concernant : {nom}.",
+  "services": [
+    {
+      "nom": "Jets privés",
+      "icone": "jet",
+      "description": "Aviation privée et hélicoptère, du vol cabotage au long-courrier. Départ sous préavis court, coordination porte à porte."
+    },
+    {
+      "nom": "Transport privé",
+      "icone": "voiture",
+      "description": "Chauffeurs de maison, véhicules d'exception, transferts maritimes. Une flotte discrète, disponible à toute heure."
+    },
+    {
+      "nom": "Stay management",
+      "icone": "cloche",
+      "description": "L'intendance complète de votre séjour : personnel, tables, accès, imprévus. Un interlocuteur unique, avant, pendant et après."
+    }
+  ]
+}

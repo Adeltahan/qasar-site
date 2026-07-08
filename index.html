@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QASAR — Conciergerie Internationale · Yachts &amp; Villas</title>
+  <meta name="description" content="QASAR, conciergerie internationale d'exception. Location de yachts et de villas d'exception, services sur mesure, disponibilité absolue. Monaco, Saint-Tropez, Dubaï, Mykonos.">
+  <link rel="icon" type="image/png" href="assets/qasar-mark-only.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- ══════════ PRELOADER ══════════ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <img src="assets/qasar-mark-only.png" alt="" class="preloader__mark">
+      <div class="preloader__word">Q&nbsp;A&nbsp;S&nbsp;A&nbsp;R</div>
+      <div class="preloader__line"></div>
+    </div>
+  </div>
+
+  <!-- ══════════ HEADER ══════════ -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#hero" class="header__brand" aria-label="QASAR — retour en haut">
+        <img src="assets/qasar-mark-only.png" alt="" class="header__mark">
+        <span class="header__logotype">QASAR<em>International Concierge</em></span>
+      </a>
+      <div class="header__verticals" aria-hidden="true">
+        <span>Yachts</span>
+        <span>Villas</span>
+        <span>Services sur mesure</span>
+      </div>
+      <nav class="header__nav" aria-label="Navigation principale">
+        <a href="#hero">Accueil</a>
+        <a href="yachts.html">Yachts</a>
+        <a href="villas.html">Villas</a>
+        <a href="services.html">Services</a>
+        <a href="#destinations">Destinations</a>
+      </nav>
+      <a href="#contact" class="btn btn--gold header__cta">Faire une demande</a>
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ MENU MOBILE ══════════ -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Navigation mobile">
+      <a href="#hero"><span>01</span>Accueil</a>
+      <a href="yachts.html"><span>02</span>Yachts</a>
+      <a href="villas.html"><span>03</span>Villas</a>
+      <a href="services.html"><span>04</span>Services</a>
+      <a href="#destinations"><span>05</span>Destinations</a>
+      <a href="#contact"><span>06</span>Contact</a>
+    </nav>
+    <div class="mobile-menu__foot">Monaco · Dubaï · Saint-Tropez — 24/7</div>
+  </div>
+
+  <main>
+
+    <!-- ══════════ HERO ══════════ -->
+    <section class="hero" id="hero">
+      <div class="hero__media" id="heroMedia">
+        <img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=2000&q=80&auto=format&fit=crop"
+             alt="Yacht de luxe naviguant sur une mer turquoise" class="hero__img" id="heroImg">
+        <div class="hero__veil"></div>
+      </div>
+      <div class="hero__content container">
+        <h1 class="hero__title">
+          <span class="line-mask"><span class="line">L'art de l'exception,</span></span>
+          <span class="line-mask"><span class="line line--italic">en mer comme à terre.</span></span>
+        </h1>
+        <p class="hero__sub">Yachts d'exception, villas rares, services sur mesure.<br>Une seule adresse, partout dans le monde.</p>
+        <div class="hero__actions">
+          <a href="#services" class="btn btn--outline-gold" data-magnetic>Découvrir nos services</a>
+          <a href="#contact" class="btn btn--gold" data-magnetic>Faire une demande</a>
+        </div>
+      </div>
+      <a href="#maison" class="hero__scroll" aria-label="Défiler vers le bas">
+        <span class="hero__scroll-label">Découvrir</span>
+        <span class="hero__scroll-line"></span>
+      </a>
+    </section>
+
+    <!-- ══════════ L'OFFRE — 3 VERTICALES ══════════ -->
+    <section class="services" id="services">
+      <div class="container">
+        <p class="kicker kicker--light" data-reveal><span class="kicker__rule"></span>L'offre</p>
+        <h2 class="services__title" data-reveal>Trois univers,<br><em>orchestrés en silence.</em></h2>
+
+        <div class="services__grid" data-reveal-group>
+          <div class="service service--visual" data-reveal>
+            <img class="service__bg" src="https://images.unsplash.com/photo-1528154291023-a6525fabe5b4?w=1200&q=80&auto=format&fit=crop" alt="Yacht vu du ciel sur une mer émeraude" loading="lazy">
+            <div class="service__content">
+              <h3>Yachts</h3>
+              <p>Charters privés à la journée, à la semaine ou à la saison. Équipages certifiés, itinéraires dessinés sur mesure, mouillages réservés.</p>
+              <a href="yachts.html" class="service__cta">
+                <span>Découvrir</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="service service--visual" data-reveal>
+            <img class="service__bg" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1200&q=80&auto=format&fit=crop" alt="Villa contemporaine avec piscine" loading="lazy">
+            <div class="service__content">
+              <h3>Villas</h3>
+              <p>Adresses rares hors marché, en front de mer comme en altitude. Personnel de maison dédié, intendance complète du séjour.</p>
+              <a href="villas.html" class="service__cta">
+                <span>Découvrir</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="service service--visual" id="sur-mesure" data-reveal>
+            <img class="service__bg" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80&auto=format&fit=crop" alt="Table gastronomique dressée aux chandelles" loading="lazy">
+            <div class="service__content">
+              <h3>Services sur mesure</h3>
+              <p>Jets privés, chefs, accès et expériences introuvables : tout ce qui entoure le séjour, organisé en silence, 24/7.</p>
+              <a href="services.html" class="service__cta">
+                <span>Découvrir</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ YACHTS ══════════ -->
+    <section class="domain" id="yachts">
+      <div class="container">
+        <div class="domain__split">
+          <figure class="domain__figure" data-reveal-clip>
+            <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=1400&q=80&auto=format&fit=crop"
+                 alt="Proue d'un yacht au coucher du soleil" loading="lazy">
+            <figcaption class="domain__caption">Méditerranée — 42° 17′ N</figcaption>
+          </figure>
+          <div class="domain__body">
+            <p class="kicker" data-reveal><span class="kicker__rule"></span>Yachts — N° 01</p>
+            <h2 class="domain__title" data-reveal>Une flotte choisie,<br><em>jamais cataloguée.</em></h2>
+            <p class="domain__desc" data-reveal>
+              Du day-cruiser confidentiel au superyacht avec équipage complet, chaque unité
+              de notre portefeuille est inspectée, éprouvée et sélectionnée. Itinéraires
+              privés, chef à bord, mouillages réservés : la mer, à vos conditions.
+            </p>
+            <ul class="domain__list" data-reveal-group>
+              <li data-reveal>Charters à la journée, à la semaine, à la saison</li>
+              <li data-reveal>Équipages certifiés, discrétion contractuelle</li>
+              <li data-reveal>Itinéraires dessinés sur mesure, escales privées</li>
+            </ul>
+            <a href="yachts.html" class="btn btn--emerald" data-reveal data-magnetic>Affréter un yacht</a>
+          </div>
+        </div>
+
+        <div class="cards" data-reveal-group>
+          <article class="card" data-reveal>
+            <div class="card__media">
+              <img src="https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=1200&q=80&auto=format&fit=crop" alt="Voilier élégant naviguant en pleine mer" loading="lazy">
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Serenity — 34 m</h3>
+              <p class="card__meta">10 invités · 6 équipage · Méditerranée</p>
+              <span class="card__price">Prix sur demande</span>
+            </div>
+          </article>
+          <article class="card" data-reveal>
+            <div class="card__media">
+              <img src="https://images.unsplash.com/photo-1528154291023-a6525fabe5b4?w=1200&q=80&auto=format&fit=crop" alt="Yacht vu du ciel sur une mer émeraude" loading="lazy">
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Al Nour — 47 m</h3>
+              <p class="card__meta">12 invités · 9 équipage · Golfe &amp; Mer Rouge</p>
+              <span class="card__price">Prix sur demande</span>
+            </div>
+          </article>
+          <article class="card" data-reveal>
+            <div class="card__media">
+              <img src="https://images.unsplash.com/photo-1559385301-0187cb6eff46?w=1200&q=80&auto=format&fit=crop" alt="Yacht au mouillage dans une crique" loading="lazy">
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Calypso — 28 m</h3>
+              <p class="card__meta">8 invités · 4 équipage · Baléares &amp; Riviera</p>
+              <span class="card__price">Prix sur demande</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="cards-cta" data-reveal>
+          <a href="yachts.html" class="btn btn--emerald" data-magnetic>Découvrir tous nos yachts</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ VILLAS ══════════ -->
+    <section class="domain domain--alt" id="villas">
+      <div class="container">
+        <div class="domain__split domain__split--reverse">
+          <figure class="domain__figure" data-reveal-clip>
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1400&q=80&auto=format&fit=crop"
+                 alt="Villa contemporaine avec piscine à débordement au crépuscule" loading="lazy">
+            <figcaption class="domain__caption">Cap Ferrat — Villa privée</figcaption>
+          </figure>
+          <div class="domain__body">
+            <p class="kicker" data-reveal><span class="kicker__rule"></span>Villas — N° 02</p>
+            <h2 class="domain__title" data-reveal>Des adresses rares,<br><em>hors du marché.</em></h2>
+            <p class="domain__desc" data-reveal>
+              Nos villas ne figurent sur aucune plateforme. Domaines en front de mer,
+              riads confidentiels, chalets d'altitude : chaque propriété est visitée par
+              nos équipes et livrée avec personnel de maison, chef et intendance complète.
+            </p>
+            <ul class="domain__list" data-reveal-group>
+              <li data-reveal>Portefeuille privé, accès sur introduction</li>
+              <li data-reveal>Personnel de maison &amp; chef dédiés</li>
+              <li data-reveal>Intendance avant, pendant et après le séjour</li>
+            </ul>
+            <a href="villas.html" class="btn btn--emerald" data-reveal data-magnetic>Réserver une villa</a>
+          </div>
+        </div>
+
+        <div class="cards" data-reveal-group>
+          <article class="card" data-reveal>
+            <div class="card__media">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80&auto=format&fit=crop" alt="Villa moderne avec piscine illuminée" loading="lazy">
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Villa Émeraude</h3>
+              <p class="card__meta">8 chambres · Front de mer · Saint-Jean-Cap-Ferrat</p>
+              <span class="card__price">Prix sur demande</span>
+            </div>
+          </article>
+          <article class="card" data-reveal>
+            <div class="card__media">
+              <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80&auto=format&fit=crop" alt="Villa d'architecte de nuit" loading="lazy">
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Dar Qamar</h3>
+              <p class="card__meta">10 chambres · Palmeraie privée · Marrakech</p>
+              <span class="card__price">Prix sur demande</span>
+            </div>
+          </article>
+          <article class="card" data-reveal>
+            <div class="card__media">
+              <img src="https://images.unsplash.com/photo-1517320964276-a002fa203177?w=1200&q=80&auto=format&fit=crop" alt="Chalet sous la neige entouré de sapins" loading="lazy">
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Chalet Altair</h3>
+              <p class="card__meta">7 chambres · Ski-in / ski-out · Courchevel 1850</p>
+              <span class="card__price">Prix sur demande</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="cards-cta" data-reveal>
+          <a href="villas.html" class="btn btn--emerald" data-magnetic>Découvrir toutes nos villas</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ MANIFESTO ══════════ -->
+    <section class="manifesto" id="maison">
+      <div class="container">
+        <div class="manifesto__grid">
+          <div class="manifesto__copy">
+            <p class="kicker" data-reveal><span class="kicker__rule"></span>Qasar</p>
+            <h2 class="manifesto__text manifesto__text--lead" data-reveal-lines>
+              Mon parcours dans la conciergerie de luxe a débuté <em>entre les
+              Alpes-Maritimes et les Émirats</em>, où j'ai développé une structure opérant
+              à l'échelle internationale, au service d'une clientèle exigeante entre
+              la <em>Côte d'Azur</em> et le <em>Golfe</em>.
+            </h2>
+            <div class="manifesto__body" data-reveal-group>
+              <p data-reveal>
+                Cette expérience, construite en tant qu'associé, m'a permis d'acquérir une
+                connaissance fine des attentes d'une clientèle internationale : location et
+                mise à disposition de yachts et de villas, organisation d'événements sur
+                mesure, coordination logistique dans plusieurs pays à la fois. Trilingue —
+                français, anglais, arabe —, je mène chaque échange dans la langue de mon
+                interlocuteur, ce qui facilite naturellement les dialogues internationaux.
+              </p>
+              <p data-reveal>
+                Aujourd'hui, je porte cette expertise à travers ma propre structure. Qasar
+                est né de cette volonté d'apporter, en toute indépendance, le même niveau
+                d'exigence et de savoir-faire à chaque client, avec une attention plus
+                directe et personnelle à chaque demande.
+              </p>
+              <p data-reveal>
+                Ancré sur la Côte d'Azur, Qasar conserve cette vocation internationale qui
+                a toujours guidé mon activité, avec un point d'ancrage désormais unique et
+                une vision qui m'appartient entièrement.
+              </p>
+            </div>
+          </div>
+          <figure class="manifesto__portrait" data-reveal>
+            <div class="manifesto__portrait-media" data-reveal-clip>
+              <img src="assets/fondateur.jpg" alt="Portrait d'Adel Tahan, fondateur de Qasar"
+                   loading="lazy"
+                   onerror="this.onerror=null;this.src='assets/qasar-mark-only.png';this.style.objectFit='contain';this.style.padding='22%';">
+            </div>
+            <figcaption>Adel Tahan — Fondateur</figcaption>
+          </figure>
+        </div>
+        <div class="stats" data-reveal-group>
+          <div class="stat" data-reveal>
+            <div class="stat__num"><span data-counter="24">0</span>/7</div>
+            <div class="stat__label">Disponibilité absolue</div>
+          </div>
+          <div class="stat" data-reveal>
+            <div class="stat__num"><span data-counter="40">0</span>+</div>
+            <div class="stat__label">Destinations privées</div>
+          </div>
+          <div class="stat" data-reveal>
+            <div class="stat__num"><span data-counter="250">0</span>+</div>
+            <div class="stat__label">Yachts &amp; villas en portefeuille</div>
+          </div>
+          <div class="stat" data-reveal>
+            <div class="stat__num"><span data-counter="100">0</span>%</div>
+            <div class="stat__label">Sur mesure, sans exception</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ MARQUEE DESTINATIONS ══════════ -->
+    <section class="marquee" id="destinations" aria-label="Nos destinations">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span>Monaco</span><i>✦</i><span>Saint-Tropez</span><i>✦</i><span>Dubaï</span><i>✦</i>
+          <span>Mykonos</span><i>✦</i><span>Ibiza</span><i>✦</i><span>Sardaigne</span><i>✦</i>
+          <span>Maldives</span><i>✦</i><span>Courchevel</span><i>✦</i>
+        </div>
+        <div class="marquee__group" aria-hidden="true">
+          <span>Monaco</span><i>✦</i><span>Saint-Tropez</span><i>✦</i><span>Dubaï</span><i>✦</i>
+          <span>Mykonos</span><i>✦</i><span>Ibiza</span><i>✦</i><span>Sardaigne</span><i>✦</i>
+          <span>Maldives</span><i>✦</i><span>Courchevel</span><i>✦</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ PROCESS ══════════ -->
+    <section class="process">
+      <div class="container">
+        <p class="kicker" data-reveal><span class="kicker__rule"></span>La méthode</p>
+        <h2 class="process__title" data-reveal>Trois temps, <em>une signature.</em></h2>
+        <div class="process__grid" data-reveal-group>
+          <div class="step" data-reveal>
+            <span class="step__num">01</span>
+            <h3>L'écoute</h3>
+            <p>Une conversation, pas un formulaire. Nous comprenons le séjour rêvé avant d'en dessiner les contours.</p>
+          </div>
+          <div class="step" data-reveal>
+            <span class="step__num">02</span>
+            <h3>La curation</h3>
+            <p>Trois propositions au plus, toutes irréprochables. Jamais de catalogue, jamais de compromis.</p>
+          </div>
+          <div class="step" data-reveal>
+            <span class="step__num">03</span>
+            <h3>L'exécution</h3>
+            <p>Chaque détail orchestré en amont, une présence discrète pendant, un suivi attentif après.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ CONTACT ══════════ -->
+    <section class="contact" id="contact">
+      <div class="contact__panel contact__panel--form">
+        <p class="kicker" data-reveal><span class="kicker__rule"></span>Faire une demande</p>
+        <h2 class="contact__title" data-reveal>Confiez-nous <em>l'intention.</em></h2>
+        <form class="form" id="contactForm" novalidate data-reveal-group>
+          <div class="form__row" data-reveal>
+            <div class="form__field">
+              <label for="f-name">Nom complet <sup>*</sup></label>
+              <input type="text" id="f-name" name="name" autocomplete="name" required>
+            </div>
+            <div class="form__field">
+              <label for="f-email">Adresse e-mail <sup>*</sup></label>
+              <input type="email" id="f-email" name="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="form__row" data-reveal>
+            <div class="form__field">
+              <label for="f-phone">Téléphone — indicatif pays inclus <sup>*</sup></label>
+              <input type="tel" id="f-phone" name="phone" autocomplete="tel" placeholder="+33 6 12 34 56 78" required>
+            </div>
+            <div class="form__field">
+              <label for="f-interest">Votre demande concerne <sup>*</sup></label>
+              <select id="f-interest" name="interest" required>
+                <option>Un yacht</option>
+                <option>Une villa</option>
+                <option>Yacht &amp; villa</option>
+                <option>Services sur mesure</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__field" data-reveal>
+            <label for="f-dates">Dates envisagées — facultatif</label>
+            <input type="text" id="f-dates" name="dates" placeholder="Juillet 2026, deux semaines…">
+          </div>
+          <div class="form__field" data-reveal>
+            <label for="f-message">Votre intention <sup>*</sup></label>
+            <textarea id="f-message" name="message" rows="3" placeholder="Décrivez le séjour tel que vous l'imaginez." required></textarea>
+          </div>
+          <div class="form__foot" data-reveal>
+            <button type="submit" class="btn btn--gold" data-magnetic>Envoyer la demande</button>
+            <p class="form__note">Vos informations restent strictement confidentielles.</p>
+          </div>
+          <p class="form__success" id="formSuccess" role="status">Merci. Votre demande nous est parvenue — l'équipe Qasar vous répondra sous douze heures.</p>
+        </form>
+      </div>
+      <div class="contact__panel contact__panel--info">
+        <div>
+          <img src="assets/qasar-mark-gold.png" alt="QASAR International Concierge" class="contact__logo" data-reveal>
+          <p class="contact__lede" data-reveal>Une demande, une réponse.<br>Sous <em>douze heures</em>, où que vous soyez.</p>
+          <address class="contact__details" data-reveal-group>
+            <p data-reveal><span>Écrire</span><a href="mailto:contact@qasar-concierge.com">contact@qasar-concierge.com</a></p>
+            <p data-reveal><span>Appeler</span><a href="tel:+37700000000">+377 00 00 00 00</a></p>
+            <p data-reveal><span>Bureaux</span>Monaco · Dubaï · Saint-Tropez</p>
+          </address>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <img src="assets/qasar-mark-gold.png" alt="QASAR International Concierge" class="footer__logo">
+      <nav class="footer__nav" aria-label="Navigation pied de page">
+        <a href="#hero">Accueil</a>
+        <a href="yachts.html">Yachts</a>
+        <a href="villas.html">Villas</a>
+        <a href="services.html">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer__rule"></div>
+      <div class="footer__legal">
+        <span>© 2026 Qasar International Concierge. Tous droits réservés.</span>
+        <span>Mentions légales · Confidentialité</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services sur mesure — QASAR · Conciergerie privée</title>
+  <meta name="description" content="Le sur-mesure QASAR : jets privés, transport privé, stay management. Discrétion absolue, exigence sans compromis, réseau international. Un interlocuteur unique, 24/7.">
+  <link rel="icon" type="image/png" href="assets/qasar-mark-only.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- ══════════ PRELOADER ══════════ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <img src="assets/qasar-mark-only.png" alt="" class="preloader__mark">
+      <div class="preloader__word">Q&nbsp;A&nbsp;S&nbsp;A&nbsp;R</div>
+      <div class="preloader__line"></div>
+    </div>
+  </div>
+
+  <!-- ══════════ HEADER ══════════ -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__brand" aria-label="QASAR — retour à l'accueil">
+        <img src="assets/qasar-mark-only.png" alt="" class="header__mark">
+        <span class="header__logotype">QASAR<em>International Concierge</em></span>
+      </a>
+      <div class="header__verticals" aria-hidden="true">
+        <span>Yachts</span>
+        <span>Villas</span>
+        <span>Services sur mesure</span>
+      </div>
+      <nav class="header__nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="yachts.html">Yachts</a>
+        <a href="villas.html">Villas</a>
+        <a href="services.html" class="is-active" aria-current="page">Services</a>
+        <a href="index.html#destinations">Destinations</a>
+      </nav>
+      <a href="index.html#contact" class="btn btn--gold header__cta">Faire une demande</a>
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ MENU MOBILE ══════════ -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Navigation mobile">
+      <a href="index.html"><span>01</span>Accueil</a>
+      <a href="yachts.html"><span>02</span>Yachts</a>
+      <a href="villas.html"><span>03</span>Villas</a>
+      <a href="services.html"><span>04</span>Services</a>
+      <a href="index.html#destinations"><span>05</span>Destinations</a>
+      <a href="index.html#contact"><span>06</span>Contact</a>
+    </nav>
+    <div class="mobile-menu__foot">Monaco · Dubaï · Saint-Tropez — 24/7</div>
+  </div>
+
+  <main>
+
+    <!-- ══════════ HERO SERVICES ══════════ -->
+    <section class="hero hero--page" id="hero">
+      <div class="hero__media">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=2000&q=80&auto=format&fit=crop"
+             alt="Table gastronomique dressée aux chandelles" class="hero__img" id="heroImg">
+        <div class="hero__veil"></div>
+      </div>
+      <div class="hero__content container">
+        <h1 class="hero__title">
+          <span class="line-mask"><span class="line">Le sur-mesure,</span></span>
+          <span class="line-mask"><span class="line line--italic">orchestré en silence.</span></span>
+        </h1>
+        <p class="hero__sub">Discrétion absolue, exigence sans compromis, réseau international.<br>Un interlocuteur unique, joignable 24/7.</p>
+      </div>
+    </section>
+
+    <!-- ══════════ RUBRIQUES ══════════ -->
+    <section class="tailored" id="rubriques">
+      <div class="container">
+        <p class="kicker" data-reveal><span class="kicker__rule"></span>Nos services</p>
+        <h2 class="fleet__title" data-reveal>Trois demandes, <em>un seul geste.</em></h2>
+        <div class="tiles" id="servicesGrid">
+          <p class="fleet__loading">Chargement des services…</p>
+        </div>
+        <p class="fleet__note" data-reveal>
+          Chaque demande reçoit une réponse personnelle sous douze heures, dans votre langue.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <img src="assets/qasar-mark-gold.png" alt="QASAR International Concierge" class="footer__logo">
+      <nav class="footer__nav" aria-label="Navigation pied de page">
+        <a href="index.html">Accueil</a>
+        <a href="yachts.html">Yachts</a>
+        <a href="villas.html">Villas</a>
+        <a href="services.html">Services</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="footer__rule"></div>
+      <div class="footer__legal">
+        <span>© 2026 Qasar International Concierge. Tous droits réservés.</span>
+        <span>Mentions légales · Confidentialité</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/services.js"></script>
+</body>
+</html>

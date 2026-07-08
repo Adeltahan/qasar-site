@@ -1,0 +1,66 @@
+{
+  "whatsapp": "33625433186",
+  "whatsapp_message": "Bonjour, je souhaite obtenir plus d'informations sur le yacht {nom}.",
+  "yachts": [
+    {
+      "nom": "Serenity",
+      "taille_m": 34,
+      "invites": 10,
+      "equipage": 6,
+      "zone": "Méditerranée",
+      "tarif": "À partir de 45 000 € / semaine",
+      "image": "https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=1200&q=80&auto=format&fit=crop",
+      "description": "Voilier classique au caractère rare, pour une Méditerranée au rythme du vent."
+    },
+    {
+      "nom": "Al Nour",
+      "taille_m": 47,
+      "invites": 12,
+      "equipage": 9,
+      "zone": "Golfe & Mer Rouge",
+      "tarif": "Prix sur demande",
+      "image": "https://images.unsplash.com/photo-1528154291023-a6525fabe5b4?w=1200&q=80&auto=format&fit=crop",
+      "description": "Superyacht d'exception pensé pour les croisières familiales entre Dubaï et la Mer Rouge."
+    },
+    {
+      "nom": "Calypso",
+      "taille_m": 28,
+      "invites": 8,
+      "equipage": 4,
+      "zone": "Baléares & Riviera",
+      "tarif": "À partir de 28 000 € / semaine",
+      "image": "https://images.unsplash.com/photo-1559385301-0187cb6eff46?w=1200&q=80&auto=format&fit=crop",
+      "description": "Ligne contemporaine et intimité préservée, d'Ibiza à Saint-Tropez."
+    },
+    {
+      "nom": "Azraq",
+      "taille_m": 39,
+      "invites": 10,
+      "equipage": 7,
+      "zone": "Côte d'Azur & Corse",
+      "tarif": "À partir de 60 000 € / semaine",
+      "image": "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=1200&q=80&auto=format&fit=crop",
+      "description": "Profil racé, volumes généreux : le charter signature de la Riviera."
+    },
+    {
+      "nom": "Layla",
+      "taille_m": 17,
+      "invites": 8,
+      "equipage": 2,
+      "zone": "Riviera — à la journée",
+      "tarif": "À partir de 4 500 € / jour",
+      "image": "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=1200&q=80&auto=format&fit=crop",
+      "description": "Day-cruiser idéal pour les criques de l'Estérel et les déjeuners à quai."
+    },
+    {
+      "nom": "Meridian",
+      "taille_m": 52,
+      "invites": 12,
+      "equipage": 10,
+      "zone": "Méditerranée & Caraïbes",
+      "tarif": "Prix sur demande",
+      "image": "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=1200&q=80&auto=format&fit=crop",
+      "description": "Navire amiral de notre portefeuille, disponible en transatlantique hivernal."
+    }
+  ]
+}

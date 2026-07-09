@@ -617,6 +617,7 @@ html.js [data-reveal-lines].is-inview { opacity: 1; transform: none; }
 
 /* ── Page Yachts ─────────────────────────────────────── */
 .hero--page { min-height: 64vh; min-height: 64dvh; }
+.hero--compact { min-height: 48vh; min-height: 48dvh; }
 .hero--page .hero__sub { margin-bottom: 0; }
 
 .fleet {
@@ -639,6 +640,12 @@ html.js [data-reveal-lines].is-inview { opacity: 1; transform: none; }
   font-size: 12.5px;
   color: var(--muted);
 }
+.fleet__note-link {
+  color: var(--emerald);
+  border-bottom: 1px solid var(--gold);
+  transition: color 0.3s;
+}
+.fleet__note-link:hover { color: var(--gold); }
 
 .cards--fleet .card { background: var(--white); }
 .card__meta--gold {
@@ -1181,6 +1188,9 @@ html.js [data-reveal-lines].is-inview { opacity: 1; transform: none; }
 }
 .form__field input::placeholder,
 .form__field textarea::placeholder { color: rgba(95, 107, 102, 0.5); }
+/* select sans valeur choisie : texte d'invite grisé */
+.form__field select:invalid { color: rgba(95, 107, 102, 0.55); }
+.form__field select option { color: var(--ink); }
 .form__field.has-error input,
 .form__field.has-error select,
 .form__field.has-error textarea { border-bottom-color: #A94438; }

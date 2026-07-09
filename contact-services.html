@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yachts — QASAR · Location de yachts de luxe</title>
-  <meta name="description" content="La flotte QASAR : yachts et superyachts d'exception à la location, avec équipage. Méditerranée, Golfe, Caraïbes. Charters à la journée, à la semaine ou à la saison.">
+  <title>Faire une demande — Services sur mesure · QASAR</title>
+  <meta name="description" content="Adressez votre demande à QASAR : jets privés, transport privé, stay management. Réponse personnelle sous douze heures, dans votre langue.">
   <link rel="icon" type="image/png" href="assets/qasar-mark-only.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,9 +37,9 @@
       </div>
       <nav class="header__nav" aria-label="Navigation principale">
         <a href="index.html">Accueil</a>
-        <a href="yachts.html" class="is-active" aria-current="page">Yachts</a>
+        <a href="yachts.html">Yachts</a>
         <a href="villas.html">Villas</a>
-        <a href="services.html">Services</a>
+        <a href="services.html" class="is-active">Services</a>
         <a href="index.html#destinations">Destinations</a>
       </nav>
       <a href="#contact" class="btn btn--gold header__cta">Faire une demande</a>
@@ -64,34 +64,19 @@
 
   <main>
 
-    <!-- ══════════ HERO YACHTS ══════════ -->
-    <section class="hero hero--page" id="hero">
+    <!-- ══════════ HERO COMPACT ══════════ -->
+    <section class="hero hero--page hero--compact" id="hero">
       <div class="hero__media">
-        <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=2000&q=80&auto=format&fit=crop"
-             alt="Superyacht naviguant au coucher du soleil" class="hero__img" id="heroImg">
+        <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=2000&q=80&auto=format&fit=crop"
+             alt="Jet privé sur le tarmac, porte ouverte" class="hero__img" id="heroImg">
         <div class="hero__veil"></div>
       </div>
       <div class="hero__content container">
         <h1 class="hero__title">
-          <span class="line-mask"><span class="line">Une flotte choisie,</span></span>
-          <span class="line-mask"><span class="line line--italic">le prestige en signature.</span></span>
+          <span class="line-mask"><span class="line">Une demande,</span></span>
+          <span class="line-mask"><span class="line line--italic">trois savoir-faire.</span></span>
         </h1>
-        <p class="hero__sub">Du day-cruiser confidentiel au superyacht avec équipage complet.<br>Chaque unité est inspectée, éprouvée, sélectionnée.</p>
-      </div>
-    </section>
-
-    <!-- ══════════ FLOTTE ══════════ -->
-    <section class="fleet" id="flotte">
-      <div class="container">
-        <p class="kicker" data-reveal><span class="kicker__rule"></span>La flotte</p>
-        <h2 class="fleet__title" data-reveal>Nos yachts <em>à la location.</em></h2>
-        <div class="cards cards--fleet" id="fleetGrid">
-          <p class="fleet__loading">Chargement de la flotte…</p>
-        </div>
-        <p class="fleet__note" data-reveal>
-          Tarifs indicatifs hors APA et frais de livraison. Chaque affrètement fait l'objet
-          d'une proposition personnalisée sous douze heures.
-        </p>
+        <p class="hero__sub">Jets privés, transport privé, stay management.<br>Dites-nous la rubrique — nous faisons le reste.</p>
       </div>
     </section>
 
@@ -119,8 +104,7 @@
             <div class="form__field">
               <label for="f-interest">Votre demande concerne <sup>*</sup></label>
               <select id="f-interest" name="interest" required>
-                <option selected>Yachts</option>
-                <option>Villas</option>
+                <option value="" disabled selected hidden>Sélectionnez une rubrique</option>
                 <option>Jets privés</option>
                 <option>Transport privé</option>
                 <option>Stay management</option>
@@ -133,7 +117,7 @@
           </div>
           <div class="form__field" data-reveal>
             <label for="f-message">Votre intention <sup>*</sup></label>
-            <textarea id="f-message" name="message" rows="3" placeholder="Décrivez la croisière telle que vous l'imaginez." required></textarea>
+            <textarea id="f-message" name="message" rows="3" placeholder="Décrivez votre demande telle que vous l'imaginez." required></textarea>
           </div>
           <div class="form__foot" data-reveal>
             <button type="submit" class="btn btn--gold" data-magnetic>Envoyer la demande</button>
@@ -177,6 +161,21 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="js/yachts.js"></script>
+  <script>
+    /* pré-sélection de la rubrique via l'URL :
+       contact-services.html?rubrique=Jets%20privés  ou  #rubrique=Jets%20privés */
+    (function () {
+      var rubrique = new URLSearchParams(location.search).get('rubrique') ||
+                     new URLSearchParams(location.hash.replace(/^#/, '')).get('rubrique');
+      if (!rubrique) return;
+      var select = document.getElementById('f-interest');
+      for (var i = 0; i < select.options.length; i++) {
+        if (select.options[i].text.toLowerCase() === rubrique.toLowerCase()) {
+          select.selectedIndex = i;
+          break;
+        }
+      }
+    })();
+  </script>
 </body>
 </html>

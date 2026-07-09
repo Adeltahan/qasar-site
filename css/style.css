@@ -1024,9 +1024,9 @@ html.js [data-reveal-lines].is-inview { opacity: 1; transform: none; }
   100% { box-shadow: 0 0 0 0 rgba(203, 180, 132, 0); }
 }
 
-/* légende simplifiée (mobile) */
+/* légende des destinations sous le globe */
 .network__legend {
-  display: none;
+  display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 22px;

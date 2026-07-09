@@ -19,8 +19,10 @@
   const destinations = [
     { name: 'Courchevel', lng: 6.6338, lat: 45.4149 },
     { name: 'Paris', lng: 2.3522, lat: 48.8566 },
+    { name: 'Londres', lng: -0.1276, lat: 51.5072 },
     { name: 'Ibiza', lng: 1.4206, lat: 38.9067 },
     { name: 'Saint-Barthélemy', lng: -62.8333, lat: 17.9000 },
+    { name: 'Miami', lng: -80.1918, lat: 25.7617 },
     { name: 'Mykonos', lng: 25.3289, lat: 37.4467 },
     { name: 'Dubaï', lng: 55.2708, lat: 25.2048 }
   ];

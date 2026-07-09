@@ -34,15 +34,33 @@
         .map((s) => {
           const waText = encodeURIComponent(msgTpl.replace('{nom}', s.nom));
           const waHref = 'https://wa.me/' + num + '?text=' + waText;
+          const btn =
+            '<a class="btn-wa" href="' + waHref + '" target="_blank" rel="noopener" aria-label="Faire une demande — ' + s.nom + '">' +
+              WA_ICON + '<span>Faire une demande</span>' +
+            '</a>';
+
+          /* tuile avec photo représentative + voile sombre (comme la home) */
+          if (s.image) {
+            return (
+              '<article class="tile tile--visual">' +
+                '<img class="tile__bg" src="' + s.image + '" alt="' + s.nom + '" loading="lazy">' +
+                '<div class="tile__content">' +
+                  '<h3 class="tile__name">' + s.nom + '</h3>' +
+                  '<p class="tile__desc">' + s.description + '</p>' +
+                  btn +
+                '</div>' +
+              '</article>'
+            );
+          }
+
+          /* repli pictogramme si aucune image n'est fournie dans le JSON */
           const icon = ICONS[s.icone] || ICONS.cloche;
           return (
             '<article class="tile">' +
               '<svg class="tile__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">' + icon + '</svg>' +
               '<h3 class="tile__name">' + s.nom + '</h3>' +
               '<p class="tile__desc">' + s.description + '</p>' +
-              '<a class="btn-wa" href="' + waHref + '" target="_blank" rel="noopener" aria-label="Faire une demande — ' + s.nom + '">' +
-                WA_ICON + '<span>Faire une demande</span>' +
-              '</a>' +
+              btn +
             '</article>'
           );
         })

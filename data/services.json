@@ -5,16 +5,19 @@
     {
       "nom": "Jets privés",
       "icone": "jet",
+      "image": "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=1200&q=80&auto=format&fit=crop",
       "description": "Aviation privée et hélicoptère, du vol cabotage au long-courrier. Départ sous préavis court, coordination porte à porte."
     },
     {
       "nom": "Transport privé",
       "icone": "voiture",
+      "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format&fit=crop",
       "description": "Chauffeurs de maison, véhicules d'exception, transferts maritimes. Une flotte discrète, disponible à toute heure."
     },
     {
       "nom": "Stay management",
       "icone": "cloche",
+      "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80&auto=format&fit=crop",
       "description": "L'intendance complète de votre séjour : personnel, tables, accès, imprévus. Un interlocuteur unique, avant, pendant et après."
     }
   ]

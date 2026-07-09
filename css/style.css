@@ -1013,14 +1013,14 @@ html.js [data-reveal-lines].is-inview { opacity: 1; transform: none; }
   transform: translateX(-50%) translateY(0);
 }
 .map-marker--hub {
-  width: 13px; height: 13px;
+  width: 10px; height: 10px;
   background: var(--gold);
   animation: hubPulse 3.2s var(--ease-luxe) infinite;
 }
 .map-marker--hub .map-marker__label { color: var(--gold-light); }
 @keyframes hubPulse {
   0%   { box-shadow: 0 0 0 0 rgba(203, 180, 132, 0.45); }
-  70%  { box-shadow: 0 0 0 14px rgba(203, 180, 132, 0); }
+  70%  { box-shadow: 0 0 0 10px rgba(203, 180, 132, 0); }
   100% { box-shadow: 0 0 0 0 rgba(203, 180, 132, 0); }
 }
 

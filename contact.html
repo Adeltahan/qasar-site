@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Faire une demande — Services sur mesure · QASAR</title>
-  <meta name="description" content="Adressez votre demande à QASAR : jets privés, transport privé, stay management. Réponse personnelle sous douze heures, dans votre langue.">
+  <title>Contact — QASAR · Faire une demande</title>
+  <meta name="description" content="Adressez votre demande à QASAR — yachts, villas, jets privés, transport privé, stay management. Une réponse personnelle sous douze heures, dans votre langue.">
   <link rel="icon" type="image/png" href="assets/qasar-mark-only.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +39,7 @@
         <a href="index.html">Accueil</a>
         <a href="yachts.html">Yachts</a>
         <a href="villas.html">Villas</a>
-        <a href="services.html" class="is-active">Services</a>
+        <a href="services.html">Services</a>
       </nav>
       <a href="#contact" class="btn btn--gold header__cta">Faire une demande</a>
       <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
@@ -65,16 +65,16 @@
     <!-- ══════════ HERO COMPACT ══════════ -->
     <section class="hero hero--page hero--compact" id="hero">
       <div class="hero__media">
-        <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=2000&q=80&auto=format&fit=crop"
-             alt="Jet privé sur le tarmac, porte ouverte" class="hero__img" id="heroImg">
+        <img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=2000&q=80&auto=format&fit=crop"
+             alt="Yacht de luxe naviguant sur une mer turquoise" class="hero__img" id="heroImg">
         <div class="hero__veil"></div>
       </div>
       <div class="hero__content container">
         <h1 class="hero__title">
           <span class="line-mask"><span class="line">Une demande,</span></span>
-          <span class="line-mask"><span class="line line--italic">trois savoir-faire.</span></span>
+          <span class="line-mask"><span class="line line--italic">une réponse.</span></span>
         </h1>
-        <p class="hero__sub">Jets privés, transport privé, stay management.<br>Dites-nous la rubrique — nous faisons le reste.</p>
+        <p class="hero__sub">Yachts, villas, jets privés, transport privé, stay management.<br>Une seule adresse pour tout organiser.</p>
       </div>
     </section>
 
@@ -103,6 +103,8 @@
               <label for="f-interest">Votre demande concerne <sup>*</sup></label>
               <select id="f-interest" name="interest" required>
                 <option value="" disabled selected hidden>Sélectionnez une rubrique</option>
+                <option>Yachts</option>
+                <option>Villas</option>
                 <option>Jets privés</option>
                 <option>Transport privé</option>
                 <option>Stay management</option>
@@ -161,7 +163,7 @@
   <script src="js/main.js"></script>
   <script>
     /* pré-sélection de la rubrique via l'URL :
-       contact-services.html?rubrique=Jets%20privés  ou  #rubrique=Jets%20privés */
+       contact.html?rubrique=Yachts  ou  #rubrique=Yachts */
     (function () {
       var rubrique = new URLSearchParams(location.search).get('rubrique') ||
                      new URLSearchParams(location.hash.replace(/^#/, '')).get('rubrique');

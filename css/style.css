@@ -1207,6 +1207,18 @@ html.js [data-reveal-lines].is-inview { opacity: 1; transform: none; }
   color: var(--emerald);
 }
 .form.is-sent .form__success { display: block; }
+.form__error {
+  display: none;
+  margin-top: 30px;
+  padding: 18px 22px;
+  border-left: 2px solid #A94438;
+  background: rgba(169, 68, 56, 0.06);
+  font-size: 14.5px;
+  color: #7A3229;
+}
+.form__error a { text-decoration: underline; }
+.form.is-error .form__error { display: block; }
+.btn[disabled] { opacity: 0.6; cursor: not-allowed; }
 
 /* ── Footer ──────────────────────────────────────────── */
 .footer {

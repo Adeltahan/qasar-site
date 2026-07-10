@@ -1,5 +1,12 @@
 /* ════════════════════════════════════════════════════════
    QASAR — interactions "quiet luxury"
+
+   CONFIGURATION REQUISE POUR L'ENVOI DES FORMULAIRES :
+   Chercher "WEB3FORMS_ACCESS_KEY" plus bas dans ce fichier et
+   remplacer le texte "REMPLACER_PAR_VOTRE_CLE_WEB3FORMS" par la
+   clé réelle obtenue sur https://web3forms.com (voir instructions
+   fournies séparément). Tant que ce n'est pas fait, le formulaire
+   affiche un message d'erreur au lieu d'envoyer quoi que ce soit.
    ════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -152,11 +159,25 @@
     });
   }
 
-  /* ── Formulaire ──────────────────────────────────────── */
+  /* ── Formulaire ──────────────────────────────────────────
+     Envoi réel via Web3Forms (https://web3forms.com) — service
+     pensé pour être appelé depuis du JS 100% client, sans backend.
+     La clé ci-dessous n'est PAS un secret (comme un ID Formspree) :
+     web3forms.com l'affiche pour l'associer à l'adresse e-mail de
+     réception déclarée sur leur site. Voir la note de configuration
+     en tête de fichier. */
+  const WEB3FORMS_ACCESS_KEY = 'REMPLACER_PAR_VOTRE_CLE_WEB3FORMS';
+  const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
+
   const form = document.getElementById('contactForm');
   if (form) {
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const submitLabel = submitBtn.textContent;
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+      form.classList.remove('is-error');
+
       let valid = true;
       form.querySelectorAll('[required]').forEach((input) => {
         const field = input.closest('.form__field');
@@ -177,10 +198,47 @@
         if (firstBad) firstBad.focus();
         return;
       }
-      form.classList.add('is-sent');
-      form.querySelector('button[type="submit"]').disabled = true;
-      form.querySelector('button[type="submit"]').textContent = 'Demande envoyée';
+
+      if (WEB3FORMS_ACCESS_KEY === 'REMPLACER_PAR_VOTRE_CLE_WEB3FORMS') {
+        console.error(
+          '[Qasar] Formulaire non configuré : renseignez WEB3FORMS_ACCESS_KEY dans js/main.js ' +
+          '(clé obtenue sur https://web3forms.com, liée à contact@qasar-international.com).'
+        );
+        form.classList.add('is-error');
+        return;
+      }
+
+      const data = new FormData(form);
+      data.append('access_key', WEB3FORMS_ACCESS_KEY);
+      data.append('subject', 'Nouvelle demande QASAR — ' + (data.get('interest') || 'site web'));
+      data.append('from_name', 'Site QASAR');
+      /* champ honeypot anti-spam recommandé par Web3Forms */
+      if (!data.has('botcheck')) data.append('botcheck', '');
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Envoi en cours…';
+
+      fetch(WEB3FORMS_ENDPOINT, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: data
+      })
+        .then((r) => r.json().then((json) => ({ ok: r.ok, json })))
+        .then(({ ok, json }) => {
+          if (!ok || !json.success) {
+            throw new Error((json && json.message) || 'Échec de l\'envoi (réponse serveur non valide).');
+          }
+          form.classList.add('is-sent');
+          submitBtn.textContent = 'Demande envoyée';
+        })
+        .catch((err) => {
+          console.error('[Qasar] Échec de l\'envoi du formulaire :', err);
+          form.classList.add('is-error');
+          submitBtn.disabled = false;
+          submitBtn.textContent = submitLabel;
+        });
     });
+
     form.querySelectorAll('input, textarea, select').forEach((input) => {
       input.addEventListener('blur', () => {
         if (input.value.trim()) input.closest('.form__field').classList.remove('has-error');

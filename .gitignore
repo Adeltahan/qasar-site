@@ -4,3 +4,5 @@
 # Éditeurs
 .vscode/
 .idea/
+.vercel
+.env*

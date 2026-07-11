@@ -13,6 +13,22 @@
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ── Bulle flottante WhatsApp (injectée sur toutes les pages) ── */
+  (function initWhatsAppFloat() {
+    const link = document.createElement('a');
+    link.className = 'whatsapp-float';
+    link.href = 'https://wa.me/33625433186?text=' + encodeURIComponent('Bonjour, je vous contacte depuis votre site');
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.setAttribute('aria-label', 'Contacter QASAR sur WhatsApp');
+    link.innerHTML =
+      '<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true">' +
+      '<path fill="#fff" d="M16.02 4C9.4 4 4 9.37 4 15.98c0 2.13.56 4.13 1.53 5.86L4 28l6.35-1.66a11.96 11.96 0 0 0 5.67 1.44h.01c6.62 0 12.02-5.37 12.02-11.98C28.05 9.37 22.65 4 16.02 4Zm0 21.9h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.77.99 1.01-3.68-.24-.38a9.9 9.9 0 0 1-1.52-5.26c0-5.47 4.46-9.92 9.95-9.92 2.65 0 5.15 1.04 7.02 2.92a9.87 9.87 0 0 1 2.91 7.02c0 5.47-4.46 9.9-9.94 9.9Z"/>' +
+      '<path fill="#fff" d="M21.62 18.4c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.96 1.18-.18.2-.35.22-.65.08-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.79-1.68-2.09-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.65-.94-2.26-.25-.6-.5-.5-.68-.51h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.13 3.26 5.17 4.57.72.31 1.29.5 1.73.64.73.23 1.39.2 1.91.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35Z"/>' +
+      '</svg>';
+    document.body.appendChild(link);
+  })();
+
   /* ── Préloader → révélation du hero ─────────────────── */
   const preloader = document.getElementById('preloader');
   const hero = document.getElementById('hero');
@@ -166,7 +182,7 @@
      web3forms.com l'affiche pour l'associer à l'adresse e-mail de
      réception déclarée sur leur site. Voir la note de configuration
      en tête de fichier. */
-  const WEB3FORMS_ACCESS_KEY = 'REMPLACER_PAR_VOTRE_CLE_WEB3FORMS';
+  const WEB3FORMS_ACCESS_KEY = '02bc05b2-99c6-4ae7-8ceb-5cebcce557ba';
   const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
   const form = document.getElementById('contactForm');

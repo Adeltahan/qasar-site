@@ -57,7 +57,7 @@
       <a href="services.html"><span>04</span>Services</a>
       <a href="contact.html"><span>05</span>Contact</a>
     </nav>
-    <div class="mobile-menu__foot">Monaco · Dubaï · Saint-Tropez — 24/7</div>
+    <div class="mobile-menu__foot">Cannes · Côte d'Azur — 24/7</div>
   </div>
 
   <main>
@@ -86,10 +86,68 @@
         <div class="tiles" id="servicesGrid">
           <p class="fleet__loading">Chargement des services…</p>
         </div>
-        <p class="fleet__note" data-reveal>
-          Chaque demande reçoit une réponse personnelle sous douze heures, dans votre langue.
-          Vous préférez écrire ? <a class="fleet__note-link" href="contact.html">Utilisez notre formulaire</a>.
-        </p>
+      </div>
+    </section>
+
+    <!-- ══════════ CONTACT ══════════ -->
+    <section class="contact" id="contact">
+      <div class="contact__panel contact__panel--form">
+        <p class="kicker" data-reveal><span class="kicker__rule"></span>Faire une demande</p>
+        <h2 class="contact__title" data-reveal>Confiez-nous <em>l'intention.</em></h2>
+        <form class="form" id="contactForm" novalidate data-reveal-group>
+          <div class="form__row" data-reveal>
+            <div class="form__field">
+              <label for="f-name">Nom complet <sup>*</sup></label>
+              <input type="text" id="f-name" name="name" autocomplete="name" required>
+            </div>
+            <div class="form__field">
+              <label for="f-email">Adresse e-mail <sup>*</sup></label>
+              <input type="email" id="f-email" name="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="form__row" data-reveal>
+            <div class="form__field">
+              <label for="f-phone">Téléphone — indicatif pays inclus <sup>*</sup></label>
+              <input type="tel" id="f-phone" name="phone" autocomplete="tel" placeholder="+33 6 12 34 56 78" required>
+            </div>
+            <div class="form__field">
+              <label for="f-interest">Votre demande concerne <sup>*</sup></label>
+              <select id="f-interest" name="interest" required>
+                <option>Yachts</option>
+                <option>Villas</option>
+                <option selected>Jets privés</option>
+                <option>Transport privé</option>
+                <option>Stay management</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__field" data-reveal>
+            <label for="f-dates">Dates envisagées — facultatif</label>
+            <input type="text" id="f-dates" name="dates" placeholder="Juillet 2026, deux semaines…">
+          </div>
+          <div class="form__field" data-reveal>
+            <label for="f-message">Votre intention <sup>*</sup></label>
+            <textarea id="f-message" name="message" rows="3" placeholder="Décrivez votre demande telle que vous l'imaginez." required></textarea>
+          </div>
+          <div class="form__foot" data-reveal>
+            <button type="submit" class="btn btn--gold" data-magnetic>Envoyer la demande</button>
+            <p class="form__note">Vos informations restent strictement confidentielles.</p>
+          </div>
+          <p class="form__success" id="formSuccess" role="status">Merci. Votre demande nous est parvenue — notre équipe vous recontacte au plus vite.</p>
+          <p class="form__error" id="formError" role="alert">Une erreur est survenue lors de l'envoi. Merci de réessayer, ou de nous écrire directement à <a href="mailto:contact@qasar-international.com">contact@qasar-international.com</a>.</p>
+        </form>
+      </div>
+      <div class="contact__panel contact__panel--info">
+        <div>
+          <img src="assets/qasar-mark-gold.png" alt="QASAR International Concierge" class="contact__logo" data-reveal>
+          <p class="contact__lede" data-reveal>Une demande, une réponse.<br>Notre équipe vous recontacte <em>au plus vite</em>, où que vous soyez.</p>
+          <address class="contact__details" data-reveal-group>
+            <p data-reveal><span>Écrire</span><a href="mailto:contact@qasar-international.com">contact@qasar-international.com</a></p>
+            <p data-reveal><span>WhatsApp</span><a href="https://wa.me/33625433186" target="_blank" rel="noopener noreferrer">+33 6 25 43 31 86</a></p>
+            <p data-reveal><span>Basé à</span>Cannes · Côte d'Azur</p>
+            <p data-reveal><span>LinkedIn</span><a href="https://www.linkedin.com/in/adel-tahan-b90691365/" target="_blank" rel="noopener noreferrer">Adel Tahan</a></p>
+          </address>
+        </div>
       </div>
     </section>
 

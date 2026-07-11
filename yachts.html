@@ -65,8 +65,12 @@
     <!-- ══════════ HERO YACHTS ══════════ -->
     <section class="hero hero--page" id="hero">
       <div class="hero__media">
-        <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=2000&q=80&auto=format&fit=crop"
-             alt="Superyacht naviguant au coucher du soleil" class="hero__img" id="heroImg">
+        <video class="hero__video" id="heroImg"
+               autoplay muted loop playsinline preload="metadata"
+               poster="assets/yachts-hero-poster.jpg"
+               aria-label="Superyacht en navigation — vidéo de présentation">
+          <source src="assets/yachts-hero.mp4" type="video/mp4">
+        </video>
         <div class="hero__veil"></div>
       </div>
       <div class="hero__content container">

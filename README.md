@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="assets/qasar-mark-gold.png" alt="QASAR International Concierge" width="180">
+<img src="assets/qasar-mark-gold.png" alt="QASAR International Broker" width="180">
 
-# QASAR — International Concierge
+# QASAR — International Broker
 
-**Site vitrine d'une conciergerie internationale de luxe**
+**Site vitrine d'un courtage international de luxe**
 Location de yachts · Villas d'exception · Services sur mesure
 
 `HTML` · `CSS` · `JavaScript vanilla` — aucun framework, aucune dépendance
@@ -123,6 +123,6 @@ Aucun build nécessaire — déployer le dossier tel quel :
 
 <div align="center">
 
-© 2026 Qasar International Concierge — Tous droits réservés.
+© 2026 Qasar International Broker — Tous droits réservés.
 
 </div>

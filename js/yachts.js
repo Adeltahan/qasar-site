@@ -18,84 +18,191 @@
   const esc = (s) =>
     String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
-  fetch('data/yachts.json')
-    .then((r) => {
-      if (!r.ok) throw new Error(r.status);
-      return r.json();
-    })
-    .then((data) => {
-      const num = String(data.whatsapp || '').replace(/\D/g, '');
-      const msgTpl = data.whatsapp_message || "Bonjour, je souhaite obtenir plus d'informations sur le yacht {nom}.";
+  /* ── Bilingue (voir js/i18n.js) ───────────────────── */
+  let enOverlay = null; // data/yachts.en.json : { nom: description }
+  const EN = () => !!(window.QASAR && window.QASAR.EN);
+  const descOf = (y) => (EN() && enOverlay && enOverlay[y.nom]) ? enOverlay[y.nom] : (y.description || '');
+  const zoneOf = (y) => (window.QASAR && y.zone) ? window.QASAR.zone(y.zone) : (y.zone || '');
+  const tarifOf = (y) => (window.QASAR && y.tarif) ? window.QASAR.tarif(y.tarif) : (y.tarif || '');
+  const metaOf = (y) => {
+    const w = EN() ? { g: ' guests', c: ' crew' } : { g: ' invités', c: ' équipage' };
+    const p = [];
+    if (y.invites != null) p.push(y.invites + w.g);
+    if (y.equipage != null) p.push(y.equipage + w.c);
+    if (y.zone) p.push(zoneOf(y));
+    return p.join(' · ');
+  };
+  const waAria = (nom) => EN() ? ('Contact Qasar on WhatsApp about the yacht ' + nom) : ('Contacter Qasar sur WhatsApp au sujet du yacht ' + nom);
+  const cardAria = (nom) => EN() ? ('View the full details of the yacht ' + nom) : ('Voir la fiche complète du yacht ' + nom);
 
-      grid.innerHTML = data.yachts
-        .map((y) => {
-          const waText = encodeURIComponent(msgTpl.replace('{nom}', y.nom));
-          const waHref = 'https://wa.me/' + num + '?text=' + waText;
+  /* ── Modal fiche yacht ────────────────────────────── */
+  const modal = document.getElementById('yachtModal');
+  let openYachtModal = () => {};
 
-          const metaParts = [];
-          if (y.invites != null) metaParts.push(y.invites + ' invités');
-          if (y.equipage != null) metaParts.push(y.equipage + ' équipage');
-          if (y.zone) metaParts.push(esc(y.zone));
-          const meta = metaParts.join(' · ');
-          const images = Array.isArray(y.images) && y.images.length ? y.images : (y.image ? [y.image] : []);
-          const single = images.length <= 1;
+  if (modal) {
+    const modalTrack = document.getElementById('yachtModalTrack');
+    const modalDots = document.getElementById('yachtModalDots');
+    const modalCarousel = modal.querySelector('[data-carousel]');
+    const modalTitle = document.getElementById('yachtModalTitle');
+    const modalMeta = document.getElementById('yachtModalMeta');
+    const modalDesc = document.getElementById('yachtModalDesc');
+    const modalPrice = document.getElementById('yachtModalPrice');
+    const modalWa = document.getElementById('yachtModalWa');
+    let lastFocused = null;
 
-          const slides = images
-            .map((src, i) =>
-              '<div class="carousel__slide">' +
-                '<img src="' + esc(src) + '" alt="Yacht ' + esc(y.nom) + ' — photo ' + (i + 1) + '"' +
-                (i === 0 ? '' : ' loading="lazy"') + '>' +
-              '</div>'
+    openYachtModal = function (y, waHref) {
+      modalTitle.textContent = y.nom + ' — ' + y.taille_m + ' m';
+      modalMeta.textContent = metaOf(y);
+      modalDesc.textContent = descOf(y);
+      modalPrice.textContent = tarifOf(y);
+      modalWa.href = waHref;
+      modalWa.setAttribute('aria-label', waAria(y.nom));
+
+      const images = Array.isArray(y.images) && y.images.length ? y.images : (y.image ? [y.image] : []);
+      modalTrack.innerHTML = images
+        .map((src, i) =>
+          '<div class="carousel__slide">' +
+            '<img src="' + esc(src) + '" alt="Yacht ' + esc(y.nom) + ' — photo ' + (i + 1) + '"' +
+            (i === 0 ? '' : ' loading="lazy"') + '>' +
+          '</div>'
+        )
+        .join('');
+      modalTrack.style.transform = 'translateX(0)';
+
+      const single = images.length <= 1;
+      modalCarousel.classList.toggle('carousel--single', single);
+      modalDots.innerHTML = single
+        ? ''
+        : images
+            .map((_, i) =>
+              '<button type="button" class="carousel__dot' + (i === 0 ? ' is-active' : '') +
+              '" data-go="' + i + '" aria-label="Aller à la photo ' + (i + 1) + '"></button>'
             )
             .join('');
+      initCarousel(modalCarousel);
 
-          const dots = single
-            ? ''
-            : '<div class="carousel__dots">' +
-                images
-                  .map((_, i) =>
-                    '<button type="button" class="carousel__dot' + (i === 0 ? ' is-active' : '') +
-                    '" data-go="' + i + '" aria-label="Aller à la photo ' + (i + 1) + '"></button>'
-                  )
-                  .join('') +
-              '</div>';
+      lastFocused = document.activeElement;
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.documentElement.classList.add('modal-open');
+      modal.querySelector('.yacht-modal__close').focus();
+    };
 
-          const nav = single
-            ? ''
-            : '<button type="button" class="carousel__nav carousel__nav--prev" data-dir="-1" aria-label="Photo précédente">' + ARROW_PREV + '</button>' +
-              '<button type="button" class="carousel__nav carousel__nav--next" data-dir="1" aria-label="Photo suivante">' + ARROW_NEXT + '</button>';
+    function closeYachtModal() {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.documentElement.classList.remove('modal-open');
+      if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+    }
 
-          return (
-            '<article class="card">' +
-              '<div class="card__media">' +
-                '<div class="carousel' + (single ? ' carousel--single' : '') + '" data-carousel>' +
-                  '<div class="carousel__track">' + slides + '</div>' +
-                  nav +
-                  dots +
-                '</div>' +
+    modal.querySelectorAll('[data-modal-close]').forEach((el) => el.addEventListener('click', closeYachtModal));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('is-open')) closeYachtModal();
+    });
+  }
+
+  let DATA = null;
+
+  const waHrefFor = (nom) => {
+    const num = String((DATA && DATA.whatsapp) || '').replace(/\D/g, '');
+    const tpl = EN()
+      ? 'Hello, I would like more information about the yacht {nom}.'
+      : ((DATA && DATA.whatsapp_message) || "Bonjour, je souhaite obtenir plus d'informations sur le yacht {nom}.");
+    return 'https://wa.me/' + num + '?text=' + encodeURIComponent(tpl.replace('{nom}', nom));
+  };
+
+  function renderGrid() {
+    if (!DATA) return;
+    grid.innerHTML = DATA.yachts
+      .map((y) => {
+        const waHref = waHrefFor(y.nom);
+        const images = Array.isArray(y.images) && y.images.length ? y.images : (y.image ? [y.image] : []);
+        const single = images.length <= 1;
+
+        const slides = images
+          .map((src, i) =>
+            '<div class="carousel__slide">' +
+              '<img src="' + esc(src) + '" alt="Yacht ' + esc(y.nom) + ' — photo ' + (i + 1) + '"' +
+              (i === 0 ? '' : ' loading="lazy"') + '>' +
+            '</div>'
+          )
+          .join('');
+
+        const dots = single
+          ? ''
+          : '<div class="carousel__dots">' +
+              images
+                .map((_, i) =>
+                  '<button type="button" class="carousel__dot' + (i === 0 ? ' is-active' : '') +
+                  '" data-go="' + i + '" aria-label="' + (EN() ? 'Go to photo ' : 'Aller à la photo ') + (i + 1) + '"></button>'
+                )
+                .join('') +
+            '</div>';
+
+        const nav = single
+          ? ''
+          : '<button type="button" class="carousel__nav carousel__nav--prev" data-dir="-1" aria-label="' + (EN() ? 'Previous photo' : 'Photo précédente') + '">' + ARROW_PREV + '</button>' +
+            '<button type="button" class="carousel__nav carousel__nav--next" data-dir="1" aria-label="' + (EN() ? 'Next photo' : 'Photo suivante') + '">' + ARROW_NEXT + '</button>';
+
+        return (
+          '<article class="card">' +
+            '<div class="card__media">' +
+              '<div class="carousel' + (single ? ' carousel--single' : '') + '" data-carousel>' +
+                '<div class="carousel__track">' + slides + '</div>' +
+                nav +
+                dots +
               '</div>' +
-              '<div class="card__body">' +
-                '<h3 class="card__name">' + esc(y.nom) + ' — ' + y.taille_m + ' m</h3>' +
-                '<p class="card__meta">' + meta + '</p>' +
-                '<p class="card__desc">' + esc(y.description) + '</p>' +
-                '<span class="card__price">' + esc(y.tarif) + '</span>' +
-                '<div class="card__actions">' +
-                  '<a class="btn-wa" href="' + waHref + '" target="_blank" rel="noopener" aria-label="Contacter Qasar sur WhatsApp au sujet du yacht ' + esc(y.nom) + '">' +
-                    WA_ICON + '<span>WhatsApp</span>' +
-                  '</a>' +
-                '</div>' +
+            '</div>' +
+            '<div class="card__body">' +
+              '<h3 class="card__name">' + esc(y.nom) + ' — ' + y.taille_m + ' m</h3>' +
+              '<p class="card__meta">' + esc(metaOf(y)) + '</p>' +
+              '<p class="card__desc">' + esc(descOf(y)) + '</p>' +
+              '<span class="card__price">' + esc(tarifOf(y)) + '</span>' +
+              '<div class="card__actions">' +
+                '<a class="btn-wa" href="' + waHref + '" target="_blank" rel="noopener" aria-label="' + esc(waAria(y.nom)) + '">' +
+                  WA_ICON + '<span>WhatsApp</span>' +
+                '</a>' +
               '</div>' +
-            '</article>'
-          );
-        })
-        .join('');
+            '</div>' +
+          '</article>'
+        );
+      })
+      .join('');
 
-      grid.querySelectorAll('[data-carousel]').forEach(initCarousel);
+    grid.querySelectorAll('[data-carousel]').forEach(initCarousel);
+
+    const ignoreSelector = '.carousel__nav, .carousel__dot, .btn-wa';
+    grid.querySelectorAll('.card').forEach((card, i) => {
+      const y = DATA.yachts[i];
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      card.setAttribute('aria-label', cardAria(y.nom));
+      card.addEventListener('click', (e) => {
+        if (e.target.closest(ignoreSelector)) return;
+        openYachtModal(y, waHrefFor(y.nom));
+      });
+      card.addEventListener('keydown', (e) => {
+        if ((e.key !== 'Enter' && e.key !== ' ') || e.target.closest(ignoreSelector)) return;
+        e.preventDefault();
+        openYachtModal(y, waHrefFor(y.nom));
+      });
+    });
+  }
+
+  Promise.all([
+    fetch('data/yachts.json').then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }),
+    fetch('data/yachts.en.json').then((r) => r.ok ? r.json() : {}).catch(() => ({}))
+  ])
+    .then(([data, overlay]) => {
+      DATA = data;
+      enOverlay = overlay || {};
+      renderGrid();
+      if (window.QASAR) window.QASAR.onChange(renderGrid);
     })
     .catch(() => {
-      grid.innerHTML =
-        '<p class="fleet__loading">La flotte est momentanément indisponible — ' +
-        '<a href="index.html#contact">contactez-nous directement</a>.</p>';
+      grid.innerHTML = EN()
+        ? '<p class="fleet__loading">The fleet is momentarily unavailable — <a href="index.html#contact">contact us directly</a>.</p>'
+        : '<p class="fleet__loading">La flotte est momentanément indisponible — <a href="index.html#contact">contactez-nous directement</a>.</p>';
     });
 
   function initCarousel(root) {

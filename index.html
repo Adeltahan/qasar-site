@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QASAR — Conciergerie Internationale · Yachts &amp; Villas</title>
-  <meta name="description" content="QASAR, conciergerie internationale d'exception. Location de yachts et de villas d'exception, services sur mesure, disponibilité absolue. Monaco, Saint-Tropez, Dubaï, Mykonos.">
+  <title>QASAR — Courtage International · Yachts &amp; Villas</title>
+  <meta name="description" content="QASAR, courtage international d'exception. Location de yachts et de villas d'exception, services sur mesure, disponibilité absolue. Monaco, Saint-Tropez, Dubaï, Mykonos.">
   <link rel="icon" type="image/png" href="assets/qasar-mark-only.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.css">
   <link rel="stylesheet" href="css/style.css">
   <script>document.documentElement.classList.add('js');</script>
+  <script src="js/i18n.js"></script>
   <script defer src="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.js"></script>
 </head>
 <body>
@@ -30,7 +31,7 @@
     <div class="header__inner">
       <a href="#hero" class="header__brand" aria-label="QASAR — retour en haut">
         <img src="assets/qasar-mark-only.png" alt="" class="header__mark">
-        <span class="header__logotype">QASAR<em>International Concierge</em></span>
+        <span class="header__logotype">QASAR<em>International Broker</em></span>
       </a>
       <div class="header__verticals" aria-hidden="true">
         <span>Yachts</span>
@@ -44,6 +45,10 @@
         <a href="services.html">Services</a>
       </nav>
       <a href="contact.html" class="btn btn--gold header__cta">Faire une demande</a>
+      <div class="lang-switch" data-no-i18n role="group" aria-label="Language / Langue">
+        <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+        <button type="button" class="lang-switch__btn" data-lang="fr">FR</button>
+      </div>
       <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span><span></span>
       </button>
@@ -67,8 +72,12 @@
     <!-- ══════════ HERO ══════════ -->
     <section class="hero" id="hero">
       <div class="hero__media" id="heroMedia">
-        <img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=2000&q=80&auto=format&fit=crop"
-             alt="Yacht de luxe naviguant sur une mer turquoise" class="hero__img" id="heroImg">
+        <video class="hero__video" id="heroImg"
+               autoplay muted loop playsinline preload="metadata"
+               poster="assets/home-hero-poster.jpg"
+               aria-label="QASAR — vidéo de présentation">
+          <source src="assets/home-hero.mp4" type="video/mp4">
+        </video>
         <div class="hero__veil"></div>
       </div>
       <div class="hero__content container">
@@ -96,7 +105,7 @@
 
         <div class="services__grid" data-reveal-group>
           <div class="service service--visual" data-reveal>
-            <img class="service__bg" src="https://images.unsplash.com/photo-1528154291023-a6525fabe5b4?w=1200&q=80&auto=format&fit=crop" alt="Yacht vu du ciel sur une mer émeraude" loading="lazy">
+            <img class="service__bg" src="assets/yachts/lamborghini-63-1.jpg" alt="Yacht Lamborghini 63 vu du ciel" loading="lazy">
             <div class="service__content">
               <h3>Yachts</h3>
               <p>Charters privés à la journée, à la semaine ou à la saison. Équipages certifiés, itinéraires dessinés sur mesure, un service entièrement dédié à bord.</p>
@@ -107,7 +116,7 @@
             </div>
           </div>
           <div class="service service--visual" data-reveal>
-            <img class="service__bg" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1200&q=80&auto=format&fit=crop" alt="Villa contemporaine avec piscine" loading="lazy">
+            <img class="service__bg" src="assets/villa-illu.jpg" alt="Villa contemporaine avec piscine à débordement au coucher du soleil" loading="lazy">
             <div class="service__content">
               <h3>Villas</h3>
               <p>Un portefeuille de villas réparties dans toute l'Europe, chacune vérifiée et sélectionnée selon des critères précis de standing, d'emplacement et de service.</p>
@@ -118,10 +127,10 @@
             </div>
           </div>
           <div class="service service--visual" id="sur-mesure" data-reveal>
-            <img class="service__bg" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80&auto=format&fit=crop" alt="Table gastronomique dressée aux chandelles" loading="lazy">
+            <img class="service__bg" src="assets/services-jet.jpg" alt="Jet privé sur le tarmac" loading="lazy">
             <div class="service__content">
               <h3>Services sur mesure</h3>
-              <p>Jets privés, chefs, accès privilégiés : un seul point de contact pour organiser l'ensemble du séjour, 24/7.</p>
+              <p>Jets privés, transport privé, stay management : un seul point de contact pour organiser l'ensemble du séjour, 24/7.</p>
               <a href="services.html" class="service__cta">
                 <span>Découvrir</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg>
@@ -137,8 +146,8 @@
       <div class="container">
         <div class="domain__split">
           <figure class="domain__figure" data-reveal-clip>
-            <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=1400&q=80&auto=format&fit=crop"
-                 alt="Proue d'un yacht au coucher du soleil" loading="lazy">
+            <img src="assets/yachts/azimut-100-1.jpg"
+                 alt="Yacht Azimut 100" loading="lazy">
             <figcaption class="domain__caption">Méditerranée — 42° 17′ N</figcaption>
           </figure>
           <div class="domain__body">
@@ -147,7 +156,7 @@
             <p class="domain__desc" data-reveal>
               Du day-cruiser au superyacht avec équipage complet, notre portefeuille couvre
               tous les formats de navigation. Chaque unité est inspectée avant intégration,
-              chaque itinéraire dessiné sur mesure, chaque équipage certifié — la mer,
+              chaque itinéraire dessiné sur mesure, chaque équipage certifié, pour une mer
               organisée à votre image.
             </p>
             <ul class="domain__list" data-reveal-group>
@@ -159,35 +168,69 @@
           </div>
         </div>
 
-        <div class="cards" data-reveal-group>
+        <div class="cards cards--yachts-home" data-reveal-group>
           <article class="card" data-reveal>
             <div class="card__media">
-              <img src="https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=1200&q=80&auto=format&fit=crop" alt="Voilier élégant naviguant en pleine mer" loading="lazy">
+              <img src="assets/yachts/wajer-55-1.jpg" alt="Yacht Wajer 55 HT" loading="lazy">
             </div>
             <div class="card__body">
-              <h3 class="card__name">Serenity — 34 m</h3>
-              <p class="card__meta">10 invités · 6 équipage · Méditerranée</p>
-              <span class="card__price">Prix sur demande</span>
+              <h3 class="card__name">Wajer 55 HT — 16.1 m</h3>
+              <p class="card__meta">9 invités · 1 équipage · Côte d'Azur &amp; Corse</p>
+              <span class="card__price">À partir de 6 900 € / jour + APA</span>
+              <div class="card__actions">
+                <a class="btn-wa" href="https://wa.me/33625433186?text=Bonjour%2C%20je%20souhaite%20obtenir%20plus%20d'informations%20sur%20le%20yacht%20Wajer%2055%20HT." target="_blank" rel="noopener" aria-label="Contacter Qasar sur WhatsApp au sujet du yacht Wajer 55 HT">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  <span>WhatsApp</span>
+                </a>
+              </div>
             </div>
           </article>
           <article class="card" data-reveal>
             <div class="card__media">
-              <img src="https://images.unsplash.com/photo-1528154291023-a6525fabe5b4?w=1200&q=80&auto=format&fit=crop" alt="Yacht vu du ciel sur une mer émeraude" loading="lazy">
+              <img src="assets/yachts/princess-v55-1.jpg" alt="Yacht Princess V55" loading="lazy">
             </div>
             <div class="card__body">
-              <h3 class="card__name">Al Nour — 47 m</h3>
-              <p class="card__meta">12 invités · 9 équipage · Golfe &amp; Mer Rouge</p>
-              <span class="card__price">Prix sur demande</span>
+              <h3 class="card__name">Princess V55 — 17.3 m</h3>
+              <p class="card__meta">10 invités · 1 équipage · Côte d'Azur &amp; Corse</p>
+              <span class="card__price">À partir de 5 900 € / jour + APA</span>
+              <div class="card__actions">
+                <a class="btn-wa" href="https://wa.me/33625433186?text=Bonjour%2C%20je%20souhaite%20obtenir%20plus%20d'informations%20sur%20le%20yacht%20Princess%20V55." target="_blank" rel="noopener" aria-label="Contacter Qasar sur WhatsApp au sujet du yacht Princess V55">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  <span>WhatsApp</span>
+                </a>
+              </div>
             </div>
           </article>
           <article class="card" data-reveal>
             <div class="card__media">
-              <img src="https://images.unsplash.com/photo-1559385301-0187cb6eff46?w=1200&q=80&auto=format&fit=crop" alt="Yacht au mouillage dans une crique" loading="lazy">
+              <img src="assets/yachts/predator-65-1.jpg" alt="Yacht Predator 65" loading="lazy">
             </div>
             <div class="card__body">
-              <h3 class="card__name">Calypso — 28 m</h3>
-              <p class="card__meta">8 invités · 4 équipage · Baléares &amp; Riviera</p>
-              <span class="card__price">Prix sur demande</span>
+              <h3 class="card__name">Predator 65 — 20.5 m</h3>
+              <p class="card__meta">12 invités · 2 équipage · Côte d'Azur &amp; Corse</p>
+              <span class="card__price">À partir de 7 600 € / jour + APA</span>
+              <div class="card__actions">
+                <a class="btn-wa" href="https://wa.me/33625433186?text=Bonjour%2C%20je%20souhaite%20obtenir%20plus%20d'informations%20sur%20le%20yacht%20Predator%2065." target="_blank" rel="noopener" aria-label="Contacter Qasar sur WhatsApp au sujet du yacht Predator 65">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  <span>WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="card card--desktop-only" data-reveal>
+            <div class="card__media">
+              <img src="assets/yachts/riva-corsaro-100-1.jpg" alt="Yacht Riva Corsaro 100" loading="lazy">
+            </div>
+            <div class="card__body">
+              <h3 class="card__name">Riva Corsaro 100 — 29.9 m</h3>
+              <p class="card__meta">12 invités · 4 équipage · Côte d'Azur &amp; Corse</p>
+              <span class="card__price">À partir de 24 000 € / jour + APA</span>
+              <div class="card__actions">
+                <a class="btn-wa" href="https://wa.me/33625433186?text=Bonjour%2C%20je%20souhaite%20obtenir%20plus%20d'informations%20sur%20le%20yacht%20Riva%20Corsaro%20100." target="_blank" rel="noopener" aria-label="Contacter Qasar sur WhatsApp au sujet du yacht Riva Corsaro 100">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  <span>WhatsApp</span>
+                </a>
+              </div>
             </div>
           </article>
         </div>
@@ -203,7 +246,7 @@
       <div class="container">
         <div class="domain__split domain__split--reverse">
           <figure class="domain__figure" data-reveal-clip>
-            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1400&q=80&auto=format&fit=crop"
+            <img src="assets/villa-accueil.jpg"
                  alt="Villa contemporaine avec piscine à débordement au crépuscule" loading="lazy">
             <figcaption class="domain__caption">Cap Ferrat — Villa privée</figcaption>
           </figure>
@@ -233,6 +276,12 @@
               <h3 class="card__name">Villa Émeraude</h3>
               <p class="card__meta">8 chambres · Front de mer · Saint-Jean-Cap-Ferrat</p>
               <span class="card__price">Prix sur demande</span>
+              <div class="card__actions">
+                <a class="btn-wa" href="https://wa.me/33625433186?text=Bonjour%2C%20je%20souhaite%20obtenir%20plus%20d'informations%20sur%20la%20villa%20Villa%20%C3%89meraude." target="_blank" rel="noopener" aria-label="Contacter Qasar sur WhatsApp au sujet de la villa Villa Émeraude">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  <span>WhatsApp</span>
+                </a>
+              </div>
             </div>
           </article>
           <article class="card" data-reveal>
@@ -243,6 +292,12 @@
               <h3 class="card__name">Dar Qamar</h3>
               <p class="card__meta">10 chambres · Palmeraie privée · Marrakech</p>
               <span class="card__price">Prix sur demande</span>
+              <div class="card__actions">
+                <a class="btn-wa" href="https://wa.me/33625433186?text=Bonjour%2C%20je%20souhaite%20obtenir%20plus%20d'informations%20sur%20la%20villa%20Dar%20Qamar." target="_blank" rel="noopener" aria-label="Contacter Qasar sur WhatsApp au sujet de la villa Dar Qamar">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  <span>WhatsApp</span>
+                </a>
+              </div>
             </div>
           </article>
           <article class="card" data-reveal>
@@ -253,6 +308,12 @@
               <h3 class="card__name">Chalet Altair</h3>
               <p class="card__meta">7 chambres · Ski-in / ski-out · Courchevel 1850</p>
               <span class="card__price">Prix sur demande</span>
+              <div class="card__actions">
+                <a class="btn-wa" href="https://wa.me/33625433186?text=Bonjour%2C%20je%20souhaite%20obtenir%20plus%20d'informations%20sur%20la%20villa%20Chalet%20Altair." target="_blank" rel="noopener" aria-label="Contacter Qasar sur WhatsApp au sujet de la villa Chalet Altair">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  <span>WhatsApp</span>
+                </a>
+              </div>
             </div>
           </article>
         </div>
@@ -270,7 +331,7 @@
           <div class="manifesto__copy">
             <p class="kicker" data-reveal><span class="kicker__rule"></span>Qasar</p>
             <h2 class="manifesto__text manifesto__text--lead" data-reveal-lines>
-              Mon parcours dans la conciergerie de luxe a débuté <em>entre les
+              Mon parcours dans le courtage de luxe a débuté <em>entre les
               Alpes-Maritimes et les Émirats</em>, où j'ai développé une structure opérant
               à l'échelle internationale, au service d'une clientèle exigeante entre
               la <em>Côte d'Azur</em> et le <em>Golfe</em>.
@@ -280,8 +341,8 @@
                 Cette expérience, construite en tant qu'associé, m'a permis d'acquérir une
                 connaissance fine des attentes d'une clientèle internationale : location et
                 mise à disposition de yachts et de villas, organisation d'événements sur
-                mesure, coordination logistique dans plusieurs pays à la fois. Trilingue —
-                français, anglais, arabe —, je mène chaque échange dans la langue de mon
+                mesure, coordination logistique dans plusieurs pays à la fois. Trilingue en
+                français, anglais et arabe, je mène chaque échange dans la langue de mon
                 interlocuteur, ce qui facilite naturellement les dialogues internationaux.
               </p>
               <p data-reveal>
@@ -303,7 +364,12 @@
                    loading="lazy"
                    onerror="this.onerror=null;this.src='assets/qasar-mark-only.png';this.style.objectFit='contain';this.style.padding='22%';">
             </div>
-            <figcaption>Adel Tahan — Fondateur</figcaption>
+            <figcaption>
+              Adel Tahan — Fondateur
+              <a class="manifesto__linkedin" href="https://www.linkedin.com/in/adel-tahan-b90691365/" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn d'Adel Tahan">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+            </figcaption>
           </figure>
         </div>
         <div class="stats" data-reveal-group>
@@ -429,6 +495,13 @@
             <label for="f-message">Votre intention <sup>*</sup></label>
             <textarea id="f-message" name="message" rows="3" placeholder="Décrivez le séjour tel que vous l'imaginez." required></textarea>
           </div>
+          <div class="form__field form__field--consent" data-reveal>
+            <label class="form__consent">
+              <input type="checkbox" id="f-consent" name="consent" required>
+              <span class="form__consent__box" aria-hidden="true"></span>
+              <span class="form__consent__text">J’ai lu la <a href="confidentialite.html" target="_blank" rel="noopener">politique de confidentialité</a> et j’accepte que mes données personnelles soient utilisées pour traiter ma demande.&nbsp;<sup>*</sup></span>
+            </label>
+          </div>
           <div class="form__foot" data-reveal>
             <button type="submit" class="btn btn--gold" data-magnetic>Envoyer la demande</button>
             <p class="form__note">Vos informations restent strictement confidentielles.</p>
@@ -439,7 +512,7 @@
       </div>
       <div class="contact__panel contact__panel--info">
         <div>
-          <img src="assets/qasar-mark-gold.png" alt="QASAR International Concierge" class="contact__logo" data-reveal>
+          <img src="assets/qasar-mark-gold.png" alt="QASAR International Broker" class="contact__logo" data-reveal>
           <p class="contact__lede" data-reveal>Une demande, une réponse.<br>Notre équipe vous recontacte <em>au plus vite</em>, où que vous soyez.</p>
           <address class="contact__details" data-reveal-group>
             <p data-reveal><span>Écrire</span><a href="mailto:contact@qasar-international.com">contact@qasar-international.com</a></p>
@@ -456,7 +529,7 @@
   <!-- ══════════ FOOTER ══════════ -->
   <footer class="footer">
     <div class="container footer__inner">
-      <img src="assets/qasar-mark-gold.png" alt="QASAR International Concierge" class="footer__logo">
+      <img src="assets/qasar-mark-gold.png" alt="QASAR International Broker" class="footer__logo">
       <nav class="footer__nav" aria-label="Navigation pied de page">
         <a href="#hero">Accueil</a>
         <a href="yachts.html">Yachts</a>
@@ -466,8 +539,8 @@
       </nav>
       <div class="footer__rule"></div>
       <div class="footer__legal">
-        <span>© 2026 Qasar International Concierge. Tous droits réservés.</span>
-        <span>Mentions légales · Confidentialité</span>
+        <span>© 2026 Qasar International Broker. Tous droits réservés.</span>
+        <span><a href="cgv.html">CGV</a> · <a href="confidentialite.html">Confidentialité</a></span>
       </div>
     </div>
   </footer>

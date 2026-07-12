@@ -7,60 +7,126 @@
       "localisation": "Saint-Jean-Cap-Ferrat",
       "chambres": 8,
       "capacite": 16,
-      "equipements": ["Front de mer", "Piscine à débordement", "Spa privé"],
+      "equipements": [
+        "Front de mer",
+        "Piscine à débordement",
+        "Spa privé"
+      ],
       "tarif": "Prix sur demande",
       "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80&auto=format&fit=crop",
-      "description": "Domaine en première ligne sur la presqu'île, jardins étagés jusqu'à la mer."
+      "description": "Domaine en première ligne sur la presqu'île, jardins étagés jusqu'à la mer.",
+      "localisation_en": "Saint-Jean-Cap-Ferrat",
+      "equipements_en": [
+        "Seafront",
+        "Infinity pool",
+        "Private spa"
+      ],
+      "description_en": "A front-row estate on the peninsula, with gardens terraced down to the sea."
     },
     {
       "nom": "Dar Qamar",
       "localisation": "Marrakech — Palmeraie",
       "chambres": 10,
       "capacite": 20,
-      "equipements": ["Palmeraie privée", "Hammam", "Personnel complet"],
+      "equipements": [
+        "Palmeraie privée",
+        "Hammam",
+        "Personnel complet"
+      ],
       "tarif": "À partir de 18 000 € / semaine",
       "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80&auto=format&fit=crop",
-      "description": "Riad contemporain au cœur d'une palmeraie close, service digne d'un palace."
+      "description": "Riad contemporain au cœur d'une palmeraie close, service digne d'un palace.",
+      "localisation_en": "Marrakech — Palm Grove",
+      "equipements_en": [
+        "Private palm grove",
+        "Hammam",
+        "Full staff"
+      ],
+      "description_en": "A contemporary riad at the heart of a walled palm grove, with palace-grade service."
     },
     {
       "nom": "Chalet Altair",
       "localisation": "Courchevel 1850",
       "chambres": 7,
       "capacite": 14,
-      "equipements": ["Ski-in / ski-out", "Spa & piscine intérieure", "Chef dédié"],
+      "equipements": [
+        "Ski-in / ski-out",
+        "Spa & piscine intérieure",
+        "Chef dédié"
+      ],
       "tarif": "À partir de 40 000 € / semaine",
       "image": "https://images.unsplash.com/photo-1517320964276-a002fa203177?w=1200&q=80&auto=format&fit=crop",
-      "description": "Skis aux pieds sur la Bellecôte, bois anciens et service d'altitude."
+      "description": "Skis aux pieds sur la Bellecôte, bois anciens et service d'altitude.",
+      "localisation_en": "Courchevel 1850",
+      "equipements_en": [
+        "Ski-in / ski-out",
+        "Spa & indoor pool",
+        "Dedicated chef"
+      ],
+      "description_en": "Skis on at the foot of the Bellecôte, with aged timber and high-altitude service."
     },
     {
       "nom": "Villa Solana",
       "localisation": "Ibiza — Es Cubells",
       "chambres": 6,
       "capacite": 12,
-      "equipements": ["Vue mer panoramique", "Piscine chauffée", "Studio yoga"],
+      "equipements": [
+        "Vue mer panoramique",
+        "Piscine chauffée",
+        "Studio yoga"
+      ],
       "tarif": "À partir de 25 000 € / semaine",
       "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80&auto=format&fit=crop",
-      "description": "Architecture blanche face aux couchers de soleil d'Es Vedrà."
+      "description": "Architecture blanche face aux couchers de soleil d'Es Vedrà.",
+      "localisation_en": "Ibiza — Es Cubells",
+      "equipements_en": [
+        "Panoramic sea view",
+        "Heated pool",
+        "Yoga studio"
+      ],
+      "description_en": "White architecture facing the sunsets of Es Vedrà."
     },
     {
       "nom": "Villa Kymata",
       "localisation": "Mykonos — Agios Lazaros",
       "chambres": 5,
       "capacite": 10,
-      "equipements": ["Accès mer privé", "Infinity pool", "Majordome"],
+      "equipements": [
+        "Accès mer privé",
+        "Infinity pool",
+        "Majordome"
+      ],
       "tarif": "À partir de 21 000 € / semaine",
       "image": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1200&q=80&auto=format&fit=crop",
-      "description": "Lignes cycladiques épurées, terrasses en cascade au-dessus de la mer Égée."
+      "description": "Lignes cycladiques épurées, terrasses en cascade au-dessus de la mer Égée.",
+      "localisation_en": "Mykonos — Agios Lazaros",
+      "equipements_en": [
+        "Private sea access",
+        "Infinity pool",
+        "Butler"
+      ],
+      "description_en": "Pure Cycladic lines, terraces cascading above the Aegean Sea."
     },
     {
       "nom": "Villa Lagon",
       "localisation": "Maldives — Atoll de Malé Nord",
       "chambres": 4,
       "capacite": 8,
-      "equipements": ["Sur pilotis", "Majordome & chef", "Plongée privée"],
+      "equipements": [
+        "Sur pilotis",
+        "Majordome & chef",
+        "Plongée privée"
+      ],
       "tarif": "À partir de 15 000 € / semaine",
       "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&q=80&auto=format&fit=crop",
-      "description": "Résidence sur pilotis au-dessus d'un lagon translucide, ponton privé."
+      "description": "Résidence sur pilotis au-dessus d'un lagon translucide, ponton privé.",
+      "localisation_en": "Maldives — North Malé Atoll",
+      "equipements_en": [
+        "Overwater",
+        "Butler & chef",
+        "Private diving"
+      ],
+      "description_en": "An overwater residence above a translucent lagoon, with a private jetty."
     }
   ]
 }

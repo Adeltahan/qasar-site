@@ -197,6 +197,11 @@
       let valid = true;
       form.querySelectorAll('[required]').forEach((input) => {
         const field = input.closest('.form__field');
+        if (input.type === 'checkbox') {
+          field.classList.toggle('has-error', !input.checked);
+          if (!input.checked) valid = false;
+          return;
+        }
         const v = input.value.trim();
         let bad = !v;
         if (!bad && input.type === 'email') {
@@ -231,8 +236,9 @@
       /* champ honeypot anti-spam recommandé par Web3Forms */
       if (!data.has('botcheck')) data.append('botcheck', '');
 
+      const L = (fr, en) => (document.documentElement.lang === 'en' ? en : fr);
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Envoi en cours…';
+      submitBtn.textContent = L('Envoi en cours…', 'Sending…');
 
       fetch(WEB3FORMS_ENDPOINT, {
         method: 'POST',
@@ -245,7 +251,7 @@
             throw new Error((json && json.message) || 'Échec de l\'envoi (réponse serveur non valide).');
           }
           form.classList.add('is-sent');
-          submitBtn.textContent = 'Demande envoyée';
+          submitBtn.textContent = L('Demande envoyée', 'Request sent');
         })
         .catch((err) => {
           console.error('[Qasar] Échec de l\'envoi du formulaire :', err);
@@ -256,6 +262,12 @@
     });
 
     form.querySelectorAll('input, textarea, select').forEach((input) => {
+      if (input.type === 'checkbox') {
+        input.addEventListener('change', () => {
+          if (input.checked) input.closest('.form__field').classList.remove('has-error');
+        });
+        return;
+      }
       input.addEventListener('blur', () => {
         if (input.value.trim()) input.closest('.form__field').classList.remove('has-error');
       });

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services sur mesure — QASAR · Conciergerie privée</title>
+  <title>Services sur mesure — QASAR · Courtage privé</title>
   <meta name="description" content="Le sur-mesure QASAR : jets privés, transport privé, stay management. Discrétion absolue, exigence sans compromis, réseau international. Un interlocuteur unique, 24/7.">
   <link rel="icon" type="image/png" href="assets/qasar-mark-only.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script>document.documentElement.classList.add('js');</script>
+  <script src="js/i18n.js"></script>
 </head>
 <body>
 
@@ -28,7 +29,7 @@
     <div class="header__inner">
       <a href="index.html" class="header__brand" aria-label="QASAR — retour à l'accueil">
         <img src="assets/qasar-mark-only.png" alt="" class="header__mark">
-        <span class="header__logotype">QASAR<em>International Concierge</em></span>
+        <span class="header__logotype">QASAR<em>International Broker</em></span>
       </a>
       <div class="header__verticals" aria-hidden="true">
         <span>Yachts</span>
@@ -42,6 +43,10 @@
         <a href="services.html" class="is-active" aria-current="page">Services</a>
       </nav>
       <a href="contact.html" class="btn btn--gold header__cta">Faire une demande</a>
+      <div class="lang-switch" data-no-i18n role="group" aria-label="Language / Langue">
+        <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+        <button type="button" class="lang-switch__btn" data-lang="fr">FR</button>
+      </div>
       <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span><span></span>
       </button>
@@ -68,7 +73,7 @@
         <video class="hero__video" id="heroImg"
                autoplay muted loop playsinline preload="metadata"
                poster="assets/services-hero-poster.jpg"
-               aria-label="Services de conciergerie — vidéo de présentation">
+               aria-label="Services de courtage — vidéo de présentation">
           <source src="assets/services-hero.mp4" type="video/mp4">
         </video>
         <div class="hero__veil"></div>
@@ -133,6 +138,13 @@
             <label for="f-message">Votre intention <sup>*</sup></label>
             <textarea id="f-message" name="message" rows="3" placeholder="Décrivez votre demande telle que vous l'imaginez." required></textarea>
           </div>
+          <div class="form__field form__field--consent" data-reveal>
+            <label class="form__consent">
+              <input type="checkbox" id="f-consent" name="consent" required>
+              <span class="form__consent__box" aria-hidden="true"></span>
+              <span class="form__consent__text">J’ai lu la <a href="confidentialite.html" target="_blank" rel="noopener">politique de confidentialité</a> et j’accepte que mes données personnelles soient utilisées pour traiter ma demande.&nbsp;<sup>*</sup></span>
+            </label>
+          </div>
           <div class="form__foot" data-reveal>
             <button type="submit" class="btn btn--gold" data-magnetic>Envoyer la demande</button>
             <p class="form__note">Vos informations restent strictement confidentielles.</p>
@@ -143,7 +155,7 @@
       </div>
       <div class="contact__panel contact__panel--info">
         <div>
-          <img src="assets/qasar-mark-gold.png" alt="QASAR International Concierge" class="contact__logo" data-reveal>
+          <img src="assets/qasar-mark-gold.png" alt="QASAR International Broker" class="contact__logo" data-reveal>
           <p class="contact__lede" data-reveal>Une demande, une réponse.<br>Notre équipe vous recontacte <em>au plus vite</em>, où que vous soyez.</p>
           <address class="contact__details" data-reveal-group>
             <p data-reveal><span>Écrire</span><a href="mailto:contact@qasar-international.com">contact@qasar-international.com</a></p>
@@ -160,7 +172,7 @@
   <!-- ══════════ FOOTER ══════════ -->
   <footer class="footer">
     <div class="container footer__inner">
-      <img src="assets/qasar-mark-gold.png" alt="QASAR International Concierge" class="footer__logo">
+      <img src="assets/qasar-mark-gold.png" alt="QASAR International Broker" class="footer__logo">
       <nav class="footer__nav" aria-label="Navigation pied de page">
         <a href="index.html">Accueil</a>
         <a href="yachts.html">Yachts</a>
@@ -170,8 +182,8 @@
       </nav>
       <div class="footer__rule"></div>
       <div class="footer__legal">
-        <span>© 2026 Qasar International Concierge. Tous droits réservés.</span>
-        <span>Mentions légales · Confidentialité</span>
+        <span>© 2026 Qasar International Broker. Tous droits réservés.</span>
+        <span><a href="cgv.html">CGV</a> · <a href="confidentialite.html">Confidentialité</a></span>
       </div>
     </div>
   </footer>

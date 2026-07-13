@@ -43,7 +43,7 @@
   } else {
     /* rideau court et indépendant de window.load : la vidéo hero est
        chargée après coup (voir lazyHeroVideos), le poster sert de LCP */
-    setTimeout(openCurtain, 250);
+    setTimeout(openCurtain, 150);
   }
 
   /* ── Header : état scrollé ───────────────────────────── */

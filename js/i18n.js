@@ -242,10 +242,14 @@
   try { lang = localStorage.getItem(STORE) || DEFAULT; } catch (e) { lang = DEFAULT; }
   if (lang !== 'fr' && lang !== 'en') lang = DEFAULT;
 
-  /* Registre construit une seule fois */
+  /* Registre construit de façon incrémentale et dédupliquée : build() peut
+     être appelé plusieurs fois (hero d'abord, puis le reste) sans jamais
+     re-parcourir un nœud déjà indexé — indispensable car une fois un nœud
+     traduit en EN, son texte n'est plus une clé du dictionnaire FR→EN. */
   var textItems = [];
   var attrItems = [];
-  var built = false;
+  var doneText = (typeof WeakSet !== 'undefined') ? new WeakSet() : null;
+  var doneAttr = (typeof WeakMap !== 'undefined') ? new WeakMap() : null;
 
   var SKIP = { SCRIPT: 1, STYLE: 1, NOSCRIPT: 1, svg: 1, SVG: 1 };
   function isSkipped(node) {
@@ -263,15 +267,18 @@
 
   var ATTRS = ['placeholder', 'aria-label', 'alt', 'title', 'content'];
 
-  function build() {
-    var walker = document.createTreeWalker(document.documentElement, NodeFilter.SHOW_TEXT, null, false);
+  function build(root) {
+    root = root || document.documentElement;
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
     var n;
     while ((n = walker.nextNode())) {
+      if (doneText && doneText.has(n)) continue;
       var raw = n.nodeValue;
       if (!raw || !/\S/.test(raw)) continue;
       if (isSkipped(n.parentNode)) continue;
       var key = collapse(raw);
       if (DICT[key] == null) continue;
+      if (doneText) doneText.add(n);
       textItems.push({
         node: n,
         lead: (raw.match(/^\s*/) || [''])[0],
@@ -280,25 +287,30 @@
         original: raw
       });
     }
-    var all = document.getElementsByTagName('*');
+    var all = root.getElementsByTagName('*');
     for (var i = 0; i < all.length; i++) {
       var el = all[i];
       var tag = el.tagName;
       if (SKIP[tag]) continue;
       if (el.hasAttribute('data-no-i18n')) continue;
+      var seen = doneAttr ? doneAttr.get(el) : null;
       for (var a = 0; a < ATTRS.length; a++) {
         if (!el.hasAttribute(ATTRS[a])) continue;
+        if (seen && seen[ATTRS[a]]) continue;
         var val = el.getAttribute(ATTRS[a]);
         var k = collapse(val);
         if (DICT[k] == null) continue;
+        if (doneAttr) {
+          if (!seen) { seen = {}; doneAttr.set(el, seen); }
+          seen[ATTRS[a]] = 1;
+        }
         attrItems.push({ el: el, attr: ATTRS[a], key: k, original: val });
       }
     }
-    built = true;
   }
 
-  function apply() {
-    if (!built) build();
+  /* Écrit dans le DOM les nœuds déjà collectés (textItems / attrItems). */
+  function writeAll() {
     var en = lang === 'en';
     var i;
     for (i = 0; i < textItems.length; i++) {
@@ -311,6 +323,14 @@
     }
     document.documentElement.lang = lang;
     updateSwitch();
+  }
+
+  /* Traduit l'intégralité du document. build() est incrémental et
+     dédupliqué : le premier appel indexe tout, les suivants sont quasi
+     gratuits (aucun nœud re-parcouru). */
+  function apply() {
+    build(document.documentElement);
+    writeAll();
   }
 
   function updateSwitch() {
@@ -353,7 +373,32 @@
      inline du <head> (au plus tôt) ; ce module, chargé en defer, applique
      la traduction puis lève le voile. */
   function reveal() { document.documentElement.classList.remove('i18n-cloak'); }
-  function boot() { try { apply(); } finally { reveal(); } }
+
+  /* Boot en deux phases : on traduit d'abord l'en-tête + le hero
+     (au-dessus de la ligne de flottaison) puis on lève AUSSITÔT le voile —
+     le texte LCP peut peindre sans attendre la traduction de tout le
+     document, qui est reportée hors de la tâche critique (item LCP + longue
+     tâche du thread principal). En FR (aucune traduction) on lève direct. */
+  function boot() {
+    try {
+      if (lang !== 'en') { reveal(); return; }
+      var head = document.querySelector('.header');
+      var hero = document.querySelector('.hero');
+      if (head) build(head);
+      if (hero) build(hero);
+      writeAll();
+      reveal();
+      var rest = function () { apply(); };
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(rest, { timeout: 900 });
+      } else {
+        setTimeout(rest, 60);
+      }
+    } catch (e) {
+      try { apply(); } catch (e2) {}
+      reveal();
+    }
+  }
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', boot);

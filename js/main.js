@@ -41,9 +41,9 @@
   if (reduceMotion) {
     openCurtain();
   } else {
-    window.addEventListener('load', () => setTimeout(openCurtain, 1600));
-    /* garde-fou si "load" tarde (images distantes) */
-    setTimeout(openCurtain, 3800);
+    /* rideau court et indépendant de window.load : la vidéo hero est
+       chargée après coup (voir lazyHeroVideos), le poster sert de LCP */
+    setTimeout(openCurtain, 450);
   }
 
   /* ── Header : état scrollé ───────────────────────────── */
@@ -273,6 +273,28 @@
       });
     });
   }
+
+  /* ── Vidéos hero : chargées APRÈS window.load ─────────
+     Les <video> portent data-video-src (pas de <source>) : le poster
+     s'affiche immédiatement (LCP), la vidéo arrive ensuite en douceur
+     sans peser sur le chargement initial — crucial pour le score mobile. */
+  (function lazyHeroVideos() {
+    const vids = document.querySelectorAll('video[data-video-src]');
+    if (!vids.length) return;
+    function start() {
+      vids.forEach((v) => {
+        v.src = v.getAttribute('data-video-src');
+        v.removeAttribute('data-video-src');
+        const p = v.play();
+        if (p && p.catch) p.catch(() => {});
+      });
+    }
+    if (document.readyState === 'complete') {
+      setTimeout(start, 150);
+    } else {
+      window.addEventListener('load', () => setTimeout(start, 150), { once: true });
+    }
+  })();
 
   /* ── Année du footer déjà statique ; rien d'autre. ──── */
 })();

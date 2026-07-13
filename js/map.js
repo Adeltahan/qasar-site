@@ -11,6 +11,39 @@
   const legend = document.querySelector('.network__legend');
   const fail = () => { el.style.display = 'none'; if (legend) legend.classList.add('is-forced'); };
 
+  /* ── Chargement paresseux de maplibre-gl ─────────────────
+     La bibliothèque (~800 Ko de JS + CSS) n'est injectée que
+     lorsque la section carte approche du viewport : le chargement
+     initial de la page (LCP/TBT mobile) n'en paie jamais le coût. */
+  const MAPLIBRE_JS = 'https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.js';
+  const MAPLIBRE_CSS = 'https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.css';
+
+  let started = false;
+  function boot() {
+    if (started) return;
+    started = true;
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = MAPLIBRE_CSS;
+    document.head.appendChild(link);
+    const script = document.createElement('script');
+    script.src = MAPLIBRE_JS;
+    script.async = true;
+    script.onload = init;
+    script.onerror = fail;
+    document.head.appendChild(script);
+  }
+
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some((e) => e.isIntersecting)) { io.disconnect(); boot(); }
+    }, { rootMargin: '600px 0px' });
+    io.observe(el);
+  } else {
+    boot();
+  }
+
+  function init() {
   if (typeof maplibregl === 'undefined') { fail(); return; }
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -139,4 +172,5 @@
       map.easeTo({ center: c, duration: 1000, easing: (n) => n });
     }, 1000);
   }
+  } /* fin init() */
 })();

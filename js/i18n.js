@@ -349,11 +349,9 @@
     set(b.getAttribute('data-lang'));
   });
 
-  /* Anti-scintillement : on masque le corps tant que la page
-     n'est pas traduite (uniquement si on part en anglais). */
-  if (lang !== 'fr') {
-    document.documentElement.classList.add('i18n-cloak');
-  }
+  /* Anti-scintillement : la classe i18n-cloak est posée par le script
+     inline du <head> (au plus tôt) ; ce module, chargé en defer, applique
+     la traduction puis lève le voile. */
   function reveal() { document.documentElement.classList.remove('i18n-cloak'); }
   function boot() { try { apply(); } finally { reveal(); } }
 

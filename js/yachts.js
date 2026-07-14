@@ -103,6 +103,44 @@
 
   let DATA = null;
 
+  /* ── Tri par prix ─────────────────────────────────── */
+  const sortSelect = document.getElementById('fleetSort');
+  let currentSort = 'default';
+
+  /* Normalise le tarif en équivalent €/jour pour comparaison ;
+     null si "Prix sur demande" (pas de montant) — ces yachts restent
+     en fin de liste quel que soit le sens du tri. */
+  const priceValue = (y) => {
+    const s = String(y.tarif || '');
+    const m = s.match(/(\d[\d\s ]*)/);
+    if (!m) return null;
+    const num = parseFloat(m[1].replace(/[\s ]/g, ''));
+    if (!num) return null;
+    return /semaine/i.test(s) ? num / 7 : num;
+  };
+
+  const sortedYachts = () => {
+    const list = DATA.yachts.slice();
+    if (currentSort === 'default') return list;
+    const dir = currentSort === 'price-asc' ? 1 : -1;
+    return list
+      .map((y, i) => ({ y, i, p: priceValue(y) }))
+      .sort((a, b) => {
+        if (a.p == null && b.p == null) return a.i - b.i;
+        if (a.p == null) return 1;
+        if (b.p == null) return -1;
+        return (a.p - b.p) * dir;
+      })
+      .map((e) => e.y);
+  };
+
+  if (sortSelect) {
+    sortSelect.addEventListener('change', () => {
+      currentSort = sortSelect.value;
+      renderGrid();
+    });
+  }
+
   const waHrefFor = (nom) => {
     const num = String((DATA && DATA.whatsapp) || '').replace(/\D/g, '');
     const tpl = EN()
@@ -113,7 +151,8 @@
 
   function renderGrid() {
     if (!DATA) return;
-    grid.innerHTML = DATA.yachts
+    const yachts = sortedYachts();
+    grid.innerHTML = yachts
       .map((y) => {
         const waHref = waHrefFor(y.nom);
         const images = Array.isArray(y.images) && y.images.length ? y.images : (y.image ? [y.image] : []);
@@ -173,7 +212,7 @@
 
     const ignoreSelector = '.carousel__nav, .carousel__dot, .btn-wa';
     grid.querySelectorAll('.card').forEach((card, i) => {
-      const y = DATA.yachts[i];
+      const y = yachts[i];
       card.setAttribute('tabindex', '0');
       card.setAttribute('role', 'button');
       card.setAttribute('aria-label', cardAria(y.nom));

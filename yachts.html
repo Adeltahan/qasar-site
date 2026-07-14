@@ -96,6 +96,16 @@
       <div class="container">
         <p class="kicker" data-reveal><span class="kicker__rule"></span>La flotte</p>
         <h2 class="fleet__title" data-reveal>Nos yachts <em>à la location.</em></h2>
+        <div class="fleet__filters" data-reveal>
+          <label class="fleet__filter">
+            <span class="fleet__filter-label">Trier par prix</span>
+            <select id="fleetSort" class="fleet__select">
+              <option value="default">Par défaut</option>
+              <option value="price-asc">Prix croissant</option>
+              <option value="price-desc">Prix décroissant</option>
+            </select>
+          </label>
+        </div>
         <div class="cards cards--fleet" id="fleetGrid">
           <p class="fleet__loading">Chargement de la flotte…</p>
         </div>

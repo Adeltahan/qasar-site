@@ -190,6 +190,10 @@
     "Nos yachts": "Our yachts",
     "à la location.": "for hire.",
     "Chargement de la flotte…": "Loading the fleet…",
+    "Trier par prix": "Sort by price",
+    "Par défaut": "Default",
+    "Prix croissant": "Price: low to high",
+    "Prix décroissant": "Price: high to low",
     "Tarifs indicatifs hors APA et frais de livraison. Chaque affrètement fait l'objet d'une proposition personnalisée dans les meilleurs délais.": "Indicative rates excluding APA and delivery fees. Every charter is the subject of a personalised proposal in the shortest possible time.",
 
     /* Page Services */

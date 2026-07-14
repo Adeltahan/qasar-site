@@ -60,7 +60,7 @@
     el.setAttribute('aria-label', l === 'en' ? 'Cookie consent' : 'Consentement aux cookies');
     el.innerHTML =
       '<div class="qc__inner">' +
-        '<p class="qc__text">' + c.text + ' <a href="confidentialite.html" class="qc__link">' + c.link + '</a></p>' +
+        '<p class="qc__text">' + c.text + ' <a href="confidentialite" class="qc__link">' + c.link + '</a></p>' +
         '<div class="qc__actions">' +
           '<button type="button" class="qc__btn qc__btn--reject" data-qc="reject">' + c.reject + '</button>' +
           '<button type="button" class="qc__btn qc__btn--accept" data-qc="accept">' + c.accept + '</button>' +

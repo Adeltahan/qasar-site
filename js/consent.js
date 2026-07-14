@@ -38,13 +38,13 @@
   var COPY = {
     fr: {
       text: 'Nous utilisons des cookies pour mesurer l’audience et la performance de nos campagnes. Vous pouvez accepter ou refuser leur dépôt.',
-      link: 'En savoir plus',
+      link: 'Notre politique de confidentialité',
       accept: 'Accepter',
       reject: 'Refuser'
     },
     en: {
       text: 'We use cookies to measure audience and campaign performance. You can accept or decline them.',
-      link: 'Learn more',
+      link: 'Our privacy policy',
       accept: 'Accept',
       reject: 'Decline'
     }

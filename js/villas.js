@@ -71,7 +71,7 @@
     })
     .catch(() => {
       grid.innerHTML = (window.QASAR && window.QASAR.EN)
-        ? '<p class="fleet__loading">The portfolio is momentarily unavailable — <a href="index.html#contact">contact us directly</a>.</p>'
-        : '<p class="fleet__loading">Le portefeuille est momentanément indisponible — <a href="index.html#contact">contactez-nous directement</a>.</p>';
+        ? '<p class="fleet__loading">The portfolio is momentarily unavailable — <a href="/#contact">contact us directly</a>.</p>'
+        : '<p class="fleet__loading">Le portefeuille est momentanément indisponible — <a href="/#contact">contactez-nous directement</a>.</p>';
     });
 })();

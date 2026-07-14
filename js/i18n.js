@@ -376,7 +376,7 @@
   /* Anti-scintillement : la classe i18n-cloak est posée par le script
      inline du <head> (au plus tôt) ; ce module, chargé en defer, applique
      la traduction puis lève le voile. */
-  function reveal() { document.documentElement.classList.remove('i18n-cloak'); }
+  function reveal() { try { performance.mark('i18n-reveal'); } catch (e) {} document.documentElement.classList.remove('i18n-cloak'); }
 
   /* Boot en deux phases : on traduit d'abord l'en-tête + le hero
      (au-dessus de la ligne de flottaison) puis on lève AUSSITÔT le voile —
@@ -404,10 +404,13 @@
     }
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', boot);
-  } else {
+  /* Inliné en fin de <body> (voir tools/inline-i18n.py) : le DOM utile est
+     déjà parsé, on traduit et on lève le voile sans attendre DOMContentLoaded
+     (qui, lui, attend l'exécution de tous les scripts defer). */
+  if (document.querySelector('main') || document.readyState !== 'loading') {
     boot();
+  } else {
+    document.addEventListener('DOMContentLoaded', boot);
   }
   /* Filet de sécurité : ne jamais laisser le corps masqué */
   setTimeout(reveal, 1500);

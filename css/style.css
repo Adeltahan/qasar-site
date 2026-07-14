@@ -305,8 +305,15 @@ html:not(.js) .preloader { display: none; }
 }
 .lang-switch__btn:not(.is-active):hover { color: var(--gold); }
 
-/* Anti-scintillement : corps masqué tant que la traduction n'est pas appliquée */
+/* Anti-scintillement : corps masqué tant que la traduction n'est pas appliquée.
+   Exceptions : préloader et médias hero (aucun texte traduit) restent visibles
+   pour que le premier rendu (LCP) n'attende pas js/i18n.js. */
 html.i18n-cloak body { visibility: hidden; }
+html.i18n-cloak .preloader,
+html.i18n-cloak .hero__video,
+html.i18n-cloak .hero__img,
+html.i18n-cloak .hero__poster,
+html.i18n-cloak .hero__veil { visibility: visible; }
 
 /* Burger */
 .burger {
@@ -370,6 +377,13 @@ html.i18n-cloak body { visibility: hidden; }
   overflow: hidden;
 }
 .hero__media { position: absolute; inset: 0; }
+/* Image poster réelle sous la vidéo : candidate LCP (les posters de <video>
+   ne comptent pas), peinte dès le premier rendu, recouverte par la vidéo. */
+.hero__poster {
+  position: absolute; inset: 0;
+  width: 100%; height: 112%;
+  object-fit: cover;
+}
 .hero__img {
   width: 100%; height: 112%;
   object-fit: cover;
@@ -378,9 +392,9 @@ html.i18n-cloak body { visibility: hidden; }
 }
 html.js .hero__img { animation: kenburns 14s var(--ease-out-quint) forwards; }
 .hero__video {
+  position: relative; /* au-dessus de .hero__poster (ordre DOM) */
   width: 100%; height: 112%;
   object-fit: cover;
-  background: var(--emerald-deep);
   will-change: transform;
 }
 @keyframes kenburns { from { transform: scale(1.08); } to { transform: scale(1); } }
@@ -417,7 +431,10 @@ html.js .is-revealed .line { transform: translateY(0); }
   max-width: 520px;
 }
 html.js .hero__sub, html.js .hero__actions {
-  opacity: 0; transform: translateY(18px);
+  /* 0.011 (invisible à l'œil) et non 0 : le texte est "peint" dès le premier
+     rendu, donc le LCP est enregistré tôt au lieu d'attendre la fin des
+     animations d'entrée. */
+  opacity: 0.011; transform: translateY(18px);
   transition: opacity 1s var(--ease-out-quint), transform 1s var(--ease-out-quint);
 }
 html.js .hero__sub { transition-delay: 0.1s; }

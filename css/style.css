@@ -161,6 +161,7 @@ html.js .kicker.is-inview .kicker__rule { transform: scaleX(1); }
 .preloader__inner { text-align: center; }
 .preloader__mark {
   width: clamp(72px, 10vw, 110px);
+  height: auto; /* l'attribut height de l'img ne doit pas figer la hauteur */
   margin: 0 auto 26px;
   opacity: 0;
   animation: preFade 1.2s var(--ease-out-quint) 0.1s forwards;
@@ -1472,7 +1473,7 @@ html.modal-open, html.modal-open body { overflow: hidden; }
   background: var(--emerald);
   display: flex; align-items: center;
 }
-.contact__logo { width: clamp(150px, 16vw, 210px); margin-bottom: 44px; }
+.contact__logo { width: clamp(150px, 16vw, 210px); height: auto; margin-bottom: 44px; }
 .contact__lede {
   font-family: var(--serif);
   font-size: clamp(24px, 2.6vw, 32px);
@@ -1650,7 +1651,7 @@ html.modal-open, html.modal-open body { overflow: hidden; }
   padding: clamp(64px, 8vw, 100px) 0 40px;
 }
 .footer__inner { display: flex; flex-direction: column; align-items: center; }
-.footer__logo { width: clamp(140px, 14vw, 180px); margin-bottom: 44px; }
+.footer__logo { width: clamp(140px, 14vw, 180px); height: auto; margin-bottom: 44px; }
 .footer__nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-bottom: 52px; }
 .footer__nav a {
   font-size: 11px;

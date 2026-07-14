@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <!-- Google tag (gtag.js) + Consent Mode v2: refuse par defaut tant que le bandeau cookies n a pas ete valide -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18323270454"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'AW-18323270454');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services sur mesure — QASAR · Courtage privé</title>
@@ -16,6 +34,7 @@
     try { if ((localStorage.getItem('qasar_lang') || 'en') !== 'fr') document.documentElement.classList.add('i18n-cloak'); } catch (e) { document.documentElement.classList.add('i18n-cloak'); }
   </script>
   <script src="js/i18n.js" defer fetchpriority="high"></script>
+<style id="qc-style">#qasarConsent{position:fixed;left:0;right:0;bottom:0;z-index:9999;background:var(--emerald-ink);border-top:1px solid var(--gold-dim);padding:22px 24px;transform:translateY(100%);opacity:0;transition:transform .5s ease,opacity .5s ease}#qasarConsent.qc--visible{transform:translateY(0);opacity:1}.qc__inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}.qc__text{flex:1 1 420px;margin:0;font-size:14px;line-height:1.6;color:var(--ivory,#F4F1EA);font-weight:300}.qc__link{color:var(--gold);text-decoration:underline;text-underline-offset:3px}.qc__link:hover{color:var(--gold-light)}.qc__actions{display:flex;gap:12px;flex:0 0 auto}.qc__btn{font-family:inherit;font-size:13px;letter-spacing:.04em;text-transform:uppercase;padding:12px 22px;border-radius:2px;cursor:pointer;border:1px solid var(--gold-dim);background:transparent;color:var(--ivory,#F4F1EA);transition:background .3s,color .3s,border-color .3s}.qc__btn--reject:hover{border-color:var(--ivory,#F4F1EA)}.qc__btn--accept{background:var(--gold);border-color:var(--gold);color:var(--emerald-ink)}.qc__btn--accept:hover{background:var(--gold-light);border-color:var(--gold-light)}@media (max-width:640px){#qasarConsent{padding:18px 16px}.qc__inner{flex-direction:column;align-items:stretch}.qc__text{flex-basis:auto}.qc__actions{justify-content:stretch}.qc__btn{flex:1}}</style>
 </head>
 <body>
 
@@ -193,6 +212,7 @@
   </footer>
 
   <script src="js/main.js" defer></script>
+  <script src="js/consent.js" defer></script>
   <script src="js/services.js" defer></script>
 </body>
 </html>

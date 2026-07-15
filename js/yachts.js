@@ -119,9 +119,39 @@
     return /semaine/i.test(s) ? num / 7 : num;
   };
 
+  /* Ordre par défaut : aléatoire, avec les yachts entre 4 000 et
+     8 000 €/jour placés en premier (mélangés entre eux) pour ne pas
+     accueillir le visiteur avec les tarifs les plus élevés.
+     Mélangé une seule fois par chargement de page (mémoïsé) : l'ordre
+     reste stable lors d'un changement de langue ou de tri. */
+  let defaultOrder = null;
+
+  const shuffle = (arr) => {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const t = arr[i];
+      arr[i] = arr[j];
+      arr[j] = t;
+    }
+    return arr;
+  };
+
+  const buildDefaultOrder = () => {
+    const featured = [];
+    const rest = [];
+    DATA.yachts.forEach((y) => {
+      const p = priceValue(y);
+      (p != null && p >= 4000 && p <= 8000 ? featured : rest).push(y);
+    });
+    return shuffle(featured).concat(shuffle(rest));
+  };
+
   const sortedYachts = () => {
+    if (currentSort === 'default') {
+      if (!defaultOrder) defaultOrder = buildDefaultOrder();
+      return defaultOrder;
+    }
     const list = DATA.yachts.slice();
-    if (currentSort === 'default') return list;
     const dir = currentSort === 'price-asc' ? 1 : -1;
     return list
       .map((y, i) => ({ y, i, p: priceValue(y) }))

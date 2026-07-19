@@ -685,7 +685,23 @@ html.js [data-reveal-lines].is-inview { opacity: 1; transform: none; }
 }
 .card:hover { border-color: var(--gold); }
 .card:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
-.card__media { overflow: hidden; }
+.card__media { overflow: hidden; position: relative; }
+.card__badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 3;
+  padding: 5px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--gold);
+  border-radius: 2px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
 .card__media img {
   width: 100%;
   aspect-ratio: 4 / 3;

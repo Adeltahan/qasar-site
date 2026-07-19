@@ -1,869 +1,920 @@
 {
-  "whatsapp": "33625433186",
-  "whatsapp_message": "Bonjour, je souhaite obtenir plus d'informations sur le yacht {nom}.",
-  "yachts": [
-    {
-      "nom": "Vanquish 58 T-Top",
-      "taille_m": 18,
-      "invites": 12,
-      "equipage": 1,
-      "zone": "Côte d'Azur & Corse",
-      "tarif": "À partir de 7 800 € / jour + APA",
-      "images": [
-        "assets/yachts/vanquish-58-1.jpg",
-        "assets/yachts/vanquish-58-2.jpg",
-        "assets/yachts/vanquish-58-3.jpg",
-        "assets/yachts/vanquish-58-4.jpg",
-        "assets/yachts/vanquish-58-5.jpg"
-      ],
-      "description": "Day-boat hollandais de 18 mètres à l'esthétique radicale : lignes affûtées et sensations de pilotage rares."
-    },
-    {
-      "nom": "Navetta 58",
-      "taille_m": 17,
-      "invites": 12,
-      "equipage": 2,
-      "zone": "Côte d'Azur & Corse",
-      "tarif": "À partir de 5 350 € / jour + APA",
-      "images": [
-        "assets/yachts/navetta-58-1.jpg",
-        "assets/yachts/navetta-58-2.jpg",
-        "assets/yachts/navetta-58-3.jpg",
-        "assets/yachts/navetta-58-4.jpg",
-        "assets/yachts/navetta-58-5.jpg"
-      ],
-      "description": "Trawler de 17 mètres, deux cabines et quatre couchages : le déplacement doux, pensé pour flâner le long de la côte."
-    },
-    {
-      "nom": "Prestige 590",
-      "taille_m": 18.7,
-      "invites": 12,
-      "equipage": 2,
-      "zone": "Côte d'Azur & Corse",
-      "tarif": "À partir de 6 400 € / jour + APA",
-      "images": [
-        "assets/yachts/prestige-590-1.jpg",
-        "assets/yachts/prestige-590-2.jpg",
-        "assets/yachts/prestige-590-3.jpg",
-        "assets/yachts/prestige-590-4.jpg",
-        "assets/yachts/prestige-590-5.jpg"
-      ],
-      "description": "Flybridge Prestige de 18,7 mètres : deux cabines, flybridge panoramique, l'équilibre parfait pour la journée."
-    },
-    {
-      "nom": "Princess V55",
-      "taille_m": 17.3,
-      "invites": 10,
-      "equipage": 1,
-      "zone": "Côte d'Azur & Corse",
-      "tarif": "À partir de 5 900 € / jour + APA",
-      "images": [
-        "assets/yachts/princess-v55-1.jpg",
-        "assets/yachts/princess-v55-2.jpg",
-        "assets/yachts/princess-v55-3.jpg",
-        "assets/yachts/princess-v55-4.jpg",
-        "assets/yachts/princess-v55-5.jpg"
-      ],
-      "description": "Sport-cruiser Princess de 17,3 mètres, deux cabines : allure racée et confort raffiné entre Monaco et Saint-Tropez."
-    },
-    {
-      "nom": "Power 44",
-      "taille_m": 13.6,
-      "invites": 10,
-      "equipage": 1,
-      "zone": "Riviera — à la journée",
-      "tarif": "À partir de 4 150 € / jour + APA",
-      "images": [
-        "assets/yachts/power-44-1.jpg",
-        "assets/yachts/power-44-2.jpg",
-        "assets/yachts/power-44-3.jpg",
-        "assets/yachts/power-44-4.jpg",
-        "assets/yachts/power-44-5.jpg"
-      ],
-      "description": "Open de 13,6 mètres, dix invités : le format juste pour une journée entre Monaco et les îles de Lérins."
-    },
-    {
-      "nom": "Princess F55",
-      "taille_m": 17.5,
-      "invites": 10,
-      "equipage": 2,
-      "zone": "Côte d'Azur & Corse",
-      "tarif": "À partir de 5 900 € / jour + APA",
-      "images": [
-        "assets/yachts/princess-f55-1.jpg",
-        "assets/yachts/princess-f55-2.jpg",
-        "assets/yachts/princess-f55-3.jpg",
-        "assets/yachts/princess-f55-4.jpg",
-        "assets/yachts/princess-f55-5.jpg"
-      ],
-      "description": "Flybridge Princess de 17,5 mètres, trois cabines : deux ponts de vie pour profiter du large en famille."
-    },
-    {
-      "nom": "Wajer 55 HT",
-      "taille_m": 16.1,
-      "invites": 9,
-      "equipage": 1,
-      "zone": "Côte d'Azur & Corse",
-      "tarif": "À partir de 6 900 € / jour + APA",
-      "images": [
-        "assets/yachts/wajer-55-1.jpg",
-        "assets/yachts/wajer-55-2.jpg",
-        "assets/yachts/wajer-55-3.jpg",
-        "assets/yachts/wajer-55-4.jpg",
-        "assets/yachts/wajer-55-5.jpg"
-      ],
-      "description": "Le day-boat le plus désirable de sa génération : 16 mètres de finition irréprochable, silence et vitesse réunis."
-    },
-    {
-      "nom": "M/Y Palumba",
-      "taille_m": 26.41,
-      "invites": 12,
-      "equipage": 3,
-      "zone": "Côte d'Azur & Corse",
-      "tarif": "À partir de 7 000 € / jour",
-      "images": [
-        "assets/yachts/palumba-1.jpg",
-        "assets/yachts/palumba-2.jpg",
-        "assets/yachts/palumba-3.jpg",
-        "assets/yachts/palumba-4.jpg",
-        "assets/yachts/palumba-5.jpg"
-      ],
-      "description": "Sunseeker de 26 mètres, quatre cabines et équipage de trois : 38 nœuds en pointe, à l'aise de la Riviera à la Corse et la Sardaigne."
-    },
-    {
-      "nom": "Vanquish 45",
-      "taille_m": 13.6,
-      "invites": 11,
-      "equipage": 1,
-      "zone": "Riviera — à la journée",
-      "tarif": "À partir de 4 500 € / jour + APA",
-      "images": [
-        "assets/yachts/vanquish-45-1.jpg",
-        "assets/yachts/vanquish-45-2.jpg",
-        "assets/yachts/vanquish-45-3.jpg",
-        "assets/yachts/vanquish-45-4.jpg",
-        "assets/yachts/vanquish-45-5.jpg"
-      ],
-      "description": "Day-cruiser hollandais de 13,6 mètres, dessin sur-mesure : idéal pour les criques de l'Estérel et les déjeuners au mouillage."
-    },
-    {
-      "nom": "Sichterman 54",
-      "taille_m": 16.42,
-      "invites": 12,
-      "equipage": 1,
-      "zone": "Côte d'Azur & Corse",
-      "tarif": "À partir de 5 900 € / jour + APA",
-      "images": [
-        "assets/yachts/sichterman-54-1.jpg",
-        "assets/yachts/sichterman-54-2.jpg",
-        "assets/yachts/sichterman-54-3.jpg",
-        "assets/yachts/sichterman-54-4.jpg",
-        "assets/yachts/sichterman-54-5.jpg"
-      ],
-      "description": "Élégance intemporelle sur 16,4 mètres : un day-cruiser rare, dessiné pour les longues journées en mer."
-    },
-    {
-      "nom": "Predator 65",
-      "taille_m": 20.5,
-      "invites": 12,
-      "equipage": 2,
-      "zone": "Côte d'Azur & Corse",
-      "tarif": "À partir de 7 600 € / jour + APA",
-      "images": [
-        "assets/yachts/predator-65-1.jpg",
-        "assets/yachts/predator-65-2.jpg",
-        "assets/yachts/predator-65-3.jpg",
-        "assets/yachts/predator-65-4.jpg",
-        "assets/yachts/predator-65-5.jpg"
-      ],
-      "description": "Sunseeker Predator 65 : 20,5 mètres, 35 nœuds, quatre cabines. Le sport-cruiser britannique par excellence."
-    },
-    {
-      "nom": "E-Cat 80 — solaire",
-      "taille_m": 23.97,
-      "invites": 12,
-      "equipage": 4,
-      "zone": "Côte d'Azur",
-      "tarif": "Prix sur demande",
-      "images": [
-        "assets/yachts/ecat-80-1.jpg",
-        "assets/yachts/ecat-80-2.jpg",
-        "assets/yachts/ecat-80-3.jpg",
-        "assets/yachts/ecat-80-4.jpg",
-        "assets/yachts/ecat-80-5.jpg",
-        "assets/yachts/ecat-80-6.jpg",
-        "assets/yachts/ecat-80-7.jpg",
-        "assets/yachts/ecat-80-8.jpg",
-        "assets/yachts/ecat-80-9.jpg",
-        "assets/yachts/ecat-80-10.jpg"
-      ],
-      "description": "Catamaran E-Cat 80 à propulsion solaire (2025) : 24 mètres, 11 mètres de large, quatre cabines. Navigation silencieuse et architecture contemporaine."
-    },
-    {
-      "nom": "Princess 35M",
-      "taille_m": 35,
-      "invites": 10,
-      "equipage": 6,
-      "zone": "Méditerranée — à la semaine",
-      "tarif": "À partir de 140 000 € / semaine",
-      "images": [
-        "assets/yachts/princess-35m-1.jpg",
-        "assets/yachts/princess-35m-2.jpg",
-        "assets/yachts/princess-35m-3.jpg",
-        "assets/yachts/princess-35m-4.jpg",
-        "assets/yachts/princess-35m-5.jpg"
-      ],
-      "description": "Superyacht Princess de 35 mètres, cinq cabines et six membres d'équipage, pour une semaine de croisière en toute intimité."
-    },
-    {
-      "nom": "Prestige 500 Fly",
-      "taille_m": 14.92,
-      "invites": 10,
-      "equipage": 2,
-      "zone": "Côte d'Azur",
-      "tarif": "Prix sur demande",
-      "images": [
-        "assets/yachts/prestige-500-1.jpg",
-        "assets/yachts/prestige-500-2.jpg",
-        "assets/yachts/prestige-500-3.jpg",
-        "assets/yachts/prestige-500-4.jpg",
-        "assets/yachts/prestige-500-5.jpg",
-        "assets/yachts/prestige-500-6.jpg",
-        "assets/yachts/prestige-500-7.jpg",
-        "assets/yachts/prestige-500-8.jpg",
-        "assets/yachts/prestige-500-9.jpg"
-      ],
-      "description": "Prestige 500 Fly (Jeanneau, 2017) de 15 mètres : intérieur spacieux, salon de flybridge, climatisation et plage de bain. Basé à Juan-les-Pins."
-    },
-    {
-      "nom": "San Lorenzo SX88",
-      "taille_m": 24,
-      "invites": 12,
-      "equipage": 4,
-      "zone": "Côte d'Azur & Corse",
-      "tarif": "À partir de 18 200 € / jour + APA",
-      "images": [
-        "assets/yachts/sanlorenzo-sx88-1.jpg",
-        "assets/yachts/sanlorenzo-sx88-2.jpg",
-        "assets/yachts/sanlorenzo-sx88-3.jpg",
-        "assets/yachts/sanlorenzo-sx88-4.jpg",
-        "assets/yachts/sanlorenzo-sx88-5.jpg"
-      ],
-      "description": "Crossover San Lorenzo de 24 mètres : volumes ouverts sur la mer, quatre cabines et art de vivre au fil de l'eau."
-    },
-    {
-      "nom": "Salpa Soleil 40",
-      "taille_m": 11.88,
-      "invites": 10,
-      "equipage": 1,
-      "zone": "Côte d'Azur",
-      "tarif": "Prix sur demande",
-      "images": [
-        "assets/yachts/soleil-40-1.jpg",
-        "assets/yachts/soleil-40-2.jpg",
-        "assets/yachts/soleil-40-3.jpg",
-        "assets/yachts/soleil-40-4.jpg",
-        "assets/yachts/soleil-40-5.jpg",
-        "assets/yachts/soleil-40-6.jpg",
-        "assets/yachts/soleil-40-7.jpg",
-        "assets/yachts/soleil-40-8.jpg",
-        "assets/yachts/soleil-40-9.jpg",
-        "assets/yachts/soleil-40-10.jpg"
-      ],
-      "description": "Salpa Soleil 40 neuf (2026) de 11,9 mètres : cabine et cuisine extérieure, propulseur d'étrave et joystick, bains de soleil avant et arrière. Basé à Juan-les-Pins."
-    },
-    {
-      "nom": "Nuova Jolly 35",
-      "taille_m": 10.7,
-      "invites": 10,
-      "equipage": 1,
-      "zone": "Côte d'Azur",
-      "tarif": "Prix sur demande",
-      "images": [
-        "assets/yachts/nuova-jolly-35-1.jpg",
-        "assets/yachts/nuova-jolly-35-2.jpg",
-        "assets/yachts/nuova-jolly-35-3.jpg",
-        "assets/yachts/nuova-jolly-35-4.jpg",
-        "assets/yachts/nuova-jolly-35-5.jpg"
-      ],
-      "description": "Nuova Jolly Prince 35 (2017) de 10,7 mètres : cabine et salle d'eau, bains de soleil avant et arrière, grand taud et moteurs silencieux. Basé à Juan-les-Pins."
-    },
-    {
-      "nom": "Princess V65",
-      "taille_m": 20,
-      "invites": 10,
-      "equipage": 2,
-      "zone": "Côte d'Azur",
-      "tarif": "Prix sur demande",
-      "images": [
-        "assets/yachts/princess-v65-1.jpg",
-        "assets/yachts/princess-v65-2.jpg",
-        "assets/yachts/princess-v65-3.jpg"
-      ],
-      "description": "Princess V65 de 20 mètres : cabines et vastes salons de plein air à l'arrière, plage de bain et équipage de deux. Basé à Juan-les-Pins."
-    },
-    {
-      "nom": "Salpa Soleil 24.5",
-      "taille_m": 7.85,
-      "invites": 8,
-      "equipage": 1,
-      "zone": "Côte d'Azur",
-      "tarif": "Prix sur demande",
-      "images": [
-        "assets/yachts/soleil-24-5-1.jpg",
-        "assets/yachts/soleil-24-5-2.jpg",
-        "assets/yachts/soleil-24-5-3.jpg",
-        "assets/yachts/soleil-24-5-4.jpg",
-        "assets/yachts/soleil-24-5-5.jpg"
-      ],
-      "description": "Salpa Soleil 24.5 (2024) de 7,85 mètres : grand bain de soleil, confort premium, idéal pour les criques à la journée. Basé à Juan-les-Pins."
-    },
-    {
-      "nom": "Leonard 74",
-      "taille_m": 21.75,
-      "invites": 12,
-      "equipage": 2,
-      "zone": "Côte d'Azur & Corse",
-      "tarif": "À partir de 8 400 € / jour + APA",
-      "images": [
-        "assets/yachts/leonard-74-1.jpg",
-        "assets/yachts/leonard-74-2.jpg",
-        "assets/yachts/leonard-74-3.jpg",
-        "assets/yachts/leonard-74-4.jpg",
-        "assets/yachts/leonard-74-5.jpg"
-      ],
-      "description": "Yacht de 21,7 mètres, quatre cabines et vastes espaces de vie : le confort d'un grand pour la journée."
-    },
-    {
-      "nom": "Salpa Avantgarde 35",
-      "taille_m": 11.2,
-      "invites": 10,
-      "equipage": 1,
-      "zone": "Côte d'Azur",
-      "tarif": "Prix sur demande",
-      "images": [
-        "assets/yachts/avantgarde-35-1.jpg",
-        "assets/yachts/avantgarde-35-2.jpg",
-        "assets/yachts/avantgarde-35-3.jpg",
-        "assets/yachts/avantgarde-35-4.jpg",
-        "assets/yachts/avantgarde-35-5.jpg",
-        "assets/yachts/avantgarde-35-6.jpg"
-      ],
-      "description": "Salpa Avantgarde 35 (2023) de 11,2 mètres : cockpit spacieux, cabine, finitions soignées et belles performances. Basé à Juan-les-Pins."
-    },
-    {
-      "nom": "Ferretti 881 RPH",
-      "taille_m": 27.07,
-      "invites": 11,
-      "equipage": 5,
-      "zone": "Côte d'Azur",
-      "tarif": "Prix sur demande",
-      "images": [
-        "assets/yachts/ferretti-881-1.jpg",
-        "assets/yachts/ferretti-881-2.jpg",
-        "assets/yachts/ferretti-881-3.jpg",
-        "assets/yachts/ferretti-881-4.jpg",
-        "assets/yachts/ferretti-881-5.jpg",
-        "assets/yachts/ferretti-881-6.jpg",
-        "assets/yachts/ferretti-881-7.jpg",
-        "assets/yachts/ferretti-881-8.jpg",
-        "assets/yachts/ferretti-881-9.jpg",
-        "assets/yachts/ferretti-881-10.jpg"
-      ],
-      "description": "Ferretti 881 RPH de 27 mètres (refit 2022) : quatre cabines, huit couchages, flybridge spacieux avec jacuzzi et un équipage de cinq. Basé à Cannes."
-    },
-    {
-      "nom": "Guy Couach 37",
-      "taille_m": 37,
-      "invites": 12,
-      "equipage": 6,
-      "zone": "Côte d'Azur & Corse",
-      "tarif": "À partir de 31 900 € / jour + APA",
-      "images": [
-        "assets/yachts/guy-couach-37-1.jpg",
-        "assets/yachts/guy-couach-37-2.jpg",
-        "assets/yachts/guy-couach-37-3.jpg",
-        "assets/yachts/guy-couach-37-4.jpg",
-        "assets/yachts/guy-couach-37-5.jpg"
-      ],
-      "description": "Yacht de 37 mètres, cinq cabines et six membres d'équipage : espace, autonomie et grand confort de croisière."
-    },
-    {
-      "nom": "Integrity 93",
-      "taille_m": 28.5,
-      "invites": 12,
-      "equipage": 4,
-      "zone": "Côte d'Azur & Corse",
-      "tarif": "À partir de 14 550 € / jour + APA",
-      "images": [
-        "assets/yachts/integrity-93-1.jpg",
-        "assets/yachts/integrity-93-2.jpg",
-        "assets/yachts/integrity-93-3.jpg",
-        "assets/yachts/integrity-93-4.jpg",
-        "assets/yachts/integrity-93-5.jpg"
-      ],
-      "description": "Yacht de 28,5 mètres, quatre cabines et huit couchages : espace généreux pour recevoir en grand comité."
-    },
-    {
-      "nom": "Leopard 23 Sport",
-      "taille_m": 23,
-      "invites": 10,
-      "equipage": 2,
-      "zone": "Côte d'Azur",
-      "tarif": "Prix sur demande",
-      "images": [
-        "assets/yachts/leopard-23-1.jpg",
-        "assets/yachts/leopard-23-2.jpg",
-        "assets/yachts/leopard-23-3.jpg",
-        "assets/yachts/leopard-23-4.jpg",
-        "assets/yachts/leopard-23-5.jpg",
-        "assets/yachts/leopard-23-6.jpg",
-        "assets/yachts/leopard-23-7.jpg"
-      ],
-      "description": "Leopard 23 Sport de 23 mètres (refit 2025) : cockpit ouvert, intérieur luxueux, plage de bain et bains de soleil avant et arrière. Basé à Golfe-Juan."
-    },
-    {
-      "nom": "Baglietto 130",
-      "taille_m": 40,
-      "invites": 12,
-      "equipage": 8,
-      "zone": "Méditerranée — à la semaine",
-      "tarif": "À partir de 250 000 € / semaine",
-      "images": [
-        "assets/yachts/baglietto-130-1.jpg",
-        "assets/yachts/baglietto-130-2.jpg",
-        "assets/yachts/baglietto-130-3.jpg",
-        "assets/yachts/baglietto-130-4.jpg",
-        "assets/yachts/baglietto-130-5.jpg"
-      ],
-      "description": "Superyacht italien de 40 mètres, cinq cabines et huit hommes d'équipage, taillé pour les longues croisières estivales."
-    },
-    {
-      "nom": "M/Y Cristal I",
-      "taille_m": 23.96,
-      "invites": 10,
-      "equipage": 2,
-      "zone": "Côte d'Azur & Méditerranée",
-      "tarif": "À partir de 3 750 € / jour",
-      "images": [
-        "assets/yachts/cristal-i-1.jpg",
-        "assets/yachts/cristal-i-2.jpg",
-        "assets/yachts/cristal-i-3.jpg",
-        "assets/yachts/cristal-i-4.jpg"
-      ],
-      "description": "Motor-yacht Leopard (Arno) de 24 mètres, trois cabines et équipage de deux, refit 2011 : 30 nœuds en pointe pour explorer la Riviera et la Méditerranée occidentale."
-    },
-    {
-      "nom": "Princess 40M",
-      "taille_m": 40,
-      "invites": 12,
-      "equipage": 7,
-      "zone": "Méditerranée — à la semaine",
-      "tarif": "À partir de 195 000 € / semaine",
-      "images": [
-        "assets/yachts/princess-40m-1.jpg",
-        "assets/yachts/princess-40m-2.jpg",
-        "assets/yachts/princess-40m-3.jpg",
-        "assets/yachts/princess-40m-4.jpg",
-        "assets/yachts/princess-40m-5.jpg"
-      ],
-      "description": "Grand raid Princess de 40 mètres : cinq cabines, dix couchages, un équipage de sept pour un service sans faille."
-    },
-    {
-      "nom": "Pershing 70",
-      "taille_m": 21.4,
-      "invites": 12,
-      "equipage": 2,
-      "zone": "Côte d'Azur & Corse",
-      "tarif": "À partir de 9 000 € / jour + APA",
-      "images": [
-        "assets/yachts/pershing-70-1.jpg",
-        "assets/yachts/pershing-70-2.jpg",
-        "assets/yachts/pershing-70-3.jpg",
-        "assets/yachts/pershing-70-4.jpg",
-        "assets/yachts/pershing-70-5.jpg"
-      ],
-      "description": "Icône Pershing de 21,4 mètres : 40 nœuds, trois cabines, l'adrénaline conjuguée au grand luxe italien."
-    },
-    {
-      "nom": "San Lorenzo 78",
-      "taille_m": 24.64,
-      "invites": 12,
-      "equipage": 3,
-      "zone": "Côte d'Azur",
-      "tarif": "Prix sur demande",
-      "images": [
-        "assets/yachts/sanlorenzo-78-1.jpg",
-        "assets/yachts/sanlorenzo-78-2.jpg",
-        "assets/yachts/sanlorenzo-78-3.jpg",
-        "assets/yachts/sanlorenzo-78-4.jpg",
-        "assets/yachts/sanlorenzo-78-5.jpg",
-        "assets/yachts/sanlorenzo-78-6.jpg",
-        "assets/yachts/sanlorenzo-78-7.jpg",
-        "assets/yachts/sanlorenzo-78-8.jpg",
-        "assets/yachts/sanlorenzo-78-9.jpg",
-        "assets/yachts/sanlorenzo-78-10.jpg"
-      ],
-      "description": "San Lorenzo 78 neuf (2024) de 24,6 mètres : quatre cabines, flybridge et vastes bains de soleil. Basé à Antibes."
-    },
-    {
-      "nom": "Ferretti 860",
-      "taille_m": 26.95,
-      "invites": 12,
-      "equipage": 4,
-      "zone": "Côte d'Azur",
-      "tarif": "Prix sur demande",
-      "images": [
-        "assets/yachts/ferretti-860-1.jpg",
-        "assets/yachts/ferretti-860-2.jpg",
-        "assets/yachts/ferretti-860-3.jpg",
-        "assets/yachts/ferretti-860-4.jpg",
-        "assets/yachts/ferretti-860-5.jpg",
-        "assets/yachts/ferretti-860-6.jpg",
-        "assets/yachts/ferretti-860-7.jpg",
-        "assets/yachts/ferretti-860-8.jpg",
-        "assets/yachts/ferretti-860-9.jpg",
-        "assets/yachts/ferretti-860-10.jpg"
-      ],
-      "description": "Ferretti 860 neuf (2024) de 27 mètres : quatre cabines dont une suite propriétaire pleine largeur, flybridge généreux, équipage de quatre."
-    },
-    {
-      "nom": "Azimut 100",
-      "taille_m": 30,
-      "invites": 12,
-      "equipage": 5,
-      "zone": "Côte d'Azur & Corse",
-      "tarif": "À partir de 16 500 € / jour + APA",
-      "images": [
-        "assets/yachts/azimut-100-1.jpg",
-        "assets/yachts/azimut-100-2.jpg",
-        "assets/yachts/azimut-100-3.jpg",
-        "assets/yachts/azimut-100-4.jpg",
-        "assets/yachts/azimut-100-5.jpg"
-      ],
-      "description": "Flagship Azimut de 30 mètres, quatre cabines et large plage arrière : le grand jour au superlatif."
-    },
-    {
-      "nom": "Diva 82",
-      "taille_m": 24.9,
-      "invites": 12,
-      "equipage": 3,
-      "zone": "Côte d'Azur & Corse",
-      "tarif": "À partir de 18 500 € / jour + APA",
-      "images": [
-        "assets/yachts/diva-82-1.jpg",
-        "assets/yachts/diva-82-2.jpg",
-        "assets/yachts/diva-82-3.jpg",
-        "assets/yachts/diva-82-4.jpg",
-        "assets/yachts/diva-82-5.jpg"
-      ],
-      "description": "Riva de 25 mètres, quatre cabines et huit couchages : le raffinement italien pour une journée d'exception."
-    },
-    {
-      "nom": "Mangusta 108",
-      "taille_m": 33.5,
-      "invites": 12,
-      "equipage": 5,
-      "zone": "Côte d'Azur & Corse",
-      "tarif": "À partir de 15 800 € / jour + APA",
-      "images": [
-        "assets/yachts/mangusta-108-1.jpg",
-        "assets/yachts/mangusta-108-2.jpg",
-        "assets/yachts/mangusta-108-3.jpg",
-        "assets/yachts/mangusta-108-4.jpg",
-        "assets/yachts/mangusta-108-5.jpg"
-      ],
-      "description": "Open sportif de 33,5 mètres, trois cabines et 28 nœuds : puissance et lignes tendues signées Mangusta."
-    },
-    {
-      "nom": "Cranchi A46",
-      "taille_m": 14.25,
-      "invites": 11,
-      "equipage": 1,
-      "zone": "Côte d'Azur",
-      "tarif": "Prix sur demande",
-      "images": [
-        "assets/yachts/cranchi-a46-1.jpg",
-        "assets/yachts/cranchi-a46-2.jpg",
-        "assets/yachts/cranchi-a46-3.jpg",
-        "assets/yachts/cranchi-a46-4.jpg",
-        "assets/yachts/cranchi-a46-5.jpg",
-        "assets/yachts/cranchi-a46-6.jpg",
-        "assets/yachts/cranchi-a46-7.jpg",
-        "assets/yachts/cranchi-a46-8.jpg",
-        "assets/yachts/cranchi-a46-9.jpg"
-      ],
-      "description": "Cranchi A46 (2025) de 14,25 mètres : cockpit spacieux, deux balcons ouvrants, plage de bain hydraulique et cabine confortable. Basé à Juan-les-Pins."
-    },
-    {
-      "nom": "Princess X80",
-      "taille_m": 25.2,
-      "invites": 12,
-      "equipage": 4,
-      "zone": "Côte d'Azur & Corse",
-      "tarif": "À partir de 17 900 € / jour + APA",
-      "images": [
-        "assets/yachts/princess-x80-1.jpg",
-        "assets/yachts/princess-x80-2.jpg",
-        "assets/yachts/princess-x80-3.jpg",
-        "assets/yachts/princess-x80-4.jpg",
-        "assets/yachts/princess-x80-5.jpg"
-      ],
-      "description": "Le vaisseau X80 de Princess : 25 mètres, cinq cabines, volumes spectaculaires et panoramas à couper le souffle."
-    },
-    {
-      "nom": "Fairline Targa GTO 65",
-      "taille_m": 20.24,
-      "invites": 14,
-      "equipage": 3,
-      "zone": "Côte d'Azur",
-      "tarif": "Prix sur demande",
-      "images": [
-        "assets/yachts/fairline-gto-65-1.jpg",
-        "assets/yachts/fairline-gto-65-2.jpg",
-        "assets/yachts/fairline-gto-65-3.jpg",
-        "assets/yachts/fairline-gto-65-4.jpg",
-        "assets/yachts/fairline-gto-65-5.jpg",
-        "assets/yachts/fairline-gto-65-6.jpg",
-        "assets/yachts/fairline-gto-65-7.jpg",
-        "assets/yachts/fairline-gto-65-8.jpg",
-        "assets/yachts/fairline-gto-65-9.jpg",
-        "assets/yachts/fairline-gto-65-10.jpg"
-      ],
-      "description": "Fairline Targa GTO 65 de 20 mètres (2021) : toit ouvrant, trois cabines, table de cockpit spacieuse et plage de bain hydraulique. Basé à Golfe-Juan."
-    },
-    {
-      "nom": "Salpa Soleil 28",
-      "taille_m": 8.9,
-      "invites": 10,
-      "equipage": 1,
-      "zone": "Côte d'Azur",
-      "tarif": "Prix sur demande",
-      "images": [
-        "assets/yachts/soleil-28-1.jpg",
-        "assets/yachts/soleil-28-2.jpg",
-        "assets/yachts/soleil-28-3.jpg",
-        "assets/yachts/soleil-28-4.jpg",
-        "assets/yachts/soleil-28-5.jpg",
-        "assets/yachts/soleil-28-6.jpg",
-        "assets/yachts/soleil-28-7.jpg",
-        "assets/yachts/soleil-28-8.jpg"
-      ],
-      "description": "Salpa Soleil 28 (2025) de 8,9 mètres : grand bain de soleil, navigation douce et confort premium pour la journée. Basé à Juan-les-Pins."
-    },
-    {
-      "nom": "Sirena 88",
-      "taille_m": 26.81,
-      "invites": 10,
-      "equipage": 4,
-      "zone": "Côte d'Azur",
-      "tarif": "Prix sur demande",
-      "images": [
-        "assets/yachts/sirena-88-1.jpg",
-        "assets/yachts/sirena-88-2.jpg",
-        "assets/yachts/sirena-88-3.jpg",
-        "assets/yachts/sirena-88-4.jpg",
-        "assets/yachts/sirena-88-5.jpg",
-        "assets/yachts/sirena-88-6.jpg",
-        "assets/yachts/sirena-88-7.jpg",
-        "assets/yachts/sirena-88-8.jpg",
-        "assets/yachts/sirena-88-9.jpg",
-        "assets/yachts/sirena-88-10.jpg"
-      ],
-      "description": "Sirena Yachts 88 neuf (2025) de 26,8 mètres : cinq cabines, jacuzzi de pont, flybridge panoramique et grand confort de croisière. Basé à Cannes."
-    },
-    {
-      "nom": "M/Y Celine II",
-      "taille_m": 21.75,
-      "invites": 10,
-      "equipage": 2,
-      "zone": "Côte d'Azur",
-      "tarif": "Prix sur demande",
-      "images": [
-        "assets/yachts/celine-ii-1.jpg",
-        "assets/yachts/celine-ii-2.jpg",
-        "assets/yachts/celine-ii-3.jpg",
-        "assets/yachts/celine-ii-4.jpg",
-        "assets/yachts/celine-ii-5.jpg",
-        "assets/yachts/celine-ii-6.jpg",
-        "assets/yachts/celine-ii-7.jpg",
-        "assets/yachts/celine-ii-8.jpg",
-        "assets/yachts/celine-ii-9.jpg",
-        "assets/yachts/celine-ii-10.jpg"
-      ],
-      "description": "Leonard de 21,75 mètres (2009, magnifiquement refité en 2025) : quatre cabines, flybridge, motorisation MAN et 30 nœuds. Ambiance moderne et raffinée."
-    },
-    {
-      "nom": "Salpa Soleil 33",
-      "taille_m": 10.25,
-      "invites": 10,
-      "equipage": 1,
-      "zone": "Côte d'Azur",
-      "tarif": "Prix sur demande",
-      "images": [
-        "assets/yachts/soleil-33-1.jpg",
-        "assets/yachts/soleil-33-2.jpg",
-        "assets/yachts/soleil-33-3.jpg",
-        "assets/yachts/soleil-33-4.jpg",
-        "assets/yachts/soleil-33-5.jpg",
-        "assets/yachts/soleil-33-6.jpg",
-        "assets/yachts/soleil-33-7.jpg"
-      ],
-      "description": "Salpa Soleil 33 (2023) de 10,25 mètres : cabine et salle d'eau, propulseur d'étrave, table convertible et son de qualité. Basé à Juan-les-Pins."
-    },
-    {
-      "nom": "Sherpa 60",
-      "taille_m": 18.7,
-      "invites": 12,
-      "equipage": 2,
-      "zone": "Côte d'Azur & Corse",
-      "tarif": "À partir de 11 250 € / jour + APA",
-      "images": [
-        "assets/yachts/sherpa-60-1.jpg",
-        "assets/yachts/sherpa-60-2.jpg",
-        "assets/yachts/sherpa-60-3.jpg",
-        "assets/yachts/sherpa-60-4.jpg",
-        "assets/yachts/sherpa-60-5.jpg"
-      ],
-      "description": "Arcadia Sherpa 60 : 18,7 mètres baignés de lumière, terrasses ouvertes et esprit loft sur la mer."
-    },
-    {
-      "nom": "Mangusta 110",
-      "taille_m": 33.8,
-      "invites": 12,
-      "equipage": 5,
-      "zone": "Côte d'Azur & Corse",
-      "tarif": "À partir de 25 900 € / jour + APA",
-      "images": [
-        "assets/yachts/mangusta-110-1.jpg",
-        "assets/yachts/mangusta-110-2.jpg",
-        "assets/yachts/mangusta-110-3.jpg",
-        "assets/yachts/mangusta-110-4.jpg",
-        "assets/yachts/mangusta-110-5.jpg"
-      ],
-      "description": "Open italien de 33,8 mètres signé Overmarine : quatre cabines, lignes sportives et tempérament racé."
-    },
-    {
-      "nom": "M/Y Faith",
-      "taille_m": 33,
-      "invites": 36,
-      "zone": "Côte d'Azur — événementiel",
-      "tarif": "Prix sur demande",
-      "images": [
-        "assets/yachts/faith-1.jpg",
-        "assets/yachts/faith-2.jpg",
-        "assets/yachts/faith-3.jpg",
-        "assets/yachts/faith-4.jpg",
-        "assets/yachts/faith-5.jpg",
-        "assets/yachts/faith-6.jpg",
-        "assets/yachts/faith-7.jpg",
-        "assets/yachts/faith-8.jpg",
-        "assets/yachts/faith-9.jpg",
-        "assets/yachts/faith-10.jpg"
-      ],
-      "description": "Motor-yacht Tecnomarine de 33 mètres (refit 2024), quatre cabines et vastes ponts de réception — jusqu'à 36 personnes en navigation, 80 à quai. Pensé pour les événements privés et croisières."
-    },
-    {
-      "nom": "Riva Corsaro 100",
-      "taille_m": 29.9,
-      "invites": 12,
-      "equipage": 4,
-      "zone": "Côte d'Azur & Corse",
-      "tarif": "À partir de 24 000 € / jour + APA",
-      "images": [
-        "assets/yachts/riva-corsaro-100-1.jpg",
-        "assets/yachts/riva-corsaro-100-2.jpg",
-        "assets/yachts/riva-corsaro-100-3.jpg",
-        "assets/yachts/riva-corsaro-100-4.jpg",
-        "assets/yachts/riva-corsaro-100-5.jpg"
-      ],
-      "description": "L'élégance Riva portée à 30 mètres : cinq cabines, finitions d'exception et allure intemporelle."
-    },
-    {
-      "nom": "ISA 120",
-      "taille_m": 37,
-      "invites": 12,
-      "equipage": 6,
-      "zone": "Côte d'Azur & Corse",
-      "tarif": "À partir de 25 600 € / jour + APA",
-      "images": [
-        "assets/yachts/isa-120-1.jpg",
-        "assets/yachts/isa-120-2.jpg",
-        "assets/yachts/isa-120-3.jpg",
-        "assets/yachts/isa-120-4.jpg",
-        "assets/yachts/isa-120-5.jpg"
-      ],
-      "description": "Superyacht ISA de 37 mètres à triple motorisation MTU : quatre cabines, présence rare sur la Riviera."
-    },
-    {
-      "nom": "CRN Ancona 79",
-      "taille_m": 79,
-      "invites": 12,
-      "equipage": 24,
-      "zone": "Méditerranée — à la semaine",
-      "tarif": "À partir de 900 000 € / semaine",
-      "images": [
-        "assets/yachts/crn-ancona-79-1.jpg",
-        "assets/yachts/crn-ancona-79-2.jpg",
-        "assets/yachts/crn-ancona-79-3.jpg",
-        "assets/yachts/crn-ancona-79-4.jpg",
-        "assets/yachts/crn-ancona-79-5.jpg"
-      ],
-      "description": "Navire amiral du catalogue : 79 mètres, six cabines, vingt-quatre membres d'équipage. L'absolu du charter méditerranéen."
-    },
-    {
-      "nom": "Lamborghini 63",
-      "taille_m": 20,
-      "invites": 10,
-      "equipage": 2,
-      "zone": "Côte d'Azur & Corse",
-      "tarif": "À partir de 11 000 € / jour + APA",
-      "images": [
-        "assets/yachts/lamborghini-63-1.jpg",
-        "assets/yachts/lamborghini-63-2.jpg",
-        "assets/yachts/lamborghini-63-3.jpg",
-        "assets/yachts/lamborghini-63-4.jpg",
-        "assets/yachts/lamborghini-63-5.jpg"
-      ],
-      "description": "Le mythe Lamborghini sur l'eau : 20 mètres, 40 nœuds, deux V12 MAN. Une signature d'exception, ultra-confidentielle."
-    },
-    {
-      "nom": "Bluegame BGX 63",
-      "taille_m": 20,
-      "invites": 12,
-      "equipage": 2,
-      "zone": "Côte d'Azur",
-      "tarif": "Prix sur demande",
-      "images": [
-        "assets/yachts/bluegame-bgx-63-1.jpg",
-        "assets/yachts/bluegame-bgx-63-2.jpg",
-        "assets/yachts/bluegame-bgx-63-3.jpg",
-        "assets/yachts/bluegame-bgx-63-4.jpg",
-        "assets/yachts/bluegame-bgx-63-5.jpg",
-        "assets/yachts/bluegame-bgx-63-6.jpg",
-        "assets/yachts/bluegame-bgx-63-7.jpg",
-        "assets/yachts/bluegame-bgx-63-8.jpg",
-        "assets/yachts/bluegame-bgx-63-9.jpg",
-        "assets/yachts/bluegame-bgx-63-10.jpg"
-      ],
-      "description": "Bluegame BGX 63 neuf (2025) de 20 mètres : trois cabines, plage de bain hydraulique et stabilisateur gyroscopique pour un confort absolu. Basé à Cogolin."
-    },
-    {
-      "nom": "Salpa Soleil 26",
-      "taille_m": 8,
-      "invites": 8,
-      "equipage": 1,
-      "zone": "Côte d'Azur",
-      "tarif": "Prix sur demande",
-      "images": [
-        "assets/yachts/soleil-26-1.jpg",
-        "assets/yachts/soleil-26-2.jpg",
-        "assets/yachts/soleil-26-3.jpg",
-        "assets/yachts/soleil-26-4.jpg",
-        "assets/yachts/soleil-26-5.jpg",
-        "assets/yachts/soleil-26-6.jpg"
-      ],
-      "description": "Salpa Soleil 26 (2023) de 8 mètres : grand bain de soleil, système son Fusion et belles performances. Basé à Juan-les-Pins."
-    }
-  ]
+ "whatsapp": "33625433186",
+ "whatsapp_message": "Bonjour, je souhaite obtenir plus d'informations sur le yacht {nom}.",
+ "yachts": [
+  {
+   "nom": "Delta 60",
+   "nouveau": true,
+   "taille_m": 18,
+   "invites": 12,
+   "equipage": 2,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "Prix sur demande",
+   "images": [
+    "assets/yachts/delta-60-1.jpg",
+    "assets/yachts/delta-60-2.jpg",
+    "assets/yachts/delta-60-3.jpg",
+    "assets/yachts/delta-60-4.jpg",
+    "assets/yachts/delta-60-5.jpg"
+   ],
+   "description": "Day-boat scandinave de 18 mètres, lignes épurées et finitions contemporaines. Stabilisateur gyroscopique, deux Seabob et vaste plage arrière pour la Riviera."
+  },
+  {
+   "nom": "Riva 76 Perseo",
+   "nouveau": true,
+   "taille_m": 23,
+   "invites": 12,
+   "equipage": 2,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "Prix sur demande",
+   "images": [
+    "assets/yachts/riva-76-1.jpg",
+    "assets/yachts/riva-76-2.jpg",
+    "assets/yachts/riva-76-3.jpg",
+    "assets/yachts/riva-76-4.jpg",
+    "assets/yachts/riva-76-5.jpg"
+   ],
+   "description": "Riva 76' Perseo : 23 mètres au tempérament sportif, flybridge et salon ouvert. Élégance italienne et finitions de luxe, du Cap d'Antibes à Saint-Tropez."
+  },
+  {
+   "nom": "Princess V65",
+   "nouveau": true,
+   "taille_m": 20,
+   "invites": 10,
+   "equipage": 2,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "Prix sur demande",
+   "images": [
+    "assets/yachts/princess-v65-1.jpg",
+    "assets/yachts/princess-v65-2.jpg",
+    "assets/yachts/princess-v65-3.jpg",
+    "assets/yachts/princess-v65-4.jpg",
+    "assets/yachts/princess-v65-5.jpg"
+   ],
+   "description": "Princess V65 de 20 mètres, refit 2025 : flybridge, vastes bains de soleil et cockpit généreux. Un confort de croisière idéal en famille sur la Côte d'Azur."
+  },
+  {
+   "nom": "Vanquish 58 T-Top",
+   "taille_m": 18,
+   "invites": 12,
+   "equipage": 1,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "À partir de 7 800 € / jour + APA",
+   "images": [
+    "assets/yachts/vanquish-58-1.jpg",
+    "assets/yachts/vanquish-58-2.jpg",
+    "assets/yachts/vanquish-58-3.jpg",
+    "assets/yachts/vanquish-58-4.jpg",
+    "assets/yachts/vanquish-58-5.jpg"
+   ],
+   "description": "Day-boat hollandais de 18 mètres à l'esthétique radicale : lignes affûtées et sensations de pilotage rares."
+  },
+  {
+   "nom": "Navetta 58",
+   "taille_m": 17,
+   "invites": 12,
+   "equipage": 2,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "À partir de 5 350 € / jour + APA",
+   "images": [
+    "assets/yachts/navetta-58-1.jpg",
+    "assets/yachts/navetta-58-2.jpg",
+    "assets/yachts/navetta-58-3.jpg",
+    "assets/yachts/navetta-58-4.jpg",
+    "assets/yachts/navetta-58-5.jpg"
+   ],
+   "description": "Trawler de 17 mètres, deux cabines et quatre couchages : le déplacement doux, pensé pour flâner le long de la côte."
+  },
+  {
+   "nom": "Prestige 590",
+   "taille_m": 18.7,
+   "invites": 12,
+   "equipage": 2,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "À partir de 6 400 € / jour + APA",
+   "images": [
+    "assets/yachts/prestige-590-1.jpg",
+    "assets/yachts/prestige-590-2.jpg",
+    "assets/yachts/prestige-590-3.jpg",
+    "assets/yachts/prestige-590-4.jpg",
+    "assets/yachts/prestige-590-5.jpg"
+   ],
+   "description": "Flybridge Prestige de 18,7 mètres : deux cabines, flybridge panoramique, l'équilibre parfait pour la journée."
+  },
+  {
+   "nom": "Princess V55",
+   "taille_m": 17.3,
+   "invites": 10,
+   "equipage": 1,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "À partir de 5 900 € / jour + APA",
+   "images": [
+    "assets/yachts/princess-v55-1.jpg",
+    "assets/yachts/princess-v55-2.jpg",
+    "assets/yachts/princess-v55-3.jpg",
+    "assets/yachts/princess-v55-4.jpg",
+    "assets/yachts/princess-v55-5.jpg"
+   ],
+   "description": "Sport-cruiser Princess de 17,3 mètres, deux cabines : allure racée et confort raffiné entre Monaco et Saint-Tropez."
+  },
+  {
+   "nom": "Power 44",
+   "taille_m": 13.6,
+   "invites": 10,
+   "equipage": 1,
+   "zone": "Riviera — à la journée",
+   "tarif": "À partir de 4 150 € / jour + APA",
+   "images": [
+    "assets/yachts/power-44-1.jpg",
+    "assets/yachts/power-44-2.jpg",
+    "assets/yachts/power-44-3.jpg",
+    "assets/yachts/power-44-4.jpg",
+    "assets/yachts/power-44-5.jpg"
+   ],
+   "description": "Open de 13,6 mètres, dix invités : le format juste pour une journée entre Monaco et les îles de Lérins."
+  },
+  {
+   "nom": "Princess F55",
+   "taille_m": 17.5,
+   "invites": 10,
+   "equipage": 2,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "À partir de 5 900 € / jour + APA",
+   "images": [
+    "assets/yachts/princess-f55-1.jpg",
+    "assets/yachts/princess-f55-2.jpg",
+    "assets/yachts/princess-f55-3.jpg",
+    "assets/yachts/princess-f55-4.jpg",
+    "assets/yachts/princess-f55-5.jpg"
+   ],
+   "description": "Flybridge Princess de 17,5 mètres, trois cabines : deux ponts de vie pour profiter du large en famille."
+  },
+  {
+   "nom": "Wajer 55 HT",
+   "taille_m": 16.1,
+   "invites": 9,
+   "equipage": 1,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "À partir de 6 900 € / jour + APA",
+   "images": [
+    "assets/yachts/wajer-55-1.jpg",
+    "assets/yachts/wajer-55-2.jpg",
+    "assets/yachts/wajer-55-3.jpg",
+    "assets/yachts/wajer-55-4.jpg",
+    "assets/yachts/wajer-55-5.jpg"
+   ],
+   "description": "Le day-boat le plus désirable de sa génération : 16 mètres de finition irréprochable, silence et vitesse réunis."
+  },
+  {
+   "nom": "M/Y Palumba",
+   "taille_m": 26.41,
+   "invites": 12,
+   "equipage": 3,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "À partir de 7 000 € / jour",
+   "images": [
+    "assets/yachts/palumba-1.jpg",
+    "assets/yachts/palumba-2.jpg",
+    "assets/yachts/palumba-3.jpg",
+    "assets/yachts/palumba-4.jpg",
+    "assets/yachts/palumba-5.jpg"
+   ],
+   "description": "Sunseeker de 26 mètres, quatre cabines et équipage de trois : 38 nœuds en pointe, à l'aise de la Riviera à la Corse et la Sardaigne."
+  },
+  {
+   "nom": "Vanquish 45",
+   "taille_m": 13.6,
+   "invites": 11,
+   "equipage": 1,
+   "zone": "Riviera — à la journée",
+   "tarif": "À partir de 4 500 € / jour + APA",
+   "images": [
+    "assets/yachts/vanquish-45-1.jpg",
+    "assets/yachts/vanquish-45-2.jpg",
+    "assets/yachts/vanquish-45-3.jpg",
+    "assets/yachts/vanquish-45-4.jpg",
+    "assets/yachts/vanquish-45-5.jpg"
+   ],
+   "description": "Day-cruiser hollandais de 13,6 mètres, dessin sur-mesure : idéal pour les criques de l'Estérel et les déjeuners au mouillage."
+  },
+  {
+   "nom": "Sichterman 54",
+   "taille_m": 16.42,
+   "invites": 12,
+   "equipage": 1,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "À partir de 5 900 € / jour + APA",
+   "images": [
+    "assets/yachts/sichterman-54-1.jpg",
+    "assets/yachts/sichterman-54-2.jpg",
+    "assets/yachts/sichterman-54-3.jpg",
+    "assets/yachts/sichterman-54-4.jpg",
+    "assets/yachts/sichterman-54-5.jpg"
+   ],
+   "description": "Élégance intemporelle sur 16,4 mètres : un day-cruiser rare, dessiné pour les longues journées en mer."
+  },
+  {
+   "nom": "Predator 65",
+   "taille_m": 20.5,
+   "invites": 12,
+   "equipage": 2,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "À partir de 7 600 € / jour + APA",
+   "images": [
+    "assets/yachts/predator-65-1.jpg",
+    "assets/yachts/predator-65-2.jpg",
+    "assets/yachts/predator-65-3.jpg",
+    "assets/yachts/predator-65-4.jpg",
+    "assets/yachts/predator-65-5.jpg"
+   ],
+   "description": "Sunseeker Predator 65 : 20,5 mètres, 35 nœuds, quatre cabines. Le sport-cruiser britannique par excellence."
+  },
+  {
+   "nom": "E-Cat 80 — solaire",
+   "taille_m": 23.97,
+   "invites": 12,
+   "equipage": 4,
+   "zone": "Côte d'Azur",
+   "tarif": "Prix sur demande",
+   "images": [
+    "assets/yachts/ecat-80-1.jpg",
+    "assets/yachts/ecat-80-2.jpg",
+    "assets/yachts/ecat-80-3.jpg",
+    "assets/yachts/ecat-80-4.jpg",
+    "assets/yachts/ecat-80-5.jpg",
+    "assets/yachts/ecat-80-6.jpg",
+    "assets/yachts/ecat-80-7.jpg",
+    "assets/yachts/ecat-80-8.jpg",
+    "assets/yachts/ecat-80-9.jpg",
+    "assets/yachts/ecat-80-10.jpg"
+   ],
+   "description": "Catamaran E-Cat 80 à propulsion solaire (2025) : 24 mètres, 11 mètres de large, quatre cabines. Navigation silencieuse et architecture contemporaine."
+  },
+  {
+   "nom": "Princess 35M",
+   "taille_m": 35,
+   "invites": 10,
+   "equipage": 6,
+   "zone": "Méditerranée — à la semaine",
+   "tarif": "À partir de 140 000 € / semaine",
+   "images": [
+    "assets/yachts/princess-35m-1.jpg",
+    "assets/yachts/princess-35m-2.jpg",
+    "assets/yachts/princess-35m-3.jpg",
+    "assets/yachts/princess-35m-4.jpg",
+    "assets/yachts/princess-35m-5.jpg"
+   ],
+   "description": "Superyacht Princess de 35 mètres, cinq cabines et six membres d'équipage, pour une semaine de croisière en toute intimité."
+  },
+  {
+   "nom": "Prestige 500 Fly",
+   "taille_m": 14.92,
+   "invites": 10,
+   "equipage": 2,
+   "zone": "Côte d'Azur",
+   "tarif": "Prix sur demande",
+   "images": [
+    "assets/yachts/prestige-500-1.jpg",
+    "assets/yachts/prestige-500-2.jpg",
+    "assets/yachts/prestige-500-3.jpg",
+    "assets/yachts/prestige-500-4.jpg",
+    "assets/yachts/prestige-500-5.jpg",
+    "assets/yachts/prestige-500-6.jpg",
+    "assets/yachts/prestige-500-7.jpg",
+    "assets/yachts/prestige-500-8.jpg",
+    "assets/yachts/prestige-500-9.jpg"
+   ],
+   "description": "Prestige 500 Fly (Jeanneau, 2017) de 15 mètres : intérieur spacieux, salon de flybridge, climatisation et plage de bain. Basé à Juan-les-Pins."
+  },
+  {
+   "nom": "San Lorenzo SX88",
+   "taille_m": 24,
+   "invites": 12,
+   "equipage": 4,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "À partir de 18 200 € / jour + APA",
+   "images": [
+    "assets/yachts/sanlorenzo-sx88-1.jpg",
+    "assets/yachts/sanlorenzo-sx88-2.jpg",
+    "assets/yachts/sanlorenzo-sx88-3.jpg",
+    "assets/yachts/sanlorenzo-sx88-4.jpg",
+    "assets/yachts/sanlorenzo-sx88-5.jpg"
+   ],
+   "description": "Crossover San Lorenzo de 24 mètres : volumes ouverts sur la mer, quatre cabines et art de vivre au fil de l'eau."
+  },
+  {
+   "nom": "Salpa Soleil 40",
+   "taille_m": 11.88,
+   "invites": 10,
+   "equipage": 1,
+   "zone": "Côte d'Azur",
+   "tarif": "Prix sur demande",
+   "images": [
+    "assets/yachts/soleil-40-1.jpg",
+    "assets/yachts/soleil-40-2.jpg",
+    "assets/yachts/soleil-40-3.jpg",
+    "assets/yachts/soleil-40-4.jpg",
+    "assets/yachts/soleil-40-5.jpg",
+    "assets/yachts/soleil-40-6.jpg",
+    "assets/yachts/soleil-40-7.jpg",
+    "assets/yachts/soleil-40-8.jpg",
+    "assets/yachts/soleil-40-9.jpg",
+    "assets/yachts/soleil-40-10.jpg"
+   ],
+   "description": "Salpa Soleil 40 neuf (2026) de 11,9 mètres : cabine et cuisine extérieure, propulseur d'étrave et joystick, bains de soleil avant et arrière. Basé à Juan-les-Pins."
+  },
+  {
+   "nom": "Nuova Jolly 35",
+   "taille_m": 10.7,
+   "invites": 10,
+   "equipage": 1,
+   "zone": "Côte d'Azur",
+   "tarif": "Prix sur demande",
+   "images": [
+    "assets/yachts/nuova-jolly-35-1.jpg",
+    "assets/yachts/nuova-jolly-35-2.jpg",
+    "assets/yachts/nuova-jolly-35-3.jpg",
+    "assets/yachts/nuova-jolly-35-4.jpg",
+    "assets/yachts/nuova-jolly-35-5.jpg"
+   ],
+   "description": "Nuova Jolly Prince 35 (2017) de 10,7 mètres : cabine et salle d'eau, bains de soleil avant et arrière, grand taud et moteurs silencieux. Basé à Juan-les-Pins."
+  },
+  {
+   "nom": "Princess V65",
+   "taille_m": 20,
+   "invites": 10,
+   "equipage": 2,
+   "zone": "Côte d'Azur",
+   "tarif": "Prix sur demande",
+   "images": [
+    "assets/yachts/princess-v65-1.jpg",
+    "assets/yachts/princess-v65-2.jpg",
+    "assets/yachts/princess-v65-3.jpg"
+   ],
+   "description": "Princess V65 de 20 mètres : cabines et vastes salons de plein air à l'arrière, plage de bain et équipage de deux. Basé à Juan-les-Pins."
+  },
+  {
+   "nom": "Salpa Soleil 24.5",
+   "taille_m": 7.85,
+   "invites": 8,
+   "equipage": 1,
+   "zone": "Côte d'Azur",
+   "tarif": "Prix sur demande",
+   "images": [
+    "assets/yachts/soleil-24-5-1.jpg",
+    "assets/yachts/soleil-24-5-2.jpg",
+    "assets/yachts/soleil-24-5-3.jpg",
+    "assets/yachts/soleil-24-5-4.jpg",
+    "assets/yachts/soleil-24-5-5.jpg"
+   ],
+   "description": "Salpa Soleil 24.5 (2024) de 7,85 mètres : grand bain de soleil, confort premium, idéal pour les criques à la journée. Basé à Juan-les-Pins."
+  },
+  {
+   "nom": "Leonard 74",
+   "taille_m": 21.75,
+   "invites": 12,
+   "equipage": 2,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "À partir de 8 400 € / jour + APA",
+   "images": [
+    "assets/yachts/leonard-74-1.jpg",
+    "assets/yachts/leonard-74-2.jpg",
+    "assets/yachts/leonard-74-3.jpg",
+    "assets/yachts/leonard-74-4.jpg",
+    "assets/yachts/leonard-74-5.jpg"
+   ],
+   "description": "Yacht de 21,7 mètres, quatre cabines et vastes espaces de vie : le confort d'un grand pour la journée."
+  },
+  {
+   "nom": "Salpa Avantgarde 35",
+   "taille_m": 11.2,
+   "invites": 10,
+   "equipage": 1,
+   "zone": "Côte d'Azur",
+   "tarif": "Prix sur demande",
+   "images": [
+    "assets/yachts/avantgarde-35-1.jpg",
+    "assets/yachts/avantgarde-35-2.jpg",
+    "assets/yachts/avantgarde-35-3.jpg",
+    "assets/yachts/avantgarde-35-4.jpg",
+    "assets/yachts/avantgarde-35-5.jpg",
+    "assets/yachts/avantgarde-35-6.jpg"
+   ],
+   "description": "Salpa Avantgarde 35 (2023) de 11,2 mètres : cockpit spacieux, cabine, finitions soignées et belles performances. Basé à Juan-les-Pins."
+  },
+  {
+   "nom": "Ferretti 881 RPH",
+   "taille_m": 27.07,
+   "invites": 11,
+   "equipage": 5,
+   "zone": "Côte d'Azur",
+   "tarif": "Prix sur demande",
+   "images": [
+    "assets/yachts/ferretti-881-1.jpg",
+    "assets/yachts/ferretti-881-2.jpg",
+    "assets/yachts/ferretti-881-3.jpg",
+    "assets/yachts/ferretti-881-4.jpg",
+    "assets/yachts/ferretti-881-5.jpg",
+    "assets/yachts/ferretti-881-6.jpg",
+    "assets/yachts/ferretti-881-7.jpg",
+    "assets/yachts/ferretti-881-8.jpg",
+    "assets/yachts/ferretti-881-9.jpg",
+    "assets/yachts/ferretti-881-10.jpg"
+   ],
+   "description": "Ferretti 881 RPH de 27 mètres (refit 2022) : quatre cabines, huit couchages, flybridge spacieux avec jacuzzi et un équipage de cinq. Basé à Cannes."
+  },
+  {
+   "nom": "Guy Couach 37",
+   "taille_m": 37,
+   "invites": 12,
+   "equipage": 6,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "À partir de 31 900 € / jour + APA",
+   "images": [
+    "assets/yachts/guy-couach-37-1.jpg",
+    "assets/yachts/guy-couach-37-2.jpg",
+    "assets/yachts/guy-couach-37-3.jpg",
+    "assets/yachts/guy-couach-37-4.jpg",
+    "assets/yachts/guy-couach-37-5.jpg"
+   ],
+   "description": "Yacht de 37 mètres, cinq cabines et six membres d'équipage : espace, autonomie et grand confort de croisière."
+  },
+  {
+   "nom": "Integrity 93",
+   "taille_m": 28.5,
+   "invites": 12,
+   "equipage": 4,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "À partir de 14 550 € / jour + APA",
+   "images": [
+    "assets/yachts/integrity-93-1.jpg",
+    "assets/yachts/integrity-93-2.jpg",
+    "assets/yachts/integrity-93-3.jpg",
+    "assets/yachts/integrity-93-4.jpg",
+    "assets/yachts/integrity-93-5.jpg"
+   ],
+   "description": "Yacht de 28,5 mètres, quatre cabines et huit couchages : espace généreux pour recevoir en grand comité."
+  },
+  {
+   "nom": "Leopard 23 Sport",
+   "taille_m": 23,
+   "invites": 10,
+   "equipage": 2,
+   "zone": "Côte d'Azur",
+   "tarif": "Prix sur demande",
+   "images": [
+    "assets/yachts/leopard-23-1.jpg",
+    "assets/yachts/leopard-23-2.jpg",
+    "assets/yachts/leopard-23-3.jpg",
+    "assets/yachts/leopard-23-4.jpg",
+    "assets/yachts/leopard-23-5.jpg",
+    "assets/yachts/leopard-23-6.jpg",
+    "assets/yachts/leopard-23-7.jpg"
+   ],
+   "description": "Leopard 23 Sport de 23 mètres (refit 2025) : cockpit ouvert, intérieur luxueux, plage de bain et bains de soleil avant et arrière. Basé à Golfe-Juan."
+  },
+  {
+   "nom": "Baglietto 130",
+   "taille_m": 40,
+   "invites": 12,
+   "equipage": 8,
+   "zone": "Méditerranée — à la semaine",
+   "tarif": "À partir de 250 000 € / semaine",
+   "images": [
+    "assets/yachts/baglietto-130-1.jpg",
+    "assets/yachts/baglietto-130-2.jpg",
+    "assets/yachts/baglietto-130-3.jpg",
+    "assets/yachts/baglietto-130-4.jpg",
+    "assets/yachts/baglietto-130-5.jpg"
+   ],
+   "description": "Superyacht italien de 40 mètres, cinq cabines et huit hommes d'équipage, taillé pour les longues croisières estivales."
+  },
+  {
+   "nom": "M/Y Cristal I",
+   "taille_m": 23.96,
+   "invites": 10,
+   "equipage": 2,
+   "zone": "Côte d'Azur & Méditerranée",
+   "tarif": "À partir de 3 750 € / jour",
+   "images": [
+    "assets/yachts/cristal-i-1.jpg",
+    "assets/yachts/cristal-i-2.jpg",
+    "assets/yachts/cristal-i-3.jpg",
+    "assets/yachts/cristal-i-4.jpg"
+   ],
+   "description": "Motor-yacht Leopard (Arno) de 24 mètres, trois cabines et équipage de deux, refit 2011 : 30 nœuds en pointe pour explorer la Riviera et la Méditerranée occidentale."
+  },
+  {
+   "nom": "Princess 40M",
+   "taille_m": 40,
+   "invites": 12,
+   "equipage": 7,
+   "zone": "Méditerranée — à la semaine",
+   "tarif": "À partir de 195 000 € / semaine",
+   "images": [
+    "assets/yachts/princess-40m-1.jpg",
+    "assets/yachts/princess-40m-2.jpg",
+    "assets/yachts/princess-40m-3.jpg",
+    "assets/yachts/princess-40m-4.jpg",
+    "assets/yachts/princess-40m-5.jpg"
+   ],
+   "description": "Grand raid Princess de 40 mètres : cinq cabines, dix couchages, un équipage de sept pour un service sans faille."
+  },
+  {
+   "nom": "Pershing 70",
+   "taille_m": 21.4,
+   "invites": 12,
+   "equipage": 2,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "À partir de 9 000 € / jour + APA",
+   "images": [
+    "assets/yachts/pershing-70-1.jpg",
+    "assets/yachts/pershing-70-2.jpg",
+    "assets/yachts/pershing-70-3.jpg",
+    "assets/yachts/pershing-70-4.jpg",
+    "assets/yachts/pershing-70-5.jpg"
+   ],
+   "description": "Icône Pershing de 21,4 mètres : 40 nœuds, trois cabines, l'adrénaline conjuguée au grand luxe italien."
+  },
+  {
+   "nom": "San Lorenzo 78",
+   "taille_m": 24.64,
+   "invites": 12,
+   "equipage": 3,
+   "zone": "Côte d'Azur",
+   "tarif": "Prix sur demande",
+   "images": [
+    "assets/yachts/sanlorenzo-78-1.jpg",
+    "assets/yachts/sanlorenzo-78-2.jpg",
+    "assets/yachts/sanlorenzo-78-3.jpg",
+    "assets/yachts/sanlorenzo-78-4.jpg",
+    "assets/yachts/sanlorenzo-78-5.jpg",
+    "assets/yachts/sanlorenzo-78-6.jpg",
+    "assets/yachts/sanlorenzo-78-7.jpg",
+    "assets/yachts/sanlorenzo-78-8.jpg",
+    "assets/yachts/sanlorenzo-78-9.jpg",
+    "assets/yachts/sanlorenzo-78-10.jpg"
+   ],
+   "description": "San Lorenzo 78 neuf (2024) de 24,6 mètres : quatre cabines, flybridge et vastes bains de soleil. Basé à Antibes."
+  },
+  {
+   "nom": "Ferretti 860",
+   "taille_m": 26.95,
+   "invites": 12,
+   "equipage": 4,
+   "zone": "Côte d'Azur",
+   "tarif": "Prix sur demande",
+   "images": [
+    "assets/yachts/ferretti-860-1.jpg",
+    "assets/yachts/ferretti-860-2.jpg",
+    "assets/yachts/ferretti-860-3.jpg",
+    "assets/yachts/ferretti-860-4.jpg",
+    "assets/yachts/ferretti-860-5.jpg",
+    "assets/yachts/ferretti-860-6.jpg",
+    "assets/yachts/ferretti-860-7.jpg",
+    "assets/yachts/ferretti-860-8.jpg",
+    "assets/yachts/ferretti-860-9.jpg",
+    "assets/yachts/ferretti-860-10.jpg"
+   ],
+   "description": "Ferretti 860 neuf (2024) de 27 mètres : quatre cabines dont une suite propriétaire pleine largeur, flybridge généreux, équipage de quatre."
+  },
+  {
+   "nom": "Azimut 100",
+   "taille_m": 30,
+   "invites": 12,
+   "equipage": 5,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "À partir de 16 500 € / jour + APA",
+   "images": [
+    "assets/yachts/azimut-100-1.jpg",
+    "assets/yachts/azimut-100-2.jpg",
+    "assets/yachts/azimut-100-3.jpg",
+    "assets/yachts/azimut-100-4.jpg",
+    "assets/yachts/azimut-100-5.jpg"
+   ],
+   "description": "Flagship Azimut de 30 mètres, quatre cabines et large plage arrière : le grand jour au superlatif."
+  },
+  {
+   "nom": "Diva 82",
+   "taille_m": 24.9,
+   "invites": 12,
+   "equipage": 3,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "À partir de 18 500 € / jour + APA",
+   "images": [
+    "assets/yachts/diva-82-1.jpg",
+    "assets/yachts/diva-82-2.jpg",
+    "assets/yachts/diva-82-3.jpg",
+    "assets/yachts/diva-82-4.jpg",
+    "assets/yachts/diva-82-5.jpg"
+   ],
+   "description": "Riva de 25 mètres, quatre cabines et huit couchages : le raffinement italien pour une journée d'exception."
+  },
+  {
+   "nom": "Mangusta 108",
+   "taille_m": 33.5,
+   "invites": 12,
+   "equipage": 5,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "À partir de 15 800 € / jour + APA",
+   "images": [
+    "assets/yachts/mangusta-108-1.jpg",
+    "assets/yachts/mangusta-108-2.jpg",
+    "assets/yachts/mangusta-108-3.jpg",
+    "assets/yachts/mangusta-108-4.jpg",
+    "assets/yachts/mangusta-108-5.jpg"
+   ],
+   "description": "Open sportif de 33,5 mètres, trois cabines et 28 nœuds : puissance et lignes tendues signées Mangusta."
+  },
+  {
+   "nom": "Cranchi A46",
+   "taille_m": 14.25,
+   "invites": 11,
+   "equipage": 1,
+   "zone": "Côte d'Azur",
+   "tarif": "Prix sur demande",
+   "images": [
+    "assets/yachts/cranchi-a46-1.jpg",
+    "assets/yachts/cranchi-a46-2.jpg",
+    "assets/yachts/cranchi-a46-3.jpg",
+    "assets/yachts/cranchi-a46-4.jpg",
+    "assets/yachts/cranchi-a46-5.jpg",
+    "assets/yachts/cranchi-a46-6.jpg",
+    "assets/yachts/cranchi-a46-7.jpg",
+    "assets/yachts/cranchi-a46-8.jpg",
+    "assets/yachts/cranchi-a46-9.jpg"
+   ],
+   "description": "Cranchi A46 (2025) de 14,25 mètres : cockpit spacieux, deux balcons ouvrants, plage de bain hydraulique et cabine confortable. Basé à Juan-les-Pins."
+  },
+  {
+   "nom": "Princess X80",
+   "taille_m": 25.2,
+   "invites": 12,
+   "equipage": 4,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "À partir de 17 900 € / jour + APA",
+   "images": [
+    "assets/yachts/princess-x80-1.jpg",
+    "assets/yachts/princess-x80-2.jpg",
+    "assets/yachts/princess-x80-3.jpg",
+    "assets/yachts/princess-x80-4.jpg",
+    "assets/yachts/princess-x80-5.jpg"
+   ],
+   "description": "Le vaisseau X80 de Princess : 25 mètres, cinq cabines, volumes spectaculaires et panoramas à couper le souffle."
+  },
+  {
+   "nom": "Fairline Targa GTO 65",
+   "taille_m": 20.24,
+   "invites": 14,
+   "equipage": 3,
+   "zone": "Côte d'Azur",
+   "tarif": "Prix sur demande",
+   "images": [
+    "assets/yachts/fairline-gto-65-1.jpg",
+    "assets/yachts/fairline-gto-65-2.jpg",
+    "assets/yachts/fairline-gto-65-3.jpg",
+    "assets/yachts/fairline-gto-65-4.jpg",
+    "assets/yachts/fairline-gto-65-5.jpg",
+    "assets/yachts/fairline-gto-65-6.jpg",
+    "assets/yachts/fairline-gto-65-7.jpg",
+    "assets/yachts/fairline-gto-65-8.jpg",
+    "assets/yachts/fairline-gto-65-9.jpg",
+    "assets/yachts/fairline-gto-65-10.jpg"
+   ],
+   "description": "Fairline Targa GTO 65 de 20 mètres (2021) : toit ouvrant, trois cabines, table de cockpit spacieuse et plage de bain hydraulique. Basé à Golfe-Juan."
+  },
+  {
+   "nom": "Salpa Soleil 28",
+   "taille_m": 8.9,
+   "invites": 10,
+   "equipage": 1,
+   "zone": "Côte d'Azur",
+   "tarif": "Prix sur demande",
+   "images": [
+    "assets/yachts/soleil-28-1.jpg",
+    "assets/yachts/soleil-28-2.jpg",
+    "assets/yachts/soleil-28-3.jpg",
+    "assets/yachts/soleil-28-4.jpg",
+    "assets/yachts/soleil-28-5.jpg",
+    "assets/yachts/soleil-28-6.jpg",
+    "assets/yachts/soleil-28-7.jpg",
+    "assets/yachts/soleil-28-8.jpg"
+   ],
+   "description": "Salpa Soleil 28 (2025) de 8,9 mètres : grand bain de soleil, navigation douce et confort premium pour la journée. Basé à Juan-les-Pins."
+  },
+  {
+   "nom": "Sirena 88",
+   "taille_m": 26.81,
+   "invites": 10,
+   "equipage": 4,
+   "zone": "Côte d'Azur",
+   "tarif": "Prix sur demande",
+   "images": [
+    "assets/yachts/sirena-88-1.jpg",
+    "assets/yachts/sirena-88-2.jpg",
+    "assets/yachts/sirena-88-3.jpg",
+    "assets/yachts/sirena-88-4.jpg",
+    "assets/yachts/sirena-88-5.jpg",
+    "assets/yachts/sirena-88-6.jpg",
+    "assets/yachts/sirena-88-7.jpg",
+    "assets/yachts/sirena-88-8.jpg",
+    "assets/yachts/sirena-88-9.jpg",
+    "assets/yachts/sirena-88-10.jpg"
+   ],
+   "description": "Sirena Yachts 88 neuf (2025) de 26,8 mètres : cinq cabines, jacuzzi de pont, flybridge panoramique et grand confort de croisière. Basé à Cannes."
+  },
+  {
+   "nom": "M/Y Celine II",
+   "taille_m": 21.75,
+   "invites": 10,
+   "equipage": 2,
+   "zone": "Côte d'Azur",
+   "tarif": "Prix sur demande",
+   "images": [
+    "assets/yachts/celine-ii-1.jpg",
+    "assets/yachts/celine-ii-2.jpg",
+    "assets/yachts/celine-ii-3.jpg",
+    "assets/yachts/celine-ii-4.jpg",
+    "assets/yachts/celine-ii-5.jpg",
+    "assets/yachts/celine-ii-6.jpg",
+    "assets/yachts/celine-ii-7.jpg",
+    "assets/yachts/celine-ii-8.jpg",
+    "assets/yachts/celine-ii-9.jpg",
+    "assets/yachts/celine-ii-10.jpg"
+   ],
+   "description": "Leonard de 21,75 mètres (2009, magnifiquement refité en 2025) : quatre cabines, flybridge, motorisation MAN et 30 nœuds. Ambiance moderne et raffinée."
+  },
+  {
+   "nom": "Salpa Soleil 33",
+   "taille_m": 10.25,
+   "invites": 10,
+   "equipage": 1,
+   "zone": "Côte d'Azur",
+   "tarif": "Prix sur demande",
+   "images": [
+    "assets/yachts/soleil-33-1.jpg",
+    "assets/yachts/soleil-33-2.jpg",
+    "assets/yachts/soleil-33-3.jpg",
+    "assets/yachts/soleil-33-4.jpg",
+    "assets/yachts/soleil-33-5.jpg",
+    "assets/yachts/soleil-33-6.jpg",
+    "assets/yachts/soleil-33-7.jpg"
+   ],
+   "description": "Salpa Soleil 33 (2023) de 10,25 mètres : cabine et salle d'eau, propulseur d'étrave, table convertible et son de qualité. Basé à Juan-les-Pins."
+  },
+  {
+   "nom": "Sherpa 60",
+   "taille_m": 18.7,
+   "invites": 12,
+   "equipage": 2,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "À partir de 11 250 € / jour + APA",
+   "images": [
+    "assets/yachts/sherpa-60-1.jpg",
+    "assets/yachts/sherpa-60-2.jpg",
+    "assets/yachts/sherpa-60-3.jpg",
+    "assets/yachts/sherpa-60-4.jpg",
+    "assets/yachts/sherpa-60-5.jpg"
+   ],
+   "description": "Arcadia Sherpa 60 : 18,7 mètres baignés de lumière, terrasses ouvertes et esprit loft sur la mer."
+  },
+  {
+   "nom": "Mangusta 110",
+   "taille_m": 33.8,
+   "invites": 12,
+   "equipage": 5,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "À partir de 25 900 € / jour + APA",
+   "images": [
+    "assets/yachts/mangusta-110-1.jpg",
+    "assets/yachts/mangusta-110-2.jpg",
+    "assets/yachts/mangusta-110-3.jpg",
+    "assets/yachts/mangusta-110-4.jpg",
+    "assets/yachts/mangusta-110-5.jpg"
+   ],
+   "description": "Open italien de 33,8 mètres signé Overmarine : quatre cabines, lignes sportives et tempérament racé."
+  },
+  {
+   "nom": "M/Y Faith",
+   "taille_m": 33,
+   "invites": 36,
+   "zone": "Côte d'Azur — événementiel",
+   "tarif": "Prix sur demande",
+   "images": [
+    "assets/yachts/faith-1.jpg",
+    "assets/yachts/faith-2.jpg",
+    "assets/yachts/faith-3.jpg",
+    "assets/yachts/faith-4.jpg",
+    "assets/yachts/faith-5.jpg",
+    "assets/yachts/faith-6.jpg",
+    "assets/yachts/faith-7.jpg",
+    "assets/yachts/faith-8.jpg",
+    "assets/yachts/faith-9.jpg",
+    "assets/yachts/faith-10.jpg"
+   ],
+   "description": "Motor-yacht Tecnomarine de 33 mètres (refit 2024), quatre cabines et vastes ponts de réception — jusqu'à 36 personnes en navigation, 80 à quai. Pensé pour les événements privés et croisières."
+  },
+  {
+   "nom": "Riva Corsaro 100",
+   "taille_m": 29.9,
+   "invites": 12,
+   "equipage": 4,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "À partir de 24 000 € / jour + APA",
+   "images": [
+    "assets/yachts/riva-corsaro-100-1.jpg",
+    "assets/yachts/riva-corsaro-100-2.jpg",
+    "assets/yachts/riva-corsaro-100-3.jpg",
+    "assets/yachts/riva-corsaro-100-4.jpg",
+    "assets/yachts/riva-corsaro-100-5.jpg"
+   ],
+   "description": "L'élégance Riva portée à 30 mètres : cinq cabines, finitions d'exception et allure intemporelle."
+  },
+  {
+   "nom": "ISA 120",
+   "taille_m": 37,
+   "invites": 12,
+   "equipage": 6,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "À partir de 25 600 € / jour + APA",
+   "images": [
+    "assets/yachts/isa-120-1.jpg",
+    "assets/yachts/isa-120-2.jpg",
+    "assets/yachts/isa-120-3.jpg",
+    "assets/yachts/isa-120-4.jpg",
+    "assets/yachts/isa-120-5.jpg"
+   ],
+   "description": "Superyacht ISA de 37 mètres à triple motorisation MTU : quatre cabines, présence rare sur la Riviera."
+  },
+  {
+   "nom": "CRN Ancona 79",
+   "taille_m": 79,
+   "invites": 12,
+   "equipage": 24,
+   "zone": "Méditerranée — à la semaine",
+   "tarif": "À partir de 900 000 € / semaine",
+   "images": [
+    "assets/yachts/crn-ancona-79-1.jpg",
+    "assets/yachts/crn-ancona-79-2.jpg",
+    "assets/yachts/crn-ancona-79-3.jpg",
+    "assets/yachts/crn-ancona-79-4.jpg",
+    "assets/yachts/crn-ancona-79-5.jpg"
+   ],
+   "description": "Navire amiral du catalogue : 79 mètres, six cabines, vingt-quatre membres d'équipage. L'absolu du charter méditerranéen."
+  },
+  {
+   "nom": "Lamborghini 63",
+   "taille_m": 20,
+   "invites": 10,
+   "equipage": 2,
+   "zone": "Côte d'Azur & Corse",
+   "tarif": "À partir de 11 000 € / jour + APA",
+   "images": [
+    "assets/yachts/lamborghini-63-1.jpg",
+    "assets/yachts/lamborghini-63-2.jpg",
+    "assets/yachts/lamborghini-63-3.jpg",
+    "assets/yachts/lamborghini-63-4.jpg",
+    "assets/yachts/lamborghini-63-5.jpg"
+   ],
+   "description": "Le mythe Lamborghini sur l'eau : 20 mètres, 40 nœuds, deux V12 MAN. Une signature d'exception, ultra-confidentielle."
+  },
+  {
+   "nom": "Bluegame BGX 63",
+   "taille_m": 20,
+   "invites": 12,
+   "equipage": 2,
+   "zone": "Côte d'Azur",
+   "tarif": "Prix sur demande",
+   "images": [
+    "assets/yachts/bluegame-bgx-63-1.jpg",
+    "assets/yachts/bluegame-bgx-63-2.jpg",
+    "assets/yachts/bluegame-bgx-63-3.jpg",
+    "assets/yachts/bluegame-bgx-63-4.jpg",
+    "assets/yachts/bluegame-bgx-63-5.jpg",
+    "assets/yachts/bluegame-bgx-63-6.jpg",
+    "assets/yachts/bluegame-bgx-63-7.jpg",
+    "assets/yachts/bluegame-bgx-63-8.jpg",
+    "assets/yachts/bluegame-bgx-63-9.jpg",
+    "assets/yachts/bluegame-bgx-63-10.jpg"
+   ],
+   "description": "Bluegame BGX 63 neuf (2025) de 20 mètres : trois cabines, plage de bain hydraulique et stabilisateur gyroscopique pour un confort absolu. Basé à Cogolin."
+  },
+  {
+   "nom": "Salpa Soleil 26",
+   "taille_m": 8,
+   "invites": 8,
+   "equipage": 1,
+   "zone": "Côte d'Azur",
+   "tarif": "Prix sur demande",
+   "images": [
+    "assets/yachts/soleil-26-1.jpg",
+    "assets/yachts/soleil-26-2.jpg",
+    "assets/yachts/soleil-26-3.jpg",
+    "assets/yachts/soleil-26-4.jpg",
+    "assets/yachts/soleil-26-5.jpg",
+    "assets/yachts/soleil-26-6.jpg"
+   ],
+   "description": "Salpa Soleil 26 (2023) de 8 mètres : grand bain de soleil, système son Fusion et belles performances. Basé à Juan-les-Pins."
+  }
+ ]
 }

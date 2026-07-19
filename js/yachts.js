@@ -189,6 +189,7 @@
         return (
           '<article class="card">' +
             '<div class="card__media">' +
+              (y.nouveau ? '<span class="card__badge">' + (EN() ? 'New' : 'Nouveau') + '</span>' : '') +
               '<div class="carousel' + (single ? ' carousel--single' : '') + '" data-carousel>' +
                 '<div class="carousel__track">' + slides + '</div>' +
                 nav +

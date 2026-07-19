@@ -779,6 +779,7 @@ html.js [data-reveal-lines].is-inview { opacity: 1; transform: none; }
 .hero--compact { min-height: 48vh; min-height: 48dvh; }
 .hero--compact { min-height: max(48vh, 460px); min-height: max(48dvh, 460px); }
 .hero--page .hero__sub { margin-bottom: 0; }
+.hero--page .hero__actions { margin-top: 36px; }
 .hero--compact .hero__content { padding-bottom: clamp(24px, 5vw, 48px); }
 
 .fleet {

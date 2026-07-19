@@ -31,7 +31,7 @@
 
   /* ── Suivi conversion Google Ads : clic sur un bouton WhatsApp ── */
   document.addEventListener('click', function (e) {
-    if (e.target.closest('.btn-wa, .whatsapp-float') && typeof gtag === 'function') {
+    if (e.target.closest('.btn-wa, .whatsapp-float, [data-wa]') && typeof gtag === 'function') {
       gtag('event', 'conversion', { send_to: 'AW-18323270454/f-7LCPa-ytAcELbWm6FE' });
     }
   });

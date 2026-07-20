@@ -29,11 +29,41 @@
     document.body.appendChild(link);
   })();
 
-  /* ── Suivi conversion Google Ads : clic sur un bouton WhatsApp ── */
+  /* ── Suivi conversions Google Ads ───────────────────────────
+     Dédup : chaque type de conversion n'est compté qu'une fois
+     par session, pour ne pas gonfler les données d'apprentissage
+     du Smart Bidding quand un même visiteur clique plusieurs
+     boutons. Chaque envoi porte un transaction_id (dédup côté
+     Google également) et accepte une valeur optionnelle en EUR
+     pour préparer d'éventuelles enchères basées sur la valeur. */
+  var ADS_ID = 'AW-18323270454';
+  /* TODO Google Ads : créer DEUX actions de conversion distinctes
+     — « Contact WhatsApp/Appel » et « Lead formulaire » — puis
+     remplacer les libellés ci-dessous par les leurs. Tant qu'il
+     n'y en a qu'un seul, les trois pointent sur le même libellé
+     et ne peuvent pas être distingués dans les rapports. */
+  var CONV = {
+    whatsapp: ADS_ID + '/f-7LCPa-ytAcELbWm6FE',
+    call:     ADS_ID + '/f-7LCPa-ytAcELbWm6FE',
+    form:     ADS_ID + '/f-7LCPa-ytAcELbWm6FE'
+  };
+  function fireConversion(key, value) {
+    if (typeof gtag !== 'function') return;
+    var sendTo = CONV[key];
+    if (!sendTo) return;
+    var done = [];
+    try { done = JSON.parse(sessionStorage.getItem('qasar_conv') || '[]'); } catch (e) {}
+    if (done.indexOf(key) !== -1) return; /* déjà compté cette session */
+    done.push(key);
+    try { sessionStorage.setItem('qasar_conv', JSON.stringify(done)); } catch (e) {}
+    var params = { send_to: sendTo, transaction_id: key + '-' + Date.now() };
+    if (value) { params.value = value; params.currency = 'EUR'; }
+    gtag('event', 'conversion', params);
+  }
+
   document.addEventListener('click', function (e) {
-    if (e.target.closest('.btn-wa, .whatsapp-float, [data-wa]') && typeof gtag === 'function') {
-      gtag('event', 'conversion', { send_to: 'AW-18323270454/f-7LCPa-ytAcELbWm6FE' });
-    }
+    if (e.target.closest('.btn-wa, .whatsapp-float, [data-wa]')) fireConversion('whatsapp');
+    else if (e.target.closest('[data-call]')) fireConversion('call');
   });
 
   /* ── Préloader → révélation du hero ─────────────────── */
@@ -259,6 +289,7 @@
           }
           form.classList.add('is-sent');
           submitBtn.textContent = L('Demande envoyée', 'Request sent');
+          fireConversion('form'); /* lead formulaire = conversion Google Ads */
         })
         .catch((err) => {
           console.error('[Qasar] Échec de l\'envoi du formulaire :', err);

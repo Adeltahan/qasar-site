@@ -2,6 +2,16 @@
    QASAR — rendu de la flotte depuis data/yachts.json
    Ajouter / modifier un yacht = éditer le JSON, sans toucher au code.
    Chaque carte affiche un carrousel des photos du yacht (champ "images").
+
+   Nouvelle photo ajoutée ? Relancer tools/gen-yacht-gallery.py pour
+   générer ses variantes -960.{jpg,webp,avif} avant de la référencer ici.
+
+   Perf : seule la 1ère photo de chaque carrousel est chargée (en AVIF/
+   WebP, 960px). Les photos suivantes ne sont insérées dans le DOM
+   (et donc téléchargées) qu'au moment où l'utilisateur les affiche
+   réellement (flèche, point, swipe) — sinon le carrousel CSS (slides
+   empilés hors champ via transform) désactive le loading="lazy" natif
+   et charge les ~300 photos de la flotte dès l'arrivée sur la page.
    ════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -17,6 +27,55 @@
 
   const esc = (s) =>
     String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+  /* ── Variantes optimisées (voir tools/gen-yacht-gallery.py) ──── */
+  const variantsOf = (src) => {
+    const base = src.slice(0, src.lastIndexOf('.')) + '-960';
+    return { jpg: base + '.jpg', webp: base + '.webp', avif: base + '.avif' };
+  };
+
+  /* 1ère photo d'un carrousel : chargée tout de suite (loading="lazy"
+     natif suffit, elle occupe la position réelle de la carte). */
+  const eagerPicture = (src, alt) => {
+    const v = variantsOf(src);
+    return '<picture>' +
+      '<source srcset="' + esc(v.avif) + '" type="image/avif">' +
+      '<source srcset="' + esc(v.webp) + '" type="image/webp">' +
+      '<img src="' + esc(v.jpg) + '" alt="' + esc(alt) + '" loading="lazy">' +
+    '</picture>';
+  };
+
+  /* Photos suivantes : placeholder vide, hydraté à la demande
+     (voir hydrateSlide / initCarousel) — pas de requête tant que
+     l'utilisateur n'a pas navigué jusqu'à cette photo. */
+  const placeholderPicture = (src, alt) => {
+    const v = variantsOf(src);
+    return '<picture data-jpg="' + esc(v.jpg) + '" data-webp="' + esc(v.webp) +
+      '" data-avif="' + esc(v.avif) + '" data-alt="' + esc(alt) + '"></picture>';
+  };
+
+  const buildSlides = (images, altFor) =>
+    images
+      .map((src, i) =>
+        '<div class="carousel__slide">' +
+          (i === 0 ? eagerPicture(src, altFor(i)) : placeholderPicture(src, altFor(i))) +
+        '</div>'
+      )
+      .join('');
+
+  function hydrateSlide(slideEl) {
+    const pic = slideEl && slideEl.querySelector('picture[data-jpg]');
+    if (!pic) return;
+    const { jpg, webp, avif, alt } = pic.dataset;
+    pic.innerHTML =
+      '<source srcset="' + esc(avif) + '" type="image/avif">' +
+      '<source srcset="' + esc(webp) + '" type="image/webp">' +
+      '<img src="' + esc(jpg) + '" alt="' + esc(alt) + '" loading="lazy">';
+    pic.removeAttribute('data-jpg');
+    pic.removeAttribute('data-webp');
+    pic.removeAttribute('data-avif');
+    pic.removeAttribute('data-alt');
+  }
 
   /* ── Bilingue (voir js/i18n.js) ───────────────────── */
   let enOverlay = null; // data/yachts.en.json : { nom: description }
@@ -59,14 +118,7 @@
       modalWa.setAttribute('aria-label', waAria(y.nom));
 
       const images = Array.isArray(y.images) && y.images.length ? y.images : (y.image ? [y.image] : []);
-      modalTrack.innerHTML = images
-        .map((src, i) =>
-          '<div class="carousel__slide">' +
-            '<img src="' + esc(src) + '" alt="Yacht ' + esc(y.nom) + ' — photo ' + (i + 1) + '"' +
-            (i === 0 ? '' : ' loading="lazy"') + '>' +
-          '</div>'
-        )
-        .join('');
+      modalTrack.innerHTML = buildSlides(images, (i) => 'Yacht ' + y.nom + ' — photo ' + (i + 1));
       modalTrack.style.transform = 'translateX(0)';
 
       const single = images.length <= 1;
@@ -161,14 +213,7 @@
         const images = Array.isArray(y.images) && y.images.length ? y.images : (y.image ? [y.image] : []);
         const single = images.length <= 1;
 
-        const slides = images
-          .map((src, i) =>
-            '<div class="carousel__slide">' +
-              '<img src="' + esc(src) + '" alt="Yacht ' + esc(y.nom) + ' — photo ' + (i + 1) + '"' +
-              (i === 0 ? '' : ' loading="lazy"') + '>' +
-            '</div>'
-          )
-          .join('');
+        const slides = buildSlides(images, (i) => 'Yacht ' + y.nom + ' — photo ' + (i + 1));
 
         const dots = single
           ? ''
@@ -259,6 +304,7 @@
 
     function go(i) {
       index = (i + count) % count;
+      hydrateSlide(slides[index]);
       track.style.transform = 'translateX(' + -index * 100 + '%)';
       dots.forEach((d, k) => d.classList.toggle('is-active', k === index));
     }
